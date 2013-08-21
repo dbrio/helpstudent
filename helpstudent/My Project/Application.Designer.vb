@@ -32,12 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.helpstudent.MDIParent1
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
-        Protected Overrides Sub OnCreateSplashScreen()
-            Me.SplashScreen = Global.helpstudent.Screen
+            Me.MainForm = Global.helpstudent.login
         End Sub
     End Class
 End Namespace
