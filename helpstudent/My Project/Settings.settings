@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConectionSqlite" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;data source="C:\Users\dbrio\Documents\Visual Studio 2010\Projects\helpstudent\helpstudent\StudentApp.s3db"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SQLite&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">data source="C:\Users\dbrio\Documents\Visual Studio 2010\Projects\helpstudent\helpstudent\StudentApp.s3db"</Value>
+    </Setting>
+    <Setting Name="ConectionMysql" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=db4free.net;User Id=studentapp;password=HelpUphCh01;Persist Security Info=True;database=studentapp&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=db4free.net;User Id=studentapp;password=HelpUphCh01;Persist Security Info=True;database=studentapp</Value>
+    </Setting>
+    <Setting Name="studentappConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=db4free.net;User Id=studentapp;password=HelpUphCh01;database=studentapp;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=db4free.net;User Id=studentapp;password=HelpUphCh01;database=studentapp;Persist Security Info=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
