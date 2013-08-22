@@ -22,27 +22,14 @@ Partial Class Inicio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.RectangleShapeUsuario = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape6 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape5 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape4 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape3 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
-        CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RectangleShapeUsuario = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.SuspendLayout()
-        '
-        'RectangleShapeUsuario
-        '
-        Me.RectangleShapeUsuario.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque
-        Me.RectangleShapeUsuario.BorderColor = System.Drawing.SystemColors.ControlLight
-        Me.RectangleShapeUsuario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.RectangleShapeUsuario.FillColor = System.Drawing.SystemColors.ControlLight
-        Me.RectangleShapeUsuario.FillGradientColor = System.Drawing.Color.Maroon
-        Me.RectangleShapeUsuario.Location = New System.Drawing.Point(230, 165)
-        Me.RectangleShapeUsuario.Name = "RectangleShapeUsuario"
-        Me.RectangleShapeUsuario.Size = New System.Drawing.Size(226, 292)
         '
         'ShapeContainer1
         '
@@ -109,13 +96,19 @@ Partial Class Inicio
         Me.RectangleShape2.Name = "RectangleShape2"
         Me.RectangleShape2.Size = New System.Drawing.Size(171, 135)
         '
-        'PictureEdit1
+        'RectangleShapeUsuario
         '
-        Me.PictureEdit1.EditValue = Global.helpstudent.My.Resources.Resources.edit_user_128
-        Me.PictureEdit1.Location = New System.Drawing.Point(300, 180)
-        Me.PictureEdit1.Name = "PictureEdit1"
-        Me.PictureEdit1.Size = New System.Drawing.Size(129, 122)
-        Me.PictureEdit1.TabIndex = 2
+        Me.RectangleShapeUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.RectangleShapeUsuario.BackgroundImage = Global.helpstudent.My.Resources.Resources.perfil
+        Me.RectangleShapeUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShapeUsuario.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque
+        Me.RectangleShapeUsuario.BorderColor = System.Drawing.SystemColors.ControlLight
+        Me.RectangleShapeUsuario.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.RectangleShapeUsuario.FillColor = System.Drawing.SystemColors.ControlLight
+        Me.RectangleShapeUsuario.FillGradientColor = System.Drawing.Color.Maroon
+        Me.RectangleShapeUsuario.Location = New System.Drawing.Point(230, 165)
+        Me.RectangleShapeUsuario.Name = "RectangleShapeUsuario"
+        Me.RectangleShapeUsuario.Size = New System.Drawing.Size(226, 292)
         '
         'Inicio
         '
@@ -125,7 +118,6 @@ Partial Class Inicio
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1214, 641)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PictureEdit1)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.ForeColor = System.Drawing.Color.Transparent
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -135,7 +127,6 @@ Partial Class Inicio
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio"
         Me.TransparencyKey = System.Drawing.Color.Transparent
-        CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -146,5 +137,4 @@ Partial Class Inicio
     Friend WithEvents RectangleShape4 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents RectangleShape3 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents RectangleShape2 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents PictureEdit1 As DevExpress.XtraEditors.PictureEdit
 End Class
