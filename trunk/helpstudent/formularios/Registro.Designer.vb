@@ -19,7 +19,6 @@ Partial Class Registro
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim CtaAlumLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registro))
         Dim NombreLabel As System.Windows.Forms.Label
@@ -34,10 +33,6 @@ Partial Class Registro
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label4 = New System.Windows.Forms.Label()
-
-        Me.AlumnoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-
-
         Me.CtaAlumTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.ApellidoTextEdit = New DevExpress.XtraEditors.TextEdit()
@@ -60,8 +55,6 @@ Partial Class Registro
         CorreoLabel = New System.Windows.Forms.Label()
         IdLoginLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
-
-        CType(Me.AlumnoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CtaAlumTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApellidoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,26 +132,8 @@ Partial Class Registro
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Name = "Label4"
         '
-        'DataSetSqlite
-        '
-     
-        '
-        'AlumnoBindingSource
-        '
-        Me.AlumnoBindingSource.DataMember = "Alumno"
-
-        '
-        'AlumnoTableAdapter
-        '
-
-        '
-        'TableAdapterManager
-        '
-      
-       
         'CtaAlumTextEdit
         '
-        Me.CtaAlumTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnoBindingSource, "CtaAlum", True))
         resources.ApplyResources(Me.CtaAlumTextEdit, "CtaAlumTextEdit")
         Me.CtaAlumTextEdit.Name = "CtaAlumTextEdit"
         Me.CtaAlumTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -166,7 +141,6 @@ Partial Class Registro
         '
         'NombreTextEdit
         '
-        Me.NombreTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnoBindingSource, "Nombre", True))
         resources.ApplyResources(Me.NombreTextEdit, "NombreTextEdit")
         Me.NombreTextEdit.Name = "NombreTextEdit"
         Me.NombreTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -174,7 +148,6 @@ Partial Class Registro
         '
         'ApellidoTextEdit
         '
-        Me.ApellidoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnoBindingSource, "Apellido", True))
         resources.ApplyResources(Me.ApellidoTextEdit, "ApellidoTextEdit")
         Me.ApellidoTextEdit.Name = "ApellidoTextEdit"
         Me.ApellidoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -182,13 +155,11 @@ Partial Class Registro
         '
         'FechNacDateTimePicker
         '
-        Me.FechNacDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.AlumnoBindingSource, "FechNac", True))
         resources.ApplyResources(Me.FechNacDateTimePicker, "FechNacDateTimePicker")
         Me.FechNacDateTimePicker.Name = "FechNacDateTimePicker"
         '
         'TelefonoTextEdit
         '
-        Me.TelefonoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnoBindingSource, "Telefono", True))
         resources.ApplyResources(Me.TelefonoTextEdit, "TelefonoTextEdit")
         Me.TelefonoTextEdit.Name = "TelefonoTextEdit"
         Me.TelefonoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -196,25 +167,21 @@ Partial Class Registro
         '
         'IdSexoTextBox
         '
-        Me.IdSexoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnoBindingSource, "IdSexo", True))
         resources.ApplyResources(Me.IdSexoTextBox, "IdSexoTextBox")
         Me.IdSexoTextBox.Name = "IdSexoTextBox"
         '
         'IdLoginTextBox
         '
-        Me.IdLoginTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnoBindingSource, "IdLogin", True))
         resources.ApplyResources(Me.IdLoginTextBox, "IdLoginTextBox")
         Me.IdLoginTextBox.Name = "IdLoginTextBox"
         '
         'IdCarreraTextBox
         '
-        Me.IdCarreraTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnoBindingSource, "IdCarrera", True))
         resources.ApplyResources(Me.IdCarreraTextBox, "IdCarreraTextBox")
         Me.IdCarreraTextBox.Name = "IdCarreraTextBox"
         '
         'CorreoTextEdit
         '
-        Me.CorreoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnoBindingSource, "Correo", True))
         resources.ApplyResources(Me.CorreoTextEdit, "CorreoTextEdit")
         Me.CorreoTextEdit.Name = "CorreoTextEdit"
         Me.CorreoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -222,7 +189,6 @@ Partial Class Registro
         '
         'TextBox1
         '
-        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnoBindingSource, "IdLogin", True))
         resources.ApplyResources(Me.TextBox1, "TextBox1")
         Me.TextBox1.Name = "TextBox1"
         '
@@ -289,8 +255,6 @@ Partial Class Registro
         Me.Name = "Registro"
         Me.Opacity = 0.98R
         Me.ShowIcon = False
-
-        CType(Me.AlumnoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CtaAlumTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApellidoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -304,7 +268,6 @@ Partial Class Registro
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents Label4 As System.Windows.Forms.Label
 
-    Friend WithEvents AlumnoBindingSource As System.Windows.Forms.BindingSource
 
 
     Friend WithEvents CtaAlumTextEdit As DevExpress.XtraEditors.TextEdit
