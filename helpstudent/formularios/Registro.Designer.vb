@@ -34,10 +34,10 @@ Partial Class Registro
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DataSetSqlite = New helpstudent.DataSetSqlite()
+
         Me.AlumnoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
 
-        Me.TableAdapterManager = New helpstudent.DataSetSqliteTableAdapters.TableAdapterManager()
+
         Me.CtaAlumTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.ApellidoTextEdit = New DevExpress.XtraEditors.TextEdit()
@@ -60,7 +60,7 @@ Partial Class Registro
         CorreoLabel = New System.Windows.Forms.Label()
         IdLoginLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
-        CType(Me.DataSetSqlite, System.ComponentModel.ISupportInitialize).BeginInit()
+
         CType(Me.AlumnoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CtaAlumTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -141,13 +141,12 @@ Partial Class Registro
         '
         'DataSetSqlite
         '
-        Me.DataSetSqlite.DataSetName = "DataSetSqlite"
-        Me.DataSetSqlite.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+     
         '
         'AlumnoBindingSource
         '
         Me.AlumnoBindingSource.DataMember = "Alumno"
-        Me.AlumnoBindingSource.DataSource = Me.DataSetSqlite
+
         '
         'AlumnoTableAdapter
         '
@@ -156,8 +155,7 @@ Partial Class Registro
         'TableAdapterManager
         '
       
-        Me.TableAdapterManager.UpdateOrder = helpstudent.DataSetSqliteTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
+       
         'CtaAlumTextEdit
         '
         Me.CtaAlumTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnoBindingSource, "CtaAlum", True))
@@ -291,7 +289,7 @@ Partial Class Registro
         Me.Name = "Registro"
         Me.Opacity = 0.98R
         Me.ShowIcon = False
-        CType(Me.DataSetSqlite, System.ComponentModel.ISupportInitialize).EndInit()
+
         CType(Me.AlumnoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CtaAlumTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -305,10 +303,10 @@ Partial Class Registro
     Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents DataSetSqlite As helpstudent.DataSetSqlite
+
     Friend WithEvents AlumnoBindingSource As System.Windows.Forms.BindingSource
 
-    Friend WithEvents TableAdapterManager As helpstudent.DataSetSqliteTableAdapters.TableAdapterManager
+
     Friend WithEvents CtaAlumTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents NombreTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents ApellidoTextEdit As DevExpress.XtraEditors.TextEdit
