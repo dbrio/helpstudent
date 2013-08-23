@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="studentappConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="studentappConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.helpstudent.My.MySettings.GlobalReference.Default.studentappConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="temporal" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="temporal (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.helpstudent.My.MySettings.GlobalReference.Default.temporal" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CarreraTableAdapter" GeneratorDataComponentClassName="CarreraTableAdapter" Name="Carrera" UserDataComponentName="CarreraTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Carrera" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Carrera" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Carrera` WHERE ((`IdCarrera` = @Original_IdCarrera) AND (`Nombre` = @Original_Nombre))</CommandText>
@@ -53,7 +53,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AlumnoTableAdapter" GeneratorDataComponentClassName="AlumnoTableAdapter" Name="Alumno" UserDataComponentName="AlumnoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Alumno" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Alumno" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Alumno` WHERE ((`CtaAlum` = @Original_CtaAlum) AND (`Nombre` = @Original_Nombre) AND (`Apellido` = @Original_Apellido) AND (`FechNac` = @Original_FechNac) AND (`Telefono` = @Original_Telefono) AND (`IdSexo` = @Original_IdSexo) AND (`IdLogin` = @Original_IdLogin) AND (`IdCarrera` = @Original_IdCarrera) AND ((@IsNull_Correo = 1 AND `Correo` IS NULL) OR (`Correo` = @Original_Correo)) AND ((@IsNull_Imagen = 1 AND `Imagen` IS NULL) OR (`Imagen` = @Original_Imagen)))</CommandText>
@@ -143,7 +143,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AnoTableAdapter" GeneratorDataComponentClassName="AnoTableAdapter" Name="Ano" UserDataComponentName="AnoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Ano" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Ano" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Ano` WHERE ((`IdAno` = @Original_IdAno) AND (`Ano` = @Original_Ano))</CommandText>
@@ -187,7 +187,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AgendaTableAdapter" GeneratorDataComponentClassName="AgendaTableAdapter" Name="Agenda" UserDataComponentName="AgendaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Agenda" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Agenda" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Agenda` WHERE ((`IdAgenda` = @Original_IdAgenda) AND (`Titulo` = @Original_Titulo) AND (`Fecha` = @Original_Fecha) AND (`Hora` = @Original_Hora) AND (`IdMatricula` = @Original_IdMatricula))</CommandText>
@@ -249,7 +249,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CarreraClaseTableAdapter" GeneratorDataComponentClassName="CarreraClaseTableAdapter" Name="CarreraClase" UserDataComponentName="CarreraClaseTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.CarreraClase" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.CarreraClase" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `CarreraClase` WHERE ((`IdCarrera` = @Original_IdCarrera) AND (`CodClase` = @Original_CodClase) AND ((@IsNull_IdPeriodoCatalogo = 1 AND `IdPeriodoCatalogo` IS NULL) OR (`IdPeriodoCatalogo` = @Original_IdPeriodoCatalogo)) AND ((@IsNull_IdAno = 1 AND `IdAno` IS NULL) OR (`IdAno` = @Original_IdAno)))</CommandText>
@@ -309,7 +309,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClaseTableAdapter" GeneratorDataComponentClassName="ClaseTableAdapter" Name="Clase" UserDataComponentName="ClaseTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Clase" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Clase" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Clase` WHERE ((`CodClase` = @Original_CodClase) AND (`Nombre` = @Original_Nombre) AND (`UV` = @Original_UV))</CommandText>
@@ -360,7 +360,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LoginTableAdapter" GeneratorDataComponentClassName="LoginTableAdapter" Name="Login" UserDataComponentName="LoginTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Login" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Login" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Login` WHERE ((`IdLogin` = @Original_IdLogin) AND (`Usuario` = @Original_Usuario) AND (`Contrasena` = @Original_Contrasena))</CommandText>
@@ -409,7 +409,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MaestroTableAdapter" GeneratorDataComponentClassName="MaestroTableAdapter" Name="Maestro" UserDataComponentName="MaestroTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Maestro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Maestro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Maestro` WHERE ((`IdMaestro` = @Original_IdMaestro) AND (`Nombre` = @Original_Nombre) AND (`Apellido` = @Original_Apellido) AND (`Telefono` = @Original_Telefono) AND ((@IsNull_Correo = 1 AND `Correo` IS NULL) OR (`Correo` = @Original_Correo)) AND (`IdSexo` = @Original_IdSexo) AND (`Titulo` = @Original_Titulo))</CommandText>
@@ -482,7 +482,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatriculaTableAdapter" GeneratorDataComponentClassName="MatriculaTableAdapter" Name="Matricula" UserDataComponentName="MatriculaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Matricula" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Matricula" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Matricula` WHERE ((`IdMatricula` = @Original_IdMatricula) AND (`CodClase` = @Original_CodClase) AND (`IdPeriodo` = @Original_IdPeriodo) AND (`Hora` = @Original_Hora) AND (`Dia` = @Original_Dia) AND (`IdMaestro` = @Original_IdMaestro) AND (`Nota1` = @Original_Nota1) AND (`Nota2` = @Original_Nota2) AND (`Nota3` = @Original_Nota3) AND (`Promedio` = @Original_Promedio) AND (`Activo` = @Original_Activo) AND (`CtaAlum` = @Original_CtaAlum))</CommandText>
@@ -576,7 +576,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PeridoCatalogoTableAdapter" GeneratorDataComponentClassName="PeridoCatalogoTableAdapter" Name="PeridoCatalogo" UserDataComponentName="PeridoCatalogoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.PeridoCatalogo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.PeridoCatalogo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `PeridoCatalogo` WHERE ((`IdPeriodoCatalogo` = @Original_IdPeriodoCatalogo) AND (`Peridodo` = @Original_Peridodo))</CommandText>
@@ -620,7 +620,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PeriodoTableAdapter" GeneratorDataComponentClassName="PeriodoTableAdapter" Name="Periodo" UserDataComponentName="PeriodoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Periodo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Periodo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Periodo` WHERE ((`IdPeriodo` = @Original_IdPeriodo) AND (`Periodo` = @Original_Periodo) AND (`Anio` = @Original_Anio))</CommandText>
@@ -669,7 +669,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RequisitosTableAdapter" GeneratorDataComponentClassName="RequisitosTableAdapter" Name="Requisitos" UserDataComponentName="RequisitosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Requisitos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Requisitos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Requisitos` WHERE ((`CodClase` = @Original_CodClase) AND (`CodRequisito` = @Original_CodRequisito))</CommandText>
@@ -715,7 +715,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SexoTableAdapter" GeneratorDataComponentClassName="SexoTableAdapter" Name="Sexo" UserDataComponentName="SexoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="studentappConnectionString (MySettings)" DbObjectName="studentapp.Sexo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="temporal (MySettings)" DbObjectName="studentapp.Sexo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Sexo` WHERE ((`IdSexo` = @Original_IdSexo) AND (`Sexo` = @Original_Sexo))</CommandText>
@@ -765,7 +765,7 @@
   <xs:element name="DataSetMysql" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetMysql" msprop:Generator_UserDSName="DataSetMysql">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Carrera" msprop:Generator_TableClassName="CarreraDataTable" msprop:Generator_TableVarName="tableCarrera" msprop:Generator_TablePropName="Carrera" msprop:Generator_RowDeletingName="CarreraRowDeleting" msprop:Generator_RowChangingName="CarreraRowChanging" msprop:Generator_RowEvHandlerName="CarreraRowChangeEventHandler" msprop:Generator_RowDeletedName="CarreraRowDeleted" msprop:Generator_UserTableName="Carrera" msprop:Generator_RowChangedName="CarreraRowChanged" msprop:Generator_RowEvArgName="CarreraRowChangeEvent" msprop:Generator_RowClassName="CarreraRow">
+        <xs:element name="Carrera" msprop:Generator_TableClassName="CarreraDataTable" msprop:Generator_TableVarName="tableCarrera" msprop:Generator_RowChangedName="CarreraRowChanged" msprop:Generator_TablePropName="Carrera" msprop:Generator_RowDeletingName="CarreraRowDeleting" msprop:Generator_RowChangingName="CarreraRowChanging" msprop:Generator_RowEvHandlerName="CarreraRowChangeEventHandler" msprop:Generator_RowDeletedName="CarreraRowDeleted" msprop:Generator_RowClassName="CarreraRow" msprop:Generator_UserTableName="Carrera" msprop:Generator_RowEvArgName="CarreraRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdCarrera" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdCarrera" msprop:Generator_ColumnPropNameInRow="IdCarrera" msprop:Generator_ColumnPropNameInTable="IdCarreraColumn" msprop:Generator_UserColumnName="IdCarrera" type="xs:int" />
@@ -779,7 +779,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Alumno" msprop:Generator_TableClassName="AlumnoDataTable" msprop:Generator_TableVarName="tableAlumno" msprop:Generator_TablePropName="Alumno" msprop:Generator_RowDeletingName="AlumnoRowDeleting" msprop:Generator_RowChangingName="AlumnoRowChanging" msprop:Generator_RowEvHandlerName="AlumnoRowChangeEventHandler" msprop:Generator_RowDeletedName="AlumnoRowDeleted" msprop:Generator_UserTableName="Alumno" msprop:Generator_RowChangedName="AlumnoRowChanged" msprop:Generator_RowEvArgName="AlumnoRowChangeEvent" msprop:Generator_RowClassName="AlumnoRow">
+        <xs:element name="Alumno" msprop:Generator_TableClassName="AlumnoDataTable" msprop:Generator_TableVarName="tableAlumno" msprop:Generator_RowChangedName="AlumnoRowChanged" msprop:Generator_TablePropName="Alumno" msprop:Generator_RowDeletingName="AlumnoRowDeleting" msprop:Generator_RowChangingName="AlumnoRowChanging" msprop:Generator_RowEvHandlerName="AlumnoRowChangeEventHandler" msprop:Generator_RowDeletedName="AlumnoRowDeleted" msprop:Generator_RowClassName="AlumnoRow" msprop:Generator_UserTableName="Alumno" msprop:Generator_RowEvArgName="AlumnoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CtaAlum" msprop:Generator_ColumnVarNameInTable="columnCtaAlum" msprop:Generator_ColumnPropNameInRow="CtaAlum" msprop:Generator_ColumnPropNameInTable="CtaAlumColumn" msprop:Generator_UserColumnName="CtaAlum">
@@ -831,7 +831,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ano" msprop:Generator_TableClassName="AnoDataTable" msprop:Generator_TableVarName="tableAno" msprop:Generator_TablePropName="Ano" msprop:Generator_RowDeletingName="AnoRowDeleting" msprop:Generator_RowChangingName="AnoRowChanging" msprop:Generator_RowEvHandlerName="AnoRowChangeEventHandler" msprop:Generator_RowDeletedName="AnoRowDeleted" msprop:Generator_UserTableName="Ano" msprop:Generator_RowChangedName="AnoRowChanged" msprop:Generator_RowEvArgName="AnoRowChangeEvent" msprop:Generator_RowClassName="AnoRow">
+        <xs:element name="Ano" msprop:Generator_TableClassName="AnoDataTable" msprop:Generator_TableVarName="tableAno" msprop:Generator_RowChangedName="AnoRowChanged" msprop:Generator_TablePropName="Ano" msprop:Generator_RowDeletingName="AnoRowDeleting" msprop:Generator_RowChangingName="AnoRowChanging" msprop:Generator_RowEvHandlerName="AnoRowChangeEventHandler" msprop:Generator_RowDeletedName="AnoRowDeleted" msprop:Generator_RowClassName="AnoRow" msprop:Generator_UserTableName="Ano" msprop:Generator_RowEvArgName="AnoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdAno" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdAno" msprop:Generator_ColumnPropNameInRow="IdAno" msprop:Generator_ColumnPropNameInTable="IdAnoColumn" msprop:Generator_UserColumnName="IdAno" type="xs:int" />
@@ -839,7 +839,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Agenda" msprop:Generator_TableClassName="AgendaDataTable" msprop:Generator_TableVarName="tableAgenda" msprop:Generator_TablePropName="Agenda" msprop:Generator_RowDeletingName="AgendaRowDeleting" msprop:Generator_RowChangingName="AgendaRowChanging" msprop:Generator_RowEvHandlerName="AgendaRowChangeEventHandler" msprop:Generator_RowDeletedName="AgendaRowDeleted" msprop:Generator_UserTableName="Agenda" msprop:Generator_RowChangedName="AgendaRowChanged" msprop:Generator_RowEvArgName="AgendaRowChangeEvent" msprop:Generator_RowClassName="AgendaRow">
+        <xs:element name="Agenda" msprop:Generator_TableClassName="AgendaDataTable" msprop:Generator_TableVarName="tableAgenda" msprop:Generator_RowChangedName="AgendaRowChanged" msprop:Generator_TablePropName="Agenda" msprop:Generator_RowDeletingName="AgendaRowDeleting" msprop:Generator_RowChangingName="AgendaRowChanging" msprop:Generator_RowEvHandlerName="AgendaRowChangeEventHandler" msprop:Generator_RowDeletedName="AgendaRowDeleted" msprop:Generator_RowClassName="AgendaRow" msprop:Generator_UserTableName="Agenda" msprop:Generator_RowEvArgName="AgendaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdAgenda" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdAgenda" msprop:Generator_ColumnPropNameInRow="IdAgenda" msprop:Generator_ColumnPropNameInTable="IdAgendaColumn" msprop:Generator_UserColumnName="IdAgenda" type="xs:int" />
@@ -863,7 +863,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CarreraClase" msprop:Generator_TableClassName="CarreraClaseDataTable" msprop:Generator_TableVarName="tableCarreraClase" msprop:Generator_TablePropName="CarreraClase" msprop:Generator_RowDeletingName="CarreraClaseRowDeleting" msprop:Generator_RowChangingName="CarreraClaseRowChanging" msprop:Generator_RowEvHandlerName="CarreraClaseRowChangeEventHandler" msprop:Generator_RowDeletedName="CarreraClaseRowDeleted" msprop:Generator_UserTableName="CarreraClase" msprop:Generator_RowChangedName="CarreraClaseRowChanged" msprop:Generator_RowEvArgName="CarreraClaseRowChangeEvent" msprop:Generator_RowClassName="CarreraClaseRow">
+        <xs:element name="CarreraClase" msprop:Generator_TableClassName="CarreraClaseDataTable" msprop:Generator_TableVarName="tableCarreraClase" msprop:Generator_RowChangedName="CarreraClaseRowChanged" msprop:Generator_TablePropName="CarreraClase" msprop:Generator_RowDeletingName="CarreraClaseRowDeleting" msprop:Generator_RowChangingName="CarreraClaseRowChanging" msprop:Generator_RowEvHandlerName="CarreraClaseRowChangeEventHandler" msprop:Generator_RowDeletedName="CarreraClaseRowDeleted" msprop:Generator_RowClassName="CarreraClaseRow" msprop:Generator_UserTableName="CarreraClase" msprop:Generator_RowEvArgName="CarreraClaseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdCarrera" msprop:Generator_ColumnVarNameInTable="columnIdCarrera" msprop:Generator_ColumnPropNameInRow="IdCarrera" msprop:Generator_ColumnPropNameInTable="IdCarreraColumn" msprop:Generator_UserColumnName="IdCarrera" type="xs:int" />
@@ -879,7 +879,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Clase" msprop:Generator_TableClassName="ClaseDataTable" msprop:Generator_TableVarName="tableClase" msprop:Generator_TablePropName="Clase" msprop:Generator_RowDeletingName="ClaseRowDeleting" msprop:Generator_RowChangingName="ClaseRowChanging" msprop:Generator_RowEvHandlerName="ClaseRowChangeEventHandler" msprop:Generator_RowDeletedName="ClaseRowDeleted" msprop:Generator_UserTableName="Clase" msprop:Generator_RowChangedName="ClaseRowChanged" msprop:Generator_RowEvArgName="ClaseRowChangeEvent" msprop:Generator_RowClassName="ClaseRow">
+        <xs:element name="Clase" msprop:Generator_TableClassName="ClaseDataTable" msprop:Generator_TableVarName="tableClase" msprop:Generator_RowChangedName="ClaseRowChanged" msprop:Generator_TablePropName="Clase" msprop:Generator_RowDeletingName="ClaseRowDeleting" msprop:Generator_RowChangingName="ClaseRowChanging" msprop:Generator_RowEvHandlerName="ClaseRowChangeEventHandler" msprop:Generator_RowDeletedName="ClaseRowDeleted" msprop:Generator_RowClassName="ClaseRow" msprop:Generator_UserTableName="Clase" msprop:Generator_RowEvArgName="ClaseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CodClase" msprop:Generator_ColumnVarNameInTable="columnCodClase" msprop:Generator_ColumnPropNameInRow="CodClase" msprop:Generator_ColumnPropNameInTable="CodClaseColumn" msprop:Generator_UserColumnName="CodClase">
@@ -900,7 +900,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Login" msprop:Generator_TableClassName="LoginDataTable" msprop:Generator_TableVarName="tableLogin" msprop:Generator_TablePropName="Login" msprop:Generator_RowDeletingName="LoginRowDeleting" msprop:Generator_RowChangingName="LoginRowChanging" msprop:Generator_RowEvHandlerName="LoginRowChangeEventHandler" msprop:Generator_RowDeletedName="LoginRowDeleted" msprop:Generator_UserTableName="Login" msprop:Generator_RowChangedName="LoginRowChanged" msprop:Generator_RowEvArgName="LoginRowChangeEvent" msprop:Generator_RowClassName="LoginRow">
+        <xs:element name="Login" msprop:Generator_TableClassName="LoginDataTable" msprop:Generator_TableVarName="tableLogin" msprop:Generator_RowChangedName="LoginRowChanged" msprop:Generator_TablePropName="Login" msprop:Generator_RowDeletingName="LoginRowDeleting" msprop:Generator_RowChangingName="LoginRowChanging" msprop:Generator_RowEvHandlerName="LoginRowChangeEventHandler" msprop:Generator_RowDeletedName="LoginRowDeleted" msprop:Generator_RowClassName="LoginRow" msprop:Generator_UserTableName="Login" msprop:Generator_RowEvArgName="LoginRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdLogin" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdLogin" msprop:Generator_ColumnPropNameInRow="IdLogin" msprop:Generator_ColumnPropNameInTable="IdLoginColumn" msprop:Generator_UserColumnName="IdLogin" type="xs:int" />
@@ -921,7 +921,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Maestro" msprop:Generator_TableClassName="MaestroDataTable" msprop:Generator_TableVarName="tableMaestro" msprop:Generator_TablePropName="Maestro" msprop:Generator_RowDeletingName="MaestroRowDeleting" msprop:Generator_RowChangingName="MaestroRowChanging" msprop:Generator_RowEvHandlerName="MaestroRowChangeEventHandler" msprop:Generator_RowDeletedName="MaestroRowDeleted" msprop:Generator_UserTableName="Maestro" msprop:Generator_RowChangedName="MaestroRowChanged" msprop:Generator_RowEvArgName="MaestroRowChangeEvent" msprop:Generator_RowClassName="MaestroRow">
+        <xs:element name="Maestro" msprop:Generator_TableClassName="MaestroDataTable" msprop:Generator_TableVarName="tableMaestro" msprop:Generator_RowChangedName="MaestroRowChanged" msprop:Generator_TablePropName="Maestro" msprop:Generator_RowDeletingName="MaestroRowDeleting" msprop:Generator_RowChangingName="MaestroRowChanging" msprop:Generator_RowEvHandlerName="MaestroRowChangeEventHandler" msprop:Generator_RowDeletedName="MaestroRowDeleted" msprop:Generator_RowClassName="MaestroRow" msprop:Generator_UserTableName="Maestro" msprop:Generator_RowEvArgName="MaestroRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdMaestro" msprop:Generator_ColumnVarNameInTable="columnIdMaestro" msprop:Generator_ColumnPropNameInRow="IdMaestro" msprop:Generator_ColumnPropNameInTable="IdMaestroColumn" msprop:Generator_UserColumnName="IdMaestro">
@@ -970,7 +970,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Matricula" msprop:Generator_TableClassName="MatriculaDataTable" msprop:Generator_TableVarName="tableMatricula" msprop:Generator_TablePropName="Matricula" msprop:Generator_RowDeletingName="MatriculaRowDeleting" msprop:Generator_RowChangingName="MatriculaRowChanging" msprop:Generator_RowEvHandlerName="MatriculaRowChangeEventHandler" msprop:Generator_RowDeletedName="MatriculaRowDeleted" msprop:Generator_UserTableName="Matricula" msprop:Generator_RowChangedName="MatriculaRowChanged" msprop:Generator_RowEvArgName="MatriculaRowChangeEvent" msprop:Generator_RowClassName="MatriculaRow">
+        <xs:element name="Matricula" msprop:Generator_TableClassName="MatriculaDataTable" msprop:Generator_TableVarName="tableMatricula" msprop:Generator_RowChangedName="MatriculaRowChanged" msprop:Generator_TablePropName="Matricula" msprop:Generator_RowDeletingName="MatriculaRowDeleting" msprop:Generator_RowChangingName="MatriculaRowChanging" msprop:Generator_RowEvHandlerName="MatriculaRowChangeEventHandler" msprop:Generator_RowDeletedName="MatriculaRowDeleted" msprop:Generator_RowClassName="MatriculaRow" msprop:Generator_UserTableName="Matricula" msprop:Generator_RowEvArgName="MatriculaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdMatricula" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdMatricula" msprop:Generator_ColumnPropNameInRow="IdMatricula" msprop:Generator_ColumnPropNameInTable="IdMatriculaColumn" msprop:Generator_UserColumnName="IdMatricula" type="xs:int" />
@@ -1006,7 +1006,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PeridoCatalogo" msprop:Generator_TableClassName="PeridoCatalogoDataTable" msprop:Generator_TableVarName="tablePeridoCatalogo" msprop:Generator_TablePropName="PeridoCatalogo" msprop:Generator_RowDeletingName="PeridoCatalogoRowDeleting" msprop:Generator_RowChangingName="PeridoCatalogoRowChanging" msprop:Generator_RowEvHandlerName="PeridoCatalogoRowChangeEventHandler" msprop:Generator_RowDeletedName="PeridoCatalogoRowDeleted" msprop:Generator_UserTableName="PeridoCatalogo" msprop:Generator_RowChangedName="PeridoCatalogoRowChanged" msprop:Generator_RowEvArgName="PeridoCatalogoRowChangeEvent" msprop:Generator_RowClassName="PeridoCatalogoRow">
+        <xs:element name="PeridoCatalogo" msprop:Generator_TableClassName="PeridoCatalogoDataTable" msprop:Generator_TableVarName="tablePeridoCatalogo" msprop:Generator_RowChangedName="PeridoCatalogoRowChanged" msprop:Generator_TablePropName="PeridoCatalogo" msprop:Generator_RowDeletingName="PeridoCatalogoRowDeleting" msprop:Generator_RowChangingName="PeridoCatalogoRowChanging" msprop:Generator_RowEvHandlerName="PeridoCatalogoRowChangeEventHandler" msprop:Generator_RowDeletedName="PeridoCatalogoRowDeleted" msprop:Generator_RowClassName="PeridoCatalogoRow" msprop:Generator_UserTableName="PeridoCatalogo" msprop:Generator_RowEvArgName="PeridoCatalogoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdPeriodoCatalogo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdPeriodoCatalogo" msprop:Generator_ColumnPropNameInRow="IdPeriodoCatalogo" msprop:Generator_ColumnPropNameInTable="IdPeriodoCatalogoColumn" msprop:Generator_UserColumnName="IdPeriodoCatalogo" type="xs:int" />
@@ -1014,7 +1014,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Periodo" msprop:Generator_TableClassName="PeriodoDataTable" msprop:Generator_TableVarName="tablePeriodo" msprop:Generator_TablePropName="Periodo" msprop:Generator_RowDeletingName="PeriodoRowDeleting" msprop:Generator_RowChangingName="PeriodoRowChanging" msprop:Generator_RowEvHandlerName="PeriodoRowChangeEventHandler" msprop:Generator_RowDeletedName="PeriodoRowDeleted" msprop:Generator_UserTableName="Periodo" msprop:Generator_RowChangedName="PeriodoRowChanged" msprop:Generator_RowEvArgName="PeriodoRowChangeEvent" msprop:Generator_RowClassName="PeriodoRow">
+        <xs:element name="Periodo" msprop:Generator_TableClassName="PeriodoDataTable" msprop:Generator_TableVarName="tablePeriodo" msprop:Generator_RowChangedName="PeriodoRowChanged" msprop:Generator_TablePropName="Periodo" msprop:Generator_RowDeletingName="PeriodoRowDeleting" msprop:Generator_RowChangingName="PeriodoRowChanging" msprop:Generator_RowEvHandlerName="PeriodoRowChangeEventHandler" msprop:Generator_RowDeletedName="PeriodoRowDeleted" msprop:Generator_RowClassName="PeriodoRow" msprop:Generator_UserTableName="Periodo" msprop:Generator_RowEvArgName="PeriodoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdPeriodo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdPeriodo" msprop:Generator_ColumnPropNameInRow="IdPeriodo" msprop:Generator_ColumnPropNameInTable="IdPeriodoColumn" msprop:Generator_UserColumnName="IdPeriodo" type="xs:int" />
@@ -1029,7 +1029,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Requisitos" msprop:Generator_TableClassName="RequisitosDataTable" msprop:Generator_TableVarName="tableRequisitos" msprop:Generator_TablePropName="Requisitos" msprop:Generator_RowDeletingName="RequisitosRowDeleting" msprop:Generator_RowChangingName="RequisitosRowChanging" msprop:Generator_RowEvHandlerName="RequisitosRowChangeEventHandler" msprop:Generator_RowDeletedName="RequisitosRowDeleted" msprop:Generator_UserTableName="Requisitos" msprop:Generator_RowChangedName="RequisitosRowChanged" msprop:Generator_RowEvArgName="RequisitosRowChangeEvent" msprop:Generator_RowClassName="RequisitosRow">
+        <xs:element name="Requisitos" msprop:Generator_TableClassName="RequisitosDataTable" msprop:Generator_TableVarName="tableRequisitos" msprop:Generator_RowChangedName="RequisitosRowChanged" msprop:Generator_TablePropName="Requisitos" msprop:Generator_RowDeletingName="RequisitosRowDeleting" msprop:Generator_RowChangingName="RequisitosRowChanging" msprop:Generator_RowEvHandlerName="RequisitosRowChangeEventHandler" msprop:Generator_RowDeletedName="RequisitosRowDeleted" msprop:Generator_RowClassName="RequisitosRow" msprop:Generator_UserTableName="Requisitos" msprop:Generator_RowEvArgName="RequisitosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CodClase" msprop:Generator_ColumnVarNameInTable="columnCodClase" msprop:Generator_ColumnPropNameInRow="CodClase" msprop:Generator_ColumnPropNameInTable="CodClaseColumn" msprop:Generator_UserColumnName="CodClase">
@@ -1049,7 +1049,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Sexo" msprop:Generator_TableClassName="SexoDataTable" msprop:Generator_TableVarName="tableSexo" msprop:Generator_TablePropName="Sexo" msprop:Generator_RowDeletingName="SexoRowDeleting" msprop:Generator_RowChangingName="SexoRowChanging" msprop:Generator_RowEvHandlerName="SexoRowChangeEventHandler" msprop:Generator_RowDeletedName="SexoRowDeleted" msprop:Generator_UserTableName="Sexo" msprop:Generator_RowChangedName="SexoRowChanged" msprop:Generator_RowEvArgName="SexoRowChangeEvent" msprop:Generator_RowClassName="SexoRow">
+        <xs:element name="Sexo" msprop:Generator_TableClassName="SexoDataTable" msprop:Generator_TableVarName="tableSexo" msprop:Generator_RowChangedName="SexoRowChanged" msprop:Generator_TablePropName="Sexo" msprop:Generator_RowDeletingName="SexoRowDeleting" msprop:Generator_RowChangingName="SexoRowChanging" msprop:Generator_RowEvHandlerName="SexoRowChangeEventHandler" msprop:Generator_RowDeletedName="SexoRowDeleted" msprop:Generator_RowClassName="SexoRow" msprop:Generator_UserTableName="Sexo" msprop:Generator_RowEvArgName="SexoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdSexo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdSexo" msprop:Generator_ColumnPropNameInRow="IdSexo" msprop:Generator_ColumnPropNameInTable="IdSexoColumn" msprop:Generator_UserColumnName="IdSexo" type="xs:int" />
