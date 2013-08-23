@@ -117,6 +117,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetSqlite.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet\temporal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>temporal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Enum1.vb" />
     <Compile Include="formularios\Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
@@ -240,6 +245,17 @@
     </None>
     <None Include="DataSet\DataSetSqlite.xss">
       <DependentUpon>DataSetSqlite.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\temporal.xsc">
+      <DependentUpon>temporal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\temporal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>temporal.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\temporal.xss">
+      <DependentUpon>temporal.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

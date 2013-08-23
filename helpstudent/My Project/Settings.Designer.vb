@@ -79,11 +79,11 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=db4free.net;User Id=studentapp;password=HelpUphCh01;database=studentapp;Pe"& _ 
-            "rsist Security Info=True")>  _
-        Public ReadOnly Property studentappConnectionString() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("data source=""C:\Users\dbrio\Documents\Visual Studio 2010\Projects\u3\helpstudent\"& _ 
+            "temporal.s3db""")>  _
+        Public ReadOnly Property temporal() As String
             Get
-                Return CType(Me("studentappConnectionString"),String)
+                Return CType(Me("temporal"),String)
             End Get
         End Property
     End Class
