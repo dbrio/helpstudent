@@ -57,33 +57,11 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("data source=""C:\Users\dbrio\Documents\Visual Studio 2010\Projects\helpstudent\hel"& _ 
-            "pstudent\StudentApp.s3db""")>  _
-        Public ReadOnly Property ConectionSqlite() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("data source=""C:\Users\dbrio\Documents\Visual Studio 2010\Projects\u4\helpstudent\"& _ 
+            "StudentApp.s3db""")>  _
+        Public ReadOnly Property StudentAppConnectionString() As String
             Get
-                Return CType(Me("ConectionSqlite"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=db4free.net;User Id=studentapp;password=HelpUphCh01;Persist Security Info="& _ 
-            "True;database=studentapp")>  _
-        Public ReadOnly Property ConectionMysql() As String
-            Get
-                Return CType(Me("ConectionMysql"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("data source=""C:\Users\dbrio\Documents\Visual Studio 2010\Projects\u3\helpstudent\"& _ 
-            "temporal.s3db""")>  _
-        Public ReadOnly Property temporal() As String
-            Get
-                Return CType(Me("temporal"),String)
+                Return CType(Me("StudentAppConnectionString"),String)
             End Get
         End Property
     End Class
