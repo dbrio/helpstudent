@@ -107,10 +107,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="DataSet\mysql.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mysql.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\sqlite.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>sqlite.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\temporal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>temporal.xsd</DependentUpon>
     </Compile>
     <Compile Include="Enum1.vb" />
     <Compile Include="formularios\Inicio.Designer.vb">
@@ -214,6 +224,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="DataSet\mysql.xsc">
+      <DependentUpon>mysql.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\mysql.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mysql.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\mysql.xss">
+      <DependentUpon>mysql.xsd</DependentUpon>
+    </None>
     <None Include="DataSet\sqlite.xsc">
       <DependentUpon>sqlite.xsd</DependentUpon>
     </None>
@@ -224,6 +245,17 @@
     </None>
     <None Include="DataSet\sqlite.xss">
       <DependentUpon>sqlite.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\temporal.xsc">
+      <DependentUpon>temporal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\temporal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>temporal.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\temporal.xss">
+      <DependentUpon>temporal.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
