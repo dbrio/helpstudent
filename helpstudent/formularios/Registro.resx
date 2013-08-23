@@ -520,18 +520,6 @@
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <metadata name="DataSetSqlite.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="AlumnoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>142, 17</value>
-  </metadata>
-  <metadata name="AlumnoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>315, 17</value>
-  </metadata>
-  <metadata name="TableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>483, 17</value>
-  </metadata>
   <data name="CtaAlumTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 77</value>
   </data>
@@ -828,30 +816,6 @@
   </data>
   <data name="&gt;&gt;RectangleShape1.Type" xml:space="preserve">
     <value>Microsoft.VisualBasic.PowerPacks.RectangleShape, Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;DataSetSqlite.Name" xml:space="preserve">
-    <value>DataSetSqlite</value>
-  </data>
-  <data name="&gt;&gt;DataSetSqlite.Type" xml:space="preserve">
-    <value>helpstudent.DataSetSqlite, DataSet.DataSetSqlite.Designer.vb, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AlumnoBindingSource.Name" xml:space="preserve">
-    <value>AlumnoBindingSource</value>
-  </data>
-  <data name="&gt;&gt;AlumnoBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AlumnoTableAdapter.Name" xml:space="preserve">
-    <value>AlumnoTableAdapter</value>
-  </data>
-  <data name="&gt;&gt;AlumnoTableAdapter.Type" xml:space="preserve">
-    <value>helpstudent.DataSetSqliteTableAdapters.AlumnoTableAdapter, DataSet.DataSetSqlite.Designer.vb, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TableAdapterManager.Name" xml:space="preserve">
-    <value>TableAdapterManager</value>
-  </data>
-  <data name="&gt;&gt;TableAdapterManager.Type" xml:space="preserve">
-    <value>helpstudent.DataSetSqliteTableAdapters.TableAdapterManager, DataSet.DataSetSqlite.Designer.vb, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Registro</value>
