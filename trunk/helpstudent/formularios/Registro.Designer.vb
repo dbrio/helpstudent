@@ -36,7 +36,7 @@ Partial Class Registro
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataSetSqlite = New helpstudent.DataSetSqlite()
         Me.AlumnoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AlumnoTableAdapter = New helpstudent.DataSetSqliteTableAdapters.AlumnoTableAdapter()
+
         Me.TableAdapterManager = New helpstudent.DataSetSqliteTableAdapters.TableAdapterManager()
         Me.CtaAlumTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
@@ -151,24 +151,11 @@ Partial Class Registro
         '
         'AlumnoTableAdapter
         '
-        Me.AlumnoTableAdapter.ClearBeforeFill = True
+
         '
         'TableAdapterManager
         '
-        Me.TableAdapterManager.AgendaTableAdapter = Nothing
-        Me.TableAdapterManager.AlumnoTableAdapter = Me.AlumnoTableAdapter
-        Me.TableAdapterManager.AnoTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CarreraClaseTableAdapter = Nothing
-        Me.TableAdapterManager.CarreraTableAdapter = Nothing
-        Me.TableAdapterManager.ClaseTableAdapter = Nothing
-        Me.TableAdapterManager.LoginTableAdapter = Nothing
-        Me.TableAdapterManager.MaestroTableAdapter = Nothing
-        Me.TableAdapterManager.MatriculaTableAdapter = Nothing
-        Me.TableAdapterManager.PeridoCatalogoTableAdapter = Nothing
-        Me.TableAdapterManager.PeriodoTableAdapter = Nothing
-        Me.TableAdapterManager.RequisitosTableAdapter = Nothing
-        Me.TableAdapterManager.SexoTableAdapter = Nothing
+      
         Me.TableAdapterManager.UpdateOrder = helpstudent.DataSetSqliteTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'CtaAlumTextEdit
@@ -320,7 +307,7 @@ Partial Class Registro
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents DataSetSqlite As helpstudent.DataSetSqlite
     Friend WithEvents AlumnoBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents AlumnoTableAdapter As helpstudent.DataSetSqliteTableAdapters.AlumnoTableAdapter
+
     Friend WithEvents TableAdapterManager As helpstudent.DataSetSqliteTableAdapters.TableAdapterManager
     Friend WithEvents CtaAlumTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents NombreTextEdit As DevExpress.XtraEditors.TextEdit
