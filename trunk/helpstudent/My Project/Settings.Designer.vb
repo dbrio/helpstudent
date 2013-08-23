@@ -64,6 +64,17 @@ Namespace My
                 Return CType(Me("StudentAppConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("data source=""C:\Users\dbrio\Documents\Visual Studio 2010\Projects\u1\helpstudent\"& _ 
+            "StudentApp.s3db""")>  _
+        Public ReadOnly Property StudentAppConnectionString1() As String
+            Get
+                Return CType(Me("StudentAppConnectionString1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

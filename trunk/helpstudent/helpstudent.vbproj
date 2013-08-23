@@ -107,20 +107,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
-    <Compile Include="DataSet\DataSetMysql.Designer.vb">
+    <Compile Include="DataSet\sqlite.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetMysql.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet\DataSetSqlite.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetSqlite.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet\temporal.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>temporal.xsd</DependentUpon>
+      <DependentUpon>sqlite.xsd</DependentUpon>
     </Compile>
     <Compile Include="Enum1.vb" />
     <Compile Include="formularios\Inicio.Designer.vb">
@@ -224,38 +214,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="DataSet\DataSetMysql.xsc">
-      <DependentUpon>DataSetMysql.xsd</DependentUpon>
+    <None Include="DataSet\sqlite.xsc">
+      <DependentUpon>sqlite.xsd</DependentUpon>
     </None>
-    <None Include="DataSet\DataSetMysql.xsd">
+    <None Include="DataSet\sqlite.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetMysql.Designer.vb</LastGenOutput>
+      <LastGenOutput>sqlite.Designer.vb</LastGenOutput>
     </None>
-    <None Include="DataSet\DataSetMysql.xss">
-      <DependentUpon>DataSetMysql.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet\DataSetSqlite.xsc">
-      <DependentUpon>DataSetSqlite.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet\DataSetSqlite.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetSqlite.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="DataSet\DataSetSqlite.xss">
-      <DependentUpon>DataSetSqlite.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet\temporal.xsc">
-      <DependentUpon>temporal.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet\temporal.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>temporal.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="DataSet\temporal.xss">
-      <DependentUpon>temporal.xsd</DependentUpon>
+    <None Include="DataSet\sqlite.xss">
+      <DependentUpon>sqlite.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -325,6 +293,7 @@
   <ItemGroup>
     <None Include="Resources\perfil.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
