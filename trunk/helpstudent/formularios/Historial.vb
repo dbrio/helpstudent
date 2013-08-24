@@ -1,10 +1,18 @@
-﻿Imports System.Data.SQLite
+﻿Imports System.Net.NetworkInformation
+Imports System.Data.SQLite
 
 
 Public Class Historial
     Dim DS As New DataSet
 
     Private Sub Historial_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        If NetworkInterface.GetIsNetworkAvailable Then
+            MsgBox("Tenemos internet ")
+        Else
+            MsgBox("No hay internet ")
+
+        End If
 
         Using CNN As New SQLiteConnection(cnnString)
             CNN.Open()

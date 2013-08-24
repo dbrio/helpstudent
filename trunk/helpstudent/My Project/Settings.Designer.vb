@@ -53,6 +53,17 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=db4free.net;User Id=studentapp;password=HelpUphCh01;database=studentapp;Pe"& _ 
+            "rsist Security Info=True")>  _
+        Public ReadOnly Property mysql() As String
+            Get
+                Return CType(Me("mysql"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
