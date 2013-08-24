@@ -150,7 +150,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CtaAlumLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="NombreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -183,7 +183,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NombreLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <metadata name="ApellidoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -216,7 +216,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ApellidoLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <metadata name="FechNacLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -249,7 +249,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;FechNacLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <metadata name="TelefonoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -327,7 +327,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="IdCarreraLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 314</value>
+    <value>223, 329</value>
   </data>
   <data name="IdCarreraLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 18</value>
@@ -360,7 +360,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="CorreoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 357</value>
+    <value>223, 372</value>
   </data>
   <data name="CorreoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 18</value>
@@ -393,7 +393,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="IdLoginLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 404</value>
+    <value>223, 419</value>
   </data>
   <data name="IdLoginLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 18</value>
@@ -426,7 +426,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 447</value>
+    <value>223, 462</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 18</value>
@@ -447,7 +447,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <assembly alias="Microsoft.VisualBasic.PowerPacks.Vs" name="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RectangleShape1.BackStyle" type="Microsoft.VisualBasic.PowerPacks.BackStyle, Microsoft.VisualBasic.PowerPacks.Vs">
@@ -539,7 +539,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CtaAlumTextEdit.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="NombreTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 115</value>
@@ -560,7 +560,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NombreTextEdit.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="ApellidoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 155</value>
@@ -581,31 +581,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ApellidoTextEdit.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="FechNacDateTimePicker.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 15.75pt</value>
-  </data>
-  <data name="FechNacDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 195</value>
-  </data>
-  <data name="FechNacDateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 33</value>
-  </data>
-  <data name="FechNacDateTimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;FechNacDateTimePicker.Name" xml:space="preserve">
-    <value>FechNacDateTimePicker</value>
-  </data>
-  <data name="&gt;&gt;FechNacDateTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FechNacDateTimePicker.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FechNacDateTimePicker.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="TelefonoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 235</value>
@@ -652,35 +628,35 @@
   <data name="&gt;&gt;IdSexoTextBox.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="IdLoginTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="UsuarioTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 15.75pt</value>
   </data>
-  <data name="IdLoginTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 395</value>
+  <data name="UsuarioTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 410</value>
   </data>
-  <data name="IdLoginTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="UsuarioTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 33</value>
   </data>
-  <data name="IdLoginTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="UsuarioTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;IdLoginTextBox.Name" xml:space="preserve">
-    <value>IdLoginTextBox</value>
+  <data name="&gt;&gt;UsuarioTextBox.Name" xml:space="preserve">
+    <value>UsuarioTextBox</value>
   </data>
-  <data name="&gt;&gt;IdLoginTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;UsuarioTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;IdLoginTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;UsuarioTextBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;IdLoginTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;UsuarioTextBox.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
   <data name="IdCarreraTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 15.75pt</value>
   </data>
   <data name="IdCarreraTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 314</value>
+    <value>367, 329</value>
   </data>
   <data name="IdCarreraTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 33</value>
@@ -701,7 +677,7 @@
     <value>19</value>
   </data>
   <data name="CorreoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 354</value>
+    <value>367, 369</value>
   </data>
   <data name="CorreoTextEdit.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 32</value>
@@ -721,35 +697,35 @@
   <data name="&gt;&gt;CorreoTextEdit.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <data name="TextBox1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="ContrasenaTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 15.75pt</value>
   </data>
-  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 438</value>
+  <data name="ContrasenaTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 453</value>
   </data>
-  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ContrasenaTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 33</value>
   </data>
-  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="ContrasenaTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
-    <value>TextBox1</value>
+  <data name="&gt;&gt;ContrasenaTextBox.Name" xml:space="preserve">
+    <value>ContrasenaTextBox</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;ContrasenaTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ContrasenaTextBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;ContrasenaTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="BtnRegistrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="BtnRegistrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 490</value>
+    <value>367, 491</value>
   </data>
   <data name="BtnRegistrar.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 59</value>
@@ -770,7 +746,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnRegistrar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="SimpleButton1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -797,6 +773,41 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SimpleButton1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="DateEdit1.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="DateEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 204</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v10.1" name="DevExpress.Utils.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+  <data name="DateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.1">
+    <value>Combo</value>
+  </data>
+  <data name="DateEdit1.Properties.Mask.EditMask" xml:space="preserve">
+    <value>([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v10.1" name="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+  <data name="DateEdit1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.1">
+    <value>RegEx</value>
+  </data>
+  <data name="DateEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="DateEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;DateEdit1.Name" xml:space="preserve">
+    <value>DateEdit1</value>
+  </data>
+  <data name="&gt;&gt;DateEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd</value>
+  </data>
+  <data name="&gt;&gt;DateEdit1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DateEdit1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

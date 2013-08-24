@@ -1,9 +1,39 @@
-﻿Public Class Registro 
+﻿Imports System.Net.NetworkInformation
+Imports System.Data.SQLite
+Public Class Registro
     Dim ex, ey As Integer
     Dim arrastrar As Boolean
     Private Sub BtnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRegistrar.Click
         login.Show()
         Me.Close()
+
+        If NetworkInterface.GetIsNetworkAvailable Then
+            Using CNN As New SQLiteConnection(cnnString)
+                CNN.Open()
+                Dim U As String = "INSERT INTO Login ( Usuario, Contrasena) VALUES ( @Usuario, @Contrasena)"
+                Dim Q As String = "INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdLogin, IdCarrera, Correo) VALUES(@CtaAlum, @Nombre, @Apellido, @FechNac, @Telefono, @IdSexo,@IdLg  @IdCarrera, @Correo)"
+
+                Dim cmd As New SQLiteCommand(Q, CNN)
+                Dim cm As New SQLiteCommand(U, CNN)
+                cmd.Parameters.Add("@CtaAlum", SqlDbType.VarChar, 10).Value = CtaAlumTextEdit.EditValue
+                cmd.Parameters.Add("@Nombre", SqlDbType.VarChar, 30).Value = NombreTextEdit.EditValue
+                cmd.Parameters.Add("@Apellido", SqlDbType.VarChar, 30).Value = ApellidoTextEdit.EditValue
+                cmd.Parameters.Add("@FechNac", SqlDbType.Date).Value = DateEdit1.EditValue
+                cmd.Parameters.Add("@Telefono", SqlDbType.VarChar, 9).Value = TelefonoTextEdit.EditValue
+                cmd.Parameters.Add("@IdSexo", SqlDbType.Int).Value = IdSexoTextBox.Text
+                cmd.Parameters.Add("@IdCarrera", SqlDbType.Int).Value = IdCarreraTextBox.Text
+                cmd.Parameters.Add("@Correo", SqlDbType.VarChar, 50).Value = CorreoTextEdit.EditValue
+                cm.Parameters.Add("@Usuario", SqlDbType.VarChar, 10).Value = UsuarioTextBox.Text
+                cm.Parameters.Add("@Contrasena", SqlDbType.VarChar, 40).Value = ContrasenaTextBox.Text
+                cm.ExecuteNonQuery()
+                cmd.ExecuteNonQuery()
+
+                MsgBox("El Gallo ya canto")
+                CNN.Close()
+            End Using
+        Else
+
+        End If
     End Sub
 
     Private Sub Registro_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseDown

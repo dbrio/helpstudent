@@ -36,15 +36,15 @@ Partial Class Registro
         Me.CtaAlumTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.ApellidoTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.FechNacDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.TelefonoTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.IdSexoTextBox = New System.Windows.Forms.TextBox()
-        Me.IdLoginTextBox = New System.Windows.Forms.TextBox()
+        Me.UsuarioTextBox = New System.Windows.Forms.TextBox()
         Me.IdCarreraTextBox = New System.Windows.Forms.TextBox()
         Me.CorreoTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ContrasenaTextBox = New System.Windows.Forms.TextBox()
         Me.BtnRegistrar = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.DateEdit1 = New DevExpress.XtraEditors.DateEdit()
         CtaAlumLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidoLabel = New System.Windows.Forms.Label()
@@ -60,6 +60,8 @@ Partial Class Registro
         CType(Me.ApellidoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit1.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CtaAlumLabel
@@ -153,11 +155,6 @@ Partial Class Registro
         Me.ApellidoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ApellidoTextEdit.Properties.Appearance.Options.UseFont = True
         '
-        'FechNacDateTimePicker
-        '
-        resources.ApplyResources(Me.FechNacDateTimePicker, "FechNacDateTimePicker")
-        Me.FechNacDateTimePicker.Name = "FechNacDateTimePicker"
-        '
         'TelefonoTextEdit
         '
         resources.ApplyResources(Me.TelefonoTextEdit, "TelefonoTextEdit")
@@ -170,10 +167,10 @@ Partial Class Registro
         resources.ApplyResources(Me.IdSexoTextBox, "IdSexoTextBox")
         Me.IdSexoTextBox.Name = "IdSexoTextBox"
         '
-        'IdLoginTextBox
+        'UsuarioTextBox
         '
-        resources.ApplyResources(Me.IdLoginTextBox, "IdLoginTextBox")
-        Me.IdLoginTextBox.Name = "IdLoginTextBox"
+        resources.ApplyResources(Me.UsuarioTextBox, "UsuarioTextBox")
+        Me.UsuarioTextBox.Name = "UsuarioTextBox"
         '
         'IdCarreraTextBox
         '
@@ -187,10 +184,10 @@ Partial Class Registro
         Me.CorreoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CorreoTextEdit.Properties.Appearance.Options.UseFont = True
         '
-        'TextBox1
+        'ContrasenaTextBox
         '
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
-        Me.TextBox1.Name = "TextBox1"
+        resources.ApplyResources(Me.ContrasenaTextBox, "ContrasenaTextBox")
+        Me.ContrasenaTextBox.Name = "ContrasenaTextBox"
         '
         'BtnRegistrar
         '
@@ -217,6 +214,15 @@ Partial Class Registro
         Me.SimpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft
         Me.SimpleButton1.Name = "SimpleButton1"
         '
+        'DateEdit1
+        '
+        resources.ApplyResources(Me.DateEdit1, "DateEdit1")
+        Me.DateEdit1.Name = "DateEdit1"
+        Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("DateEdit1.Properties.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
+        Me.DateEdit1.Properties.Mask.EditMask = resources.GetString("DateEdit1.Properties.Mask.EditMask")
+        Me.DateEdit1.Properties.Mask.MaskType = CType(resources.GetObject("DateEdit1.Properties.Mask.MaskType"), DevExpress.XtraEditors.Mask.MaskType)
+        Me.DateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        '
         'Registro
         '
         Me.AllowDrop = True
@@ -225,9 +231,10 @@ Partial Class Registro
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         resources.ApplyResources(Me, "$this")
         Me.ControlBox = False
+        Me.Controls.Add(Me.DateEdit1)
         Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ContrasenaTextBox)
         Me.Controls.Add(Me.BtnRegistrar)
         Me.Controls.Add(CtaAlumLabel)
         Me.Controls.Add(Me.CtaAlumTextEdit)
@@ -236,13 +243,12 @@ Partial Class Registro
         Me.Controls.Add(ApellidoLabel)
         Me.Controls.Add(Me.ApellidoTextEdit)
         Me.Controls.Add(FechNacLabel)
-        Me.Controls.Add(Me.FechNacDateTimePicker)
         Me.Controls.Add(TelefonoLabel)
         Me.Controls.Add(Me.TelefonoTextEdit)
         Me.Controls.Add(IdSexoLabel)
         Me.Controls.Add(Me.IdSexoTextBox)
         Me.Controls.Add(IdLoginLabel)
-        Me.Controls.Add(Me.IdLoginTextBox)
+        Me.Controls.Add(Me.UsuarioTextBox)
         Me.Controls.Add(IdCarreraLabel)
         Me.Controls.Add(Me.IdCarreraTextBox)
         Me.Controls.Add(CorreoLabel)
@@ -253,13 +259,15 @@ Partial Class Registro
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Registro"
-        Me.Opacity = 0.98R
+        Me.Opacity = 0.97999999999999998R
         Me.ShowIcon = False
         CType(Me.CtaAlumTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApellidoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit1.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -273,13 +281,13 @@ Partial Class Registro
     Friend WithEvents CtaAlumTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents NombreTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents ApellidoTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents FechNacDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents TelefonoTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents IdSexoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents IdLoginTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents UsuarioTextBox As System.Windows.Forms.TextBox
     Friend WithEvents IdCarreraTextBox As System.Windows.Forms.TextBox
     Friend WithEvents CorreoTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents ContrasenaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents BtnRegistrar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents DateEdit1 As DevExpress.XtraEditors.DateEdit
 End Class
