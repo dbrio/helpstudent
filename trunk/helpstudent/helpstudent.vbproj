@@ -131,6 +131,12 @@
     <Compile Include="formularios\MDIParent1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formularios\Perfil.Designer.vb">
+      <DependentUpon>Perfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Perfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formularios\PlandeEstudio.Designer.vb">
       <DependentUpon>PlandeEstudio.vb</DependentUpon>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\MDIParent1.resx">
       <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\perfil.resx">
+      <DependentUpon>Perfil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\PlandeEstudio.resx">
       <DependentUpon>PlandeEstudio.vb</DependentUpon>
@@ -290,7 +299,12 @@
   <ItemGroup>
     <None Include="Resources\perfil.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1377398002_65.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1377398002_651.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

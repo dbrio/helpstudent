@@ -43,4 +43,13 @@
     Private Sub RectangleShapeUsuario_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles RectangleShapeUsuario.MouseMove
         RectangleShapeUsuario.BackColor = Color.FromArgb(&H7B, &HAD, &H18)
     End Sub
+
+    Private Sub RectangleShapeUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShapeUsuario.Click
+        With perfil
+            .MdiParent = MdiParent
+            .Show()
+            .Focus()
+        End With
+        Me.Hide()
+    End Sub
 End Class
