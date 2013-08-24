@@ -90,4 +90,10 @@ Public Class MDIParent1
     End Sub
 
     
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        Dim star = Inicio
+        star.MdiParent = Me
+        star.Show()
+
+    End Sub
 End Class

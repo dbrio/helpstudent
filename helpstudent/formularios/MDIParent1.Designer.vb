@@ -68,8 +68,10 @@ Partial Class MDIParent1
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip
@@ -373,6 +375,18 @@ Partial Class MDIParent1
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = Global.helpstudent.My.Resources.Resources._1377398002_651
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 39)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(59, 53)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
         'MDIParent1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -380,6 +394,7 @@ Partial Class MDIParent1
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.helpstudent.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(859, 453)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -392,6 +407,7 @@ Partial Class MDIParent1
         Me.MenuStrip.PerformLayout()
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -439,5 +455,6 @@ Partial Class MDIParent1
     Friend WithEvents ToolBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolsMenu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class
