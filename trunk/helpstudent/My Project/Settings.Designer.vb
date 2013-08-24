@@ -53,26 +53,6 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("data source=C:\u1\helpstudent\StudentApp.s3db")>  _
-        Public ReadOnly Property StudentAppConnectionString() As String
-            Get
-                Return CType(Me("StudentAppConnectionString"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("data source=C:\u1\helpstudent\temporal.s3db")>  _
-        Public ReadOnly Property temporalConnectionString() As String
-            Get
-                Return CType(Me("temporalConnectionString"),String)
-            End Get
-        End Property
     End Class
 End Namespace
 
