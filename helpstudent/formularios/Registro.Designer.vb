@@ -219,6 +219,8 @@ Partial Class Registro
         resources.ApplyResources(Me.DateEdit1, "DateEdit1")
         Me.DateEdit1.Name = "DateEdit1"
         Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("DateEdit1.Properties.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
+        Me.DateEdit1.Properties.DisplayFormat.FormatString = "dd/MM/yyyy"
+        Me.DateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.DateEdit1.Properties.Mask.EditMask = resources.GetString("DateEdit1.Properties.Mask.EditMask")
         Me.DateEdit1.Properties.Mask.MaskType = CType(resources.GetObject("DateEdit1.Properties.Mask.MaskType"), DevExpress.XtraEditors.Mask.MaskType)
         Me.DateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
@@ -259,7 +261,7 @@ Partial Class Registro
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Registro"
-        Me.Opacity = 0.97999999999999998R
+        Me.Opacity = 0.98R
         Me.ShowIcon = False
         CType(Me.CtaAlumTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()

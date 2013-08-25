@@ -790,7 +790,7 @@
   </data>
   <assembly alias="DevExpress.XtraEditors.v10.1" name="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
   <data name="DateEdit1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.1">
-    <value>RegEx</value>
+    <value>None</value>
   </data>
   <data name="DateEdit1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
