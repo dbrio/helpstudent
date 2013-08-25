@@ -1,7 +1,4 @@
-﻿Imports System.Net.NetworkInformation
-Imports System.Data.SQLite
-
-
+﻿
 Public Class Historial
 
     Dim DS As New DataSet
