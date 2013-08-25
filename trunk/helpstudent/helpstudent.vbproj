@@ -118,7 +118,9 @@
   <ItemGroup>
     <Compile Include="Class1.vb" />
     <Compile Include="Conexion.vb" />
+    <Compile Include="DBManager.vb" />
     <Compile Include="Enum1.vb" />
+    <Compile Include="formularios\Conexio1.vb" />
     <Compile Include="formularios\Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>
