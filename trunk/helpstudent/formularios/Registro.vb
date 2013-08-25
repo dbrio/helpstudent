@@ -4,21 +4,20 @@ Public Class Registro
     Dim ex, ey As Integer
     Dim arrastrar As Boolean
     Private Sub BtnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRegistrar.Click
-        login.Show()
-        Me.Close()
+        
 
         If NetworkInterface.GetIsNetworkAvailable Then
             Using CNN As New SQLiteConnection(cnnString)
                 CNN.Open()
                 Dim U As String = "INSERT INTO Login ( Usuario, Contrasena) VALUES ( @Usuario, @Contrasena)"
-                Dim Q As String = "INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdLogin, IdCarrera, Correo) VALUES(@CtaAlum, @Nombre, @Apellido, @FechNac, @Telefono, @IdSexo,@IdLg  @IdCarrera, @Correo)"
+                Dim Q As String = "INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo,IdLogin, IdCarrera, Correo) VALUES(@CtaAlum, @Nombre, @Apellido, @FechNac, @Telefono, @IdSexo,1,  @IdCarrera, @Correo)"
 
                 Dim cmd As New SQLiteCommand(Q, CNN)
                 Dim cm As New SQLiteCommand(U, CNN)
                 cmd.Parameters.Add("@CtaAlum", SqlDbType.VarChar, 10).Value = CtaAlumTextEdit.EditValue
                 cmd.Parameters.Add("@Nombre", SqlDbType.VarChar, 30).Value = NombreTextEdit.EditValue
                 cmd.Parameters.Add("@Apellido", SqlDbType.VarChar, 30).Value = ApellidoTextEdit.EditValue
-                cmd.Parameters.Add("@FechNac", SqlDbType.Date).Value = DateEdit1.EditValue
+                cmd.Parameters.Add("@FechNac", SqlDbType.VarChar).Value = DateEdit1.EditValue
                 cmd.Parameters.Add("@Telefono", SqlDbType.VarChar, 9).Value = TelefonoTextEdit.EditValue
                 cmd.Parameters.Add("@IdSexo", SqlDbType.Int).Value = IdSexoTextBox.Text
                 cmd.Parameters.Add("@IdCarrera", SqlDbType.Int).Value = IdCarreraTextBox.Text
@@ -34,6 +33,9 @@ Public Class Registro
         Else
 
         End If
+
+        login.Show()
+        Me.Close()
     End Sub
 
     Private Sub Registro_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseDown
