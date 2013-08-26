@@ -1,37 +1,92 @@
 ﻿Imports System.Net.NetworkInformation
-Imports System.Data.SQLite
+
 Public Class Registro
-    Dim ex, ey As Integer
-    Dim arrastrar As Boolean
+
     Private Sub BtnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRegistrar.Click
-        
+        If CtaAlumTextEdit.Text.Trim = "" Or Not IsNumeric(CtaAlumTextEdit.EditValue) Then
+            MsgBox("Cuenta no valida ", MsgBoxStyle.Information, "HelStudent")
+            CtaAlumTextEdit.Focus()
+            CtaAlumTextEdit.BackColor = Color.LemonChiffon
+            Exit Sub
+        End If
+
+        If NombreTextEdit.Text.Trim = "" Then
+            MsgBox("Debe escribir un nombre", MsgBoxStyle.Information, "HelpStudent")
+            NombreTextEdit.Focus()
+            NombreTextEdit.BackColor = Color.LemonChiffon
+            Exit Sub
+
+        End If
+
+        If ApellidoTextEdit.Text.Trim = "" Then
+            MsgBox("Debe escribir un Apellido", MsgBoxStyle.Information, "HelpStudent")
+            ApellidoTextEdit.Focus()
+            ApellidoTextEdit.BackColor = Color.LemonChiffon
+            Exit Sub
+
+        End If
+
+        If DateEdit1.Text.Trim = "" Then
+            MsgBox("Debe escribir una fecha de nacimiento", MsgBoxStyle.Information, "HelpStudent")
+            DateEdit1.Focus()
+            DateEdit1.BackColor = Color.LemonChiffon
+            Exit Sub
+
+        End If
+
+        If TelefonoTextEdit.Text.Trim = "" Then
+            MsgBox("Debe escribir su numero telefonico", MsgBoxStyle.Information, "HelpStudent")
+            TelefonoTextEdit.Focus()
+            TelefonoTextEdit.BackColor = Color.LemonChiffon
+            Exit Sub
+
+        End If
+
+
+        If ComboBoxSexo.Text.Trim = "" Then
+            MsgBox("Debe seleccionar un genero", MsgBoxStyle.Information, "HelpStudent")
+            ComboBoxSexo.Focus()
+            ComboBoxSexo.BackColor = Color.LemonChiffon
+            Exit Sub
+
+        End If
+
+        If ComboBoxCarrera.Text.Trim = "" Then
+            MsgBox("Debe seleccionar una carrera", MsgBoxStyle.Information, "HelpStudent")
+            ComboBoxCarrera.Focus()
+            ComboBoxCarrera.BackColor = Color.LemonChiffon
+            Exit Sub
+
+        End If
+
+        If TextEditUsuario.Text.Trim = "" Then
+            MsgBox("Debes de escribir tu usuario", MsgBoxStyle.Information, "HelpStudent")
+            TextEditUsuario.Focus()
+            TextEditUsuario.BackColor = Color.LemonChiffon
+            Exit Sub
+
+        End If
+        If ContrasenaTextBox.Text.Trim = "" Then
+            MsgBox("Debes de escribir una contraseña", MsgBoxStyle.Information, "HelpStudent")
+            ContrasenaTextBox.Focus()
+            ContrasenaTextBox.BackColor = Color.LemonChiffon
+            Exit Sub
+
+        End If
+
 
         If NetworkInterface.GetIsNetworkAvailable Then
-            Using CNN As New SQLiteConnection(cnnString)
-                CNN.Open()
+            Try
+                'Registramos el Alumno con el usuario db StudentApp
+                Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, DateEdit1.EditValue, TelefonoTextEdit.EditValue, ComboBoxSexo.Text, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
+                Dim InsertLogin As String = String.Format("INSERT INTO Login (Usuario, Contrasena, CtaAlum) VALUES ('{0}','{1}','{2}')", TextEditUsuario.EditValue, ContrasenaTextBox.Text, CtaAlumTextEdit.EditValue)
+                db.NotQuery(InserAlumno)
+                db.NotQuery(InsertLogin)
+                MsgBox("Te has registrado Exitosamente !Exitos!", MsgBoxStyle.Information, "Registro exitoso")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
 
-                Dim Q As String = "INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES(@CtaAlum, @Nombre, @Apellido, @FechNac, @Telefono, @IdSexo, @IdCarrera, @Correo)"
-                Dim U As String = "INSERT INTO Login ( Usuario, Contrasena, CtaAlum) VALUES ( @Usuario, @Contrasena,@CtaAlum )"
-
-                Dim cmd As New SQLiteCommand(Q, CNN)
-                Dim cm As New SQLiteCommand(U, CNN)
-                cmd.Parameters.Add("@CtaAlum", SqlDbType.VarChar, 10).Value = CtaAlumTextEdit.EditValue
-                cmd.Parameters.Add("@Nombre", SqlDbType.VarChar, 30).Value = NombreTextEdit.EditValue
-                cmd.Parameters.Add("@Apellido", SqlDbType.VarChar, 30).Value = ApellidoTextEdit.EditValue
-                cmd.Parameters.Add("@FechNac", SqlDbType.Date).Value = DateEdit1.EditValue
-                cmd.Parameters.Add("@Telefono", SqlDbType.VarChar, 9).Value = TelefonoTextEdit.EditValue
-                cmd.Parameters.Add("@IdSexo", SqlDbType.Int).Value = IdSexoTextBox.Text
-                cmd.Parameters.Add("@IdCarrera", SqlDbType.Int).Value = IdCarreraTextBox.Text
-                cmd.Parameters.Add("@Correo", SqlDbType.VarChar, 50).Value = CorreoTextEdit.EditValue
-                cm.Parameters.Add("@Usuario", SqlDbType.VarChar, 10).Value = UsuarioTextBox.Text
-                cm.Parameters.Add("@Contrasena", SqlDbType.VarChar, 40).Value = ContrasenaTextBox.Text
-                cmd.ExecuteNonQuery()
-                cm.ExecuteNonQuery()
-
-
-                MsgBox("El Gallo ya canto")
-                CNN.Close()
-            End Using
         Else
 
         End If
@@ -40,26 +95,28 @@ Public Class Registro
         Me.Close()
     End Sub
 
-    Private Sub Registro_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseDown
-        ex = e.X
-        ey = e.Y
-        arrastrar = True
+
+
+
+    Private Sub Registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        CtaAlumTextEdit.Focus()
+
+        ComboBoxSexo.Items.Insert("0", "Masculino")
+        ComboBoxSexo.Items.Insert("1", "Femenino")
+
+        ComboBoxCarrera.Items.Insert("0", "Ingenería en Sistema")
+        ComboBoxCarrera.Items.Insert("1", "Ingenería en Industrial")
+        ComboBoxCarrera.Items.Insert("2", "Lic En Gerencia de Negocios")
+        ComboBoxCarrera.Items.Insert("3", "Ingenería Electronica")
+        ComboBoxCarrera.Items.Insert("4", "Lic. En Gerencia de Turismo")
+
+
+
+
+
+
     End Sub
 
-    Private Sub Registro_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseMove
-        If arrastrar Then
-            Location = PointToScreen(New Point(MousePosition.X - Location.X - ex, MousePosition.Y - Location.Y - ex))
 
-        End If
-
-    End Sub
-
-    Private Sub Registro_MouseUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseUp
-        arrastrar = False
-    End Sub
-
-    Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton1.Click
-        login.Show()
-        Me.Close()
-    End Sub
+   
 End Class

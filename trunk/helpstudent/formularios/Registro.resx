@@ -150,7 +150,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CtaAlumLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <metadata name="NombreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -183,7 +183,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NombreLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <metadata name="ApellidoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -216,7 +216,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ApellidoLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <metadata name="FechNacLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -249,7 +249,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;FechNacLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <metadata name="TelefonoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -282,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TelefonoLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <metadata name="IdSexoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -294,7 +294,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="IdSexoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 275</value>
+    <value>225, 288</value>
   </data>
   <data name="IdSexoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 18</value>
@@ -315,7 +315,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IdSexoLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <metadata name="IdCarreraLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -348,7 +348,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IdCarreraLabel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <metadata name="CorreoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -414,7 +414,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IdLoginLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <metadata name="Label1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -447,7 +447,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <assembly alias="Microsoft.VisualBasic.PowerPacks.Vs" name="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RectangleShape1.BackStyle" type="Microsoft.VisualBasic.PowerPacks.BackStyle, Microsoft.VisualBasic.PowerPacks.Vs">
@@ -523,6 +523,16 @@
   <data name="CtaAlumTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 77</value>
   </data>
+  <data name="CtaAlumTextEdit.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CtaAlumTextEdit.Properties.Mask.EditMask" xml:space="preserve">
+    <value>\d\d\d\d\d\d\d\d\d\d</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v10.1" name="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+  <data name="CtaAlumTextEdit.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.1">
+    <value>Regular</value>
+  </data>
   <data name="CtaAlumTextEdit.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 32</value>
   </data>
@@ -539,7 +549,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CtaAlumTextEdit.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="NombreTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 115</value>
@@ -548,7 +558,7 @@
     <value>299, 32</value>
   </data>
   <data name="NombreTextEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;NombreTextEdit.Name" xml:space="preserve">
     <value>NombreTextEdit</value>
@@ -560,7 +570,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NombreTextEdit.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="ApellidoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 155</value>
@@ -569,7 +579,7 @@
     <value>299, 32</value>
   </data>
   <data name="ApellidoTextEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;ApellidoTextEdit.Name" xml:space="preserve">
     <value>ApellidoTextEdit</value>
@@ -581,100 +591,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ApellidoTextEdit.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="TelefonoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 235</value>
-  </data>
-  <data name="TelefonoTextEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 32</value>
-  </data>
-  <data name="TelefonoTextEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;TelefonoTextEdit.Name" xml:space="preserve">
-    <value>TelefonoTextEdit</value>
-  </data>
-  <data name="&gt;&gt;TelefonoTextEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd</value>
-  </data>
-  <data name="&gt;&gt;TelefonoTextEdit.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TelefonoTextEdit.ZOrder" xml:space="preserve">
     <value>13</value>
-  </data>
-  <data name="IdSexoTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 15.75pt</value>
-  </data>
-  <data name="IdSexoTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 275</value>
-  </data>
-  <data name="IdSexoTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 33</value>
-  </data>
-  <data name="IdSexoTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;IdSexoTextBox.Name" xml:space="preserve">
-    <value>IdSexoTextBox</value>
-  </data>
-  <data name="&gt;&gt;IdSexoTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IdSexoTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;IdSexoTextBox.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="UsuarioTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 15.75pt</value>
-  </data>
-  <data name="UsuarioTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 410</value>
-  </data>
-  <data name="UsuarioTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 33</value>
-  </data>
-  <data name="UsuarioTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;UsuarioTextBox.Name" xml:space="preserve">
-    <value>UsuarioTextBox</value>
-  </data>
-  <data name="&gt;&gt;UsuarioTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;UsuarioTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;UsuarioTextBox.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="IdCarreraTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 15.75pt</value>
-  </data>
-  <data name="IdCarreraTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 329</value>
-  </data>
-  <data name="IdCarreraTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 33</value>
-  </data>
-  <data name="IdCarreraTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;IdCarreraTextBox.Name" xml:space="preserve">
-    <value>IdCarreraTextBox</value>
-  </data>
-  <data name="&gt;&gt;IdCarreraTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IdCarreraTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;IdCarreraTextBox.ZOrder" xml:space="preserve">
-    <value>19</value>
   </data>
   <data name="CorreoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 369</value>
@@ -683,7 +600,7 @@
     <value>299, 32</value>
   </data>
   <data name="CorreoTextEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;CorreoTextEdit.Name" xml:space="preserve">
     <value>CorreoTextEdit</value>
@@ -707,7 +624,7 @@
     <value>299, 33</value>
   </data>
   <data name="ContrasenaTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;ContrasenaTextBox.Name" xml:space="preserve">
     <value>ContrasenaTextBox</value>
@@ -719,7 +636,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ContrasenaTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="BtnRegistrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -746,7 +663,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnRegistrar.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="SimpleButton1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -773,13 +690,112 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SimpleButton1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ComboBoxSexo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 15.75pt</value>
+  </data>
+  <data name="ComboBoxSexo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 280</value>
+  </data>
+  <data name="ComboBoxSexo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 33</value>
+  </data>
+  <data name="ComboBoxSexo.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxSexo.Name" xml:space="preserve">
+    <value>ComboBoxSexo</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxSexo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxSexo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxSexo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TextEditUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 410</value>
+  </data>
+  <data name="TextEditUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 32</value>
+  </data>
+  <data name="TextEditUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;TextEditUsuario.Name" xml:space="preserve">
+    <value>TextEditUsuario</value>
+  </data>
+  <data name="&gt;&gt;TextEditUsuario.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd</value>
+  </data>
+  <data name="&gt;&gt;TextEditUsuario.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEditUsuario.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ComboBoxCarrera.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 15.75pt</value>
+  </data>
+  <data name="ComboBoxCarrera.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 326</value>
+  </data>
+  <data name="ComboBoxCarrera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 33</value>
+  </data>
+  <data name="ComboBoxCarrera.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxCarrera.Name" xml:space="preserve">
+    <value>ComboBoxCarrera</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxCarrera.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxCarrera.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxCarrera.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="TelefonoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 237</value>
+  </data>
+  <data name="TelefonoTextEdit.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TelefonoTextEdit.Properties.Mask.EditMask" xml:space="preserve">
+    <value>\d\d\d\d-\d\d\d\d</value>
+  </data>
+  <data name="TelefonoTextEdit.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.1">
+    <value>Regular</value>
+  </data>
+  <data name="TelefonoTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 32</value>
+  </data>
+  <data name="TelefonoTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;TelefonoTextEdit.Name" xml:space="preserve">
+    <value>TelefonoTextEdit</value>
+  </data>
+  <data name="&gt;&gt;TelefonoTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd</value>
+  </data>
+  <data name="&gt;&gt;TelefonoTextEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TelefonoTextEdit.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <data name="DateEdit1.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="DateEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 204</value>
+    <value>367, 195</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.1" name="DevExpress.Utils.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
   <data name="DateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.1">
@@ -788,15 +804,14 @@
   <data name="DateEdit1.Properties.Mask.EditMask" xml:space="preserve">
     <value>([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]</value>
   </data>
-  <assembly alias="DevExpress.XtraEditors.v10.1" name="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
   <data name="DateEdit1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.1">
-    <value>None</value>
+    <value>RegEx</value>
   </data>
   <data name="DateEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>299, 20</value>
   </data>
   <data name="DateEdit1.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;DateEdit1.Name" xml:space="preserve">
     <value>DateEdit1</value>
