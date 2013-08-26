@@ -28,14 +28,14 @@ Public Class DBManager
 
 
     Public Function NotQuery(ByVal comando As String)
-        Using CMD As New SQLiteCommand(comando)
+        Using CMD As New SQLiteCommand(comando, CNN)
             Try
                 CNN.Open()
                 CMD.ExecuteNonQuery()
                 CNN.Close()
                 Return True
             Catch ex As Exception
-
+                Return False
             End Try
         End Using
     End Function
