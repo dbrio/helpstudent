@@ -1,6 +1,7 @@
 ﻿Imports System.Net.NetworkInformation
 
 Public Class Registro
+    Dim DS As New DataSet
 
     Private Sub BtnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRegistrar.Click
         If CtaAlumTextEdit.Text.Trim = "" Or Not IsNumeric(CtaAlumTextEdit.EditValue) Then
@@ -78,7 +79,7 @@ Public Class Registro
         If NetworkInterface.GetIsNetworkAvailable Then
             Try
                 'Registramos el Alumno con el usuario db StudentApp
-                Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, DateEdit1.EditValue, TelefonoTextEdit.EditValue, ComboBoxSexo.Text, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
+                Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, DateEdit1.EditValue, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
                 Dim InsertLogin As String = String.Format("INSERT INTO Login (Usuario, Contrasena, CtaAlum) VALUES ('{0}','{1}','{2}')", TextEditUsuario.EditValue, ContrasenaTextBox.Text, CtaAlumTextEdit.EditValue)
                 db.NotQuery(InserAlumno)
                 db.NotQuery(InsertLogin)
@@ -101,22 +102,17 @@ Public Class Registro
     Private Sub Registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         CtaAlumTextEdit.Focus()
 
-        ComboBoxSexo.Items.Insert("0", "Masculino")
-        ComboBoxSexo.Items.Insert("1", "Femenino")
 
-        ComboBoxCarrera.Items.Insert("0", "Ingenería en Sistema")
-        ComboBoxCarrera.Items.Insert("1", "Ingenería en Industrial")
-        ComboBoxCarrera.Items.Insert("2", "Lic En Gerencia de Negocios")
-        ComboBoxCarrera.Items.Insert("3", "Ingenería Electronica")
-        ComboBoxCarrera.Items.Insert("4", "Lic. En Gerencia de Turismo")
+        ComboBoxSexo.DisplayMember = "Sexo"
+        ComboBoxSexo.ValueMember = "IdSexo"
+        ComboBoxSexo.DataSource = db.GetData("SELECT IdSexo, Sexo FROM Sexo")
 
-
-
-
-
+        ComboBoxCarrera.DisplayMember = "Nombre"
+        ComboBoxCarrera.ValueMember = "IdCarrera"
+        ComboBoxCarrera.DataSource = db.GetData("SELECT IdCarrera, Nombre FROM Carrera")
 
     End Sub
 
-
-   
+    
+  
 End Class
