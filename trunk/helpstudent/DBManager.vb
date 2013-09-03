@@ -1,12 +1,26 @@
-﻿Imports System.Data.SQLite
+﻿Imports MySql.Data.MySqlClient
+Imports System.Data.SQLite
+
+
 
 Public Class DBManager
+    Private MyCNN As New MySqlConnection
     Private CNN As New SQLiteConnection
 
     Public Sub New()
+
+        'conexion a sqlite
         Dim path1 As String = AppDomain.CurrentDomain.BaseDirectory
         Dim dbpath As String = path1.Replace("\bin\Debug\", "\StudentApp.s3db")
         CNN.ConnectionString = String.Format("Data Source={0}", dbpath)
+
+        'Conexion a mysql
+        Dim host As String = "db4free.net"
+        Dim user As String = "studentapp"
+        Dim pass As String = "HelpUphCh01"
+        Dim db As String = "studentapp"
+        MyCNN.ConnectionString = String.Format("server={0}; uid={1}; pwd={2}; database={3}", host, user, pass, db)
+
     End Sub
 
     Public Function GetData(ByVal cmd As String, Optional ByVal table As String = "Tablex")
@@ -23,7 +37,20 @@ Public Class DBManager
             Return Nothing
         End Try
 
+    End Function
 
+    Public Function MyCargarDatos(ByVal comando As String, ByVal NombreTabla As String)
+        Try
+            Using DS As New DataSet()
+                Using DA As New MySqlDataAdapter(comando, MyCNN)
+                    DA.Fill(DS, NombreTabla)
+                End Using
+                Return DS.Tables(NombreTabla)
+            End Using
+
+        Catch ex As MySqlException
+            Return Nothing
+        End Try
     End Function
 
 
@@ -36,6 +63,19 @@ Public Class DBManager
                 Return True
             Catch ex As Exception
                 Return False
+            End Try
+        End Using
+    End Function
+
+    Public Function MyNotQuery(ByVal mycomando As String)
+        Using MyCMD As New MySqlCommand(mycomando, MyCNN)
+            Try
+                MyCNN.Open()
+                MyCMD.ExecuteNonQuery()
+                MyCNN.Close()
+                Return True
+            Catch ex As Exception
+                Return ex.Message
             End Try
         End Using
     End Function
