@@ -116,7 +116,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
     <Compile Include="Conexion.vb" />
     <Compile Include="DBManager.vb" />
     <Compile Include="Enum1.vb" />

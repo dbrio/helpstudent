@@ -4,10 +4,20 @@ Public Class Registro
     Dim DS As New DataSet
 
     Private Sub BtnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRegistrar.Click
+        Dim dia As String = TextEditDia.EditValue
+        Dim mes As String = TextEditMes.EditValue
+        Dim ano As String = TextEditAno.EditValue
+
+        Dim fecha As String = ano + "/" + mes + "/" + dia
+        Dim fecha2 As String = ano + "%" + mes + "%" + dia
+
+
         If CtaAlumTextEdit.Text.Trim = "" Or Not IsNumeric(CtaAlumTextEdit.EditValue) Then
             MsgBox("Cuenta no valida ", MsgBoxStyle.Information, "HelStudent")
             CtaAlumTextEdit.Focus()
             CtaAlumTextEdit.BackColor = Color.LemonChiffon
+
+
             Exit Sub
         End If
 
@@ -27,13 +37,7 @@ Public Class Registro
 
         End If
 
-        If DateEdit1.Text.Trim = "" Then
-            MsgBox("Debe escribir una fecha de nacimiento", MsgBoxStyle.Information, "HelpStudent")
-            DateEdit1.Focus()
-            DateEdit1.BackColor = Color.LemonChiffon
-            Exit Sub
-
-        End If
+        
 
         If TelefonoTextEdit.Text.Trim = "" Then
             MsgBox("Debe escribir su numero telefonico", MsgBoxStyle.Information, "HelpStudent")
@@ -79,10 +83,13 @@ Public Class Registro
         If NetworkInterface.GetIsNetworkAvailable Then
             Try
                 'Registramos el Alumno con el usuario db StudentApp
-                Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, DateEdit1.EditValue, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
+                Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, fecha2, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
                 Dim InsertLogin As String = String.Format("INSERT INTO Login (Usuario, Contrasena, CtaAlum) VALUES ('{0}','{1}','{2}')", TextEditUsuario.EditValue, ContrasenaTextBox.Text, CtaAlumTextEdit.EditValue)
                 db.NotQuery(InserAlumno)
                 db.NotQuery(InsertLogin)
+                Dim InserAlumno2 As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, fecha, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
+                db.MyNotQuery(InserAlumno2)
+                db.MyNotQuery(InsertLogin)
                 MsgBox("Te has registrado Exitosamente !Exitos!", MsgBoxStyle.Information, "Registro exitoso")
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -109,10 +116,21 @@ Public Class Registro
 
         ComboBoxCarrera.DisplayMember = "Nombre"
         ComboBoxCarrera.ValueMember = "IdCarrera"
-        ComboBoxCarrera.DataSource = db.GetData("SELECT IdCarrera, Nombre FROM Carrera")
+        ComboBoxCarrera.DataSource = db.GetData("SELECT IdCarrera, Nombre FROM Carrera WHERE IdCarrera <>5")
 
     End Sub
 
     
   
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", "2011020028", "David", "Briones", "1962/2/23", "2222-2222", "1", "3", "d@hotmail.com")
+        Dim InsertLogin As String = String.Format("INSERT INTO Login (Usuario, Contrasena, CtaAlum) VALUES ('{0}','{1}','{2}')", "Daniel", "123", "2011020057")
+
+
+        Dim insertar As String = db.MyNotQuery(InserAlumno)
+
+        MsgBox(insertar)
+
+
+    End Sub
 End Class
