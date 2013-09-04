@@ -9,7 +9,7 @@ Public Class Registro
         Dim ano As String = TextEditAno.EditValue
 
         Dim fecha As String = ano + "/" + mes + "/" + dia
-        Dim fecha2 As String = ano + "%" + mes + "%" + dia
+        Dim fecha2 As String = dia + "/" + mes + "/" + ano
 
 
         If CtaAlumTextEdit.Text.Trim = "" Or Not IsNumeric(CtaAlumTextEdit.EditValue) Then
@@ -123,14 +123,14 @@ Public Class Registro
     
   
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", "2011020028", "David", "Briones", "1962/2/23", "2222-2222", "1", "3", "d@hotmail.com")
-        Dim InsertLogin As String = String.Format("INSERT INTO Login (Usuario, Contrasena, CtaAlum) VALUES ('{0}','{1}','{2}')", "Daniel", "123", "2011020057")
+      
+        Dim dia As String = TextEditDia.EditValue
+        Dim mes As String = TextEditMes.EditValue
+        Dim ano As String = TextEditAno.EditValue
 
+        Dim fecha As String = ano + "/" + mes + "/" + dia
+        Dim fecha2 As String = dia + "/" + mes + "/" + ano
 
-        Dim insertar As String = db.MyNotQuery(InserAlumno)
-
-        MsgBox(insertar)
-
-
+        MsgBox(fecha2)
     End Sub
 End Class
