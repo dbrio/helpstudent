@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms
+﻿Imports System.Net.NetworkInformation
+Imports System.Windows.Forms
 
 Public Class MDIParent1
 
@@ -84,9 +85,19 @@ Public Class MDIParent1
     Private m_ChildFormNumber As Integer
 
     Private Sub MDIParent1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim star = Inicio
-        star.MdiParent = Me
-        star.Show()
+        If NetworkInterface.GetIsNetworkAvailable Then
+            Dim slect As String = String.Format("SELECT * FROM Alumno")
+
+            Dim star = Inicio
+            star.MdiParent = Me
+            star.Show()
+        Else
+            Dim star = Inicio
+            star.MdiParent = Me
+            star.Show()
+        End If
+
+       
     End Sub
 
     

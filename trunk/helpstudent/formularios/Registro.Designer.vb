@@ -296,7 +296,7 @@ Partial Class Registro
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Registro"
-        Me.Opacity = 0.98R
+        Me.Opacity = 0.97999999999999998R
         Me.ShowIcon = False
         CType(Me.CtaAlumTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
