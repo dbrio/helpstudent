@@ -4,6 +4,7 @@ Imports System.Data.SQLite
 
 
 Public Class DBManager
+    Private TemporalCNN As New SQLiteConnection
     Private MyCNN As New MySqlConnection
     Private CNN As New SQLiteConnection
 
@@ -13,6 +14,10 @@ Public Class DBManager
         Dim path1 As String = AppDomain.CurrentDomain.BaseDirectory
         Dim dbpath As String = path1.Replace("\bin\Debug\", "\StudentApp.s3db")
         CNN.ConnectionString = String.Format("Data Source={0}", dbpath)
+
+        Dim path2 As String = AppDomain.CurrentDomain.BaseDirectory
+        Dim dbpath2 As String = path2.Replace("\bin\Debug\", "\temporal.s3db")
+        TemporalCNN.ConnectionString = String.Format("Data Source={0}", dbpath2)
 
         'Conexion a mysql
         Dim host As String = "db4free.net"
@@ -67,6 +72,21 @@ Public Class DBManager
         End Using
     End Function
 
+    
+    Public Function NotQueryTemporal(ByVal comando As String)
+        Using CMD As New SQLiteCommand(comando, TemporalCNN)
+            Try
+                TemporalCNN.Open()
+                CMD.ExecuteNonQuery()
+                TemporalCNN.Close()
+                Return True
+            Catch ex As Exception
+                Return False
+            End Try
+        End Using
+    End Function
+
+    
     Public Function MyNotQuery(ByVal mycomando As String)
         Using MyCMD As New MySqlCommand(mycomando, MyCNN)
             Try
