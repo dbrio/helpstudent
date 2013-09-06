@@ -2,6 +2,7 @@
 Imports System.Windows.Forms
 
 Public Class MDIParent1
+    Dim DS As New DataSet
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewWindowToolStripMenuItem.Click
         ' Create a new instance of the child form.
@@ -85,19 +86,42 @@ Public Class MDIParent1
     Private m_ChildFormNumber As Integer
 
     Private Sub MDIParent1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If NetworkInterface.GetIsNetworkAvailable Then
-            Dim slect As String = String.Format("SELECT * FROM Alumno")
 
-            Dim star = Inicio
-            star.MdiParent = Me
-            star.Show()
+        Dim contar As Integer = db.GetCount("CtaAlum", "Alumno")
+
+        MsgBox(contar)
+        If NetworkInterface.GetIsNetworkAvailable Then
+
+            Try
+                Dim alumnos As DataTable = db.GetData("SELECT * FROM Alumno")
+                
+                MsgBox(alumnos)
+                For Each linea As DataRow In alumnos.Rows
+                    'Insertamos a mysql si hay internet
+                    Dim insert As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono,IdSexo, IdLogin,IdCarrera,Correo,Imagen) VALUES ('{0}','{1}','{2}','{3}','{4}',{5},{6},{7},'{8}',{9})", linea(0), (1), (2), (3), (4), (5), (6), (7), (8), (9))
+                    db.MyNotQuery(insert)
+
+                    'Borramos de la base de datos temporarl tabla Alumno
+                    db.NotQueryTemporal("DELETE FROM Alumno")
+
+                    MsgBox("Gracias")
+
+                    Dim star = Inicio
+                    star.MdiParent = Me
+                    star.Show()
+                Next
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+         
         Else
             Dim star = Inicio
             star.MdiParent = Me
             star.Show()
         End If
 
-       
+
     End Sub
 
     

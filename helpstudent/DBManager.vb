@@ -114,4 +114,19 @@ Public Class DBManager
             Return Nothing
         End Try
     End Function
+
+    Public Function GetCount(ByVal col As String, ByVal table As String) As Integer
+        Try
+            Dim sql As String = String.Format("SELECT COUNT({0}) FROM {1}", col, table)
+            Dim ID2 As Integer
+
+            Using cuenta As New SQLiteCommand(sql, TemporalCNN)
+                TemporalCNN.Open()
+                ID2 = cuenta.ExecuteScalar
+                TemporalCNN.Close()
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 End Class
