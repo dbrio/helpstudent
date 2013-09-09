@@ -4,14 +4,7 @@ Public Class Registro
     Dim DS As New DataSet
 
     Private Sub BtnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRegistrar.Click
-        Dim dia As String = TextEditDia.EditValue
-        Dim mes As String = TextEditMes.EditValue
-        Dim ano As String = TextEditAno.EditValue
-
-        Dim fecha As String = ano + "/" + mes + "/" + dia
-        Dim fecha2 As String = dia + "/" + mes + "/" + ano
-
-
+       
         If CtaAlumTextEdit.Text.Trim = "" Or Not IsNumeric(CtaAlumTextEdit.EditValue) Then
             MsgBox("Cuenta no valida ", MsgBoxStyle.Information, "HelStudent")
             CtaAlumTextEdit.Focus()
@@ -83,11 +76,11 @@ Public Class Registro
         If NetworkInterface.GetIsNetworkAvailable Then
             Try
                 'Registramos el Alumno con el usuario db StudentApp
-                Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, fecha2, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
+                Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
                 Dim InsertLogin As String = String.Format("INSERT INTO Login (Usuario, Contrasena, CtaAlum) VALUES ('{0}','{1}','{2}')", TextEditUsuario.EditValue, ContrasenaTextBox.Text, CtaAlumTextEdit.EditValue)
                 db.NotQuery(InserAlumno)
                 db.NotQuery(InsertLogin)
-                Dim InserAlumno2 As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, fecha, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
+                Dim InserAlumno2 As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
                 db.MyNotQuery(InserAlumno2)
                 db.MyNotQuery(InsertLogin)
                 MsgBox("Te has registrado Exitosamente !Exitos!", MsgBoxStyle.Information, "Registro exitoso")
@@ -97,11 +90,11 @@ Public Class Registro
 
         Else
             'Registramos el Alumno Temporal
-            Dim InserAlumno2 As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, fecha2, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
+            Dim InserAlumno2 As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
             Dim InsertLogin2 As String = String.Format("INSERT INTO Login (Usuario, Contrasena, CtaAlum) VALUES ('{0}','{1}','{2}')", TextEditUsuario.EditValue, ContrasenaTextBox.Text, CtaAlumTextEdit.EditValue)
             db.NotQueryTemporal(InserAlumno2)
             db.NotQueryTemporal(InsertLogin2)
-            Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, fecha2, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
+            Dim InserAlumno As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, Telefono, IdSexo, IdCarrera, Correo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}'", CtaAlumTextEdit.EditValue, NombreTextEdit.EditValue, ApellidoTextEdit.EditValue, TelefonoTextEdit.EditValue, ComboBoxSexo.SelectedValue, ComboBoxCarrera.SelectedValue, CorreoTextEdit.EditValue)
             Dim InsertLogin As String = String.Format("INSERT INTO Login (Usuario, Contrasena, CtaAlum) VALUES ('{0}','{1}','{2}')", TextEditUsuario.EditValue, ContrasenaTextBox.Text, CtaAlumTextEdit.EditValue)
             db.NotQuery(InserAlumno)
             db.NotQuery(InsertLogin)
@@ -128,18 +121,6 @@ Public Class Registro
         ComboBoxCarrera.DataSource = db.GetData("SELECT IdCarrera, Nombre FROM Carrera WHERE IdCarrera <>5")
 
     End Sub
+   
 
-    
-  
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-      
-        Dim dia As String = TextEditDia.EditValue
-        Dim mes As String = TextEditMes.EditValue
-        Dim ano As String = TextEditAno.EditValue
-
-        Dim fecha As String = ano + "/" + mes + "/" + dia
-        Dim fecha2 As String = dia + "/" + mes + "/" + ano
-
-        MsgBox(fecha2)
-    End Sub
 End Class

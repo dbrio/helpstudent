@@ -15,9 +15,6 @@ Public Class DBManager
         Dim dbpath As String = path1.Replace("\bin\Debug\", "\StudentApp.s3db")
         CNN.ConnectionString = String.Format("Data Source={0}", dbpath)
 
-        Dim path2 As String = AppDomain.CurrentDomain.BaseDirectory
-        Dim dbpath2 As String = path2.Replace("\bin\Debug\", "\temporal.s3db")
-        TemporalCNN.ConnectionString = String.Format("Data Source={0}", dbpath2)
 
         'Conexion a mysql
         Dim host As String = "db4free.net"
@@ -26,7 +23,13 @@ Public Class DBManager
         Dim db As String = "studentapp"
         MyCNN.ConnectionString = String.Format("server={0}; uid={1}; pwd={2}; database={3}", host, user, pass, db)
 
+
+        Dim Temp As String = AppDomain.CurrentDomain.BaseDirectory
+        Dim dbTempo As String = Temp.Replace("\bin\Debug\", "\temporal.s3db")
+        TemporalCNN.ConnectionString = String.Format("Data Source={0}", dbTempo)
+
     End Sub
+   
 
     Public Function GetData(ByVal cmd As String, Optional ByVal table As String = "Tablex")
 
@@ -34,7 +37,6 @@ Public Class DBManager
             Using DS As New DataSet
                 Using DA As New SQLiteDataAdapter(cmd, CNN)
                     DA.Fill(DS, table)
-
                 End Using
                 Return DS.Tables(table)
             End Using
@@ -52,10 +54,25 @@ Public Class DBManager
                 End Using
                 Return DS.Tables(NombreTabla)
             End Using
-
         Catch ex As MySqlException
             Return Nothing
         End Try
+    End Function
+
+
+    Public Function GetDataTemporal(ByVal cmd As String, Optional ByVal table As String = "Tablex")
+
+        Try
+            Using DS As New DataSet
+                Using DA As New SQLiteDataAdapter(cmd, TemporalCNN)
+                    DA.Fill(DS, table)
+                End Using
+                Return DS.Tables(table)
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
+
     End Function
 
 
@@ -110,6 +127,7 @@ Public Class DBManager
                 ID = CMD.ExecuteScalar
                 CNN.Close()
             End Using
+            Return ID
         Catch ex As Exception
             Return Nothing
         End Try
@@ -125,6 +143,7 @@ Public Class DBManager
                 ID2 = cuenta.ExecuteScalar
                 TemporalCNN.Close()
             End Using
+            Return ID2
         Catch ex As Exception
             Return Nothing
         End Try

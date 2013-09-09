@@ -129,7 +129,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="CtaAlumLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 86</value>
+    <value>236, 86</value>
   </data>
   <data name="CtaAlumLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 18</value>
@@ -150,7 +150,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CtaAlumLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>7</value>
   </data>
   <metadata name="NombreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -162,7 +162,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="NombreLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 124</value>
+    <value>230, 122</value>
   </data>
   <data name="NombreLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 18</value>
@@ -183,7 +183,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NombreLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>9</value>
   </data>
   <metadata name="ApellidoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -195,7 +195,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="ApellidoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 164</value>
+    <value>232, 165</value>
   </data>
   <data name="ApellidoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 18</value>
@@ -216,40 +216,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ApellidoLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <metadata name="FechNacLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="FechNacLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FechNacLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="FechNacLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 207</value>
-  </data>
-  <data name="FechNacLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 18</value>
-  </data>
-  <data name="FechNacLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="FechNacLabel.Text" xml:space="preserve">
-    <value>Fecha Nacimiento:</value>
-  </data>
-  <data name="&gt;&gt;FechNacLabel.Name" xml:space="preserve">
-    <value>FechNacLabel</value>
-  </data>
-  <data name="&gt;&gt;FechNacLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FechNacLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FechNacLabel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>11</value>
   </data>
   <metadata name="TelefonoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -261,7 +228,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="TelefonoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 244</value>
+    <value>225, 211</value>
   </data>
   <data name="TelefonoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 18</value>
@@ -282,7 +249,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TelefonoLabel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>13</value>
   </data>
   <metadata name="IdSexoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -294,7 +261,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="IdSexoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 288</value>
+    <value>251, 256</value>
   </data>
   <data name="IdSexoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 18</value>
@@ -315,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IdSexoLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>15</value>
   </data>
   <metadata name="IdCarreraLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -327,7 +294,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="IdCarreraLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 329</value>
+    <value>234, 293</value>
   </data>
   <data name="IdCarreraLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 18</value>
@@ -348,7 +315,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IdCarreraLabel.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>17</value>
   </data>
   <metadata name="CorreoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -360,7 +327,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="CorreoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 372</value>
+    <value>239, 339</value>
   </data>
   <data name="CorreoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 18</value>
@@ -381,7 +348,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CorreoLabel.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>18</value>
   </data>
   <metadata name="IdLoginLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -393,7 +360,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="IdLoginLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 419</value>
+    <value>233, 380</value>
   </data>
   <data name="IdLoginLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 18</value>
@@ -414,7 +381,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IdLoginLabel.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>16</value>
   </data>
   <metadata name="Label1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -426,7 +393,7 @@
     <value>Tahoma, 11.25pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 462</value>
+    <value>208, 429</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 18</value>
@@ -447,7 +414,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>4</value>
   </data>
   <assembly alias="Microsoft.VisualBasic.PowerPacks.Vs" name="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RectangleShape1.BackStyle" type="Microsoft.VisualBasic.PowerPacks.BackStyle, Microsoft.VisualBasic.PowerPacks.Vs">
@@ -488,7 +455,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ShapeContainer1.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>21</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -518,7 +485,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>20</value>
   </data>
   <data name="CtaAlumTextEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 77</value>
@@ -549,10 +516,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CtaAlumTextEdit.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>8</value>
   </data>
   <data name="NombreTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 115</value>
+    <value>367, 119</value>
   </data>
   <data name="NombreTextEdit.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 32</value>
@@ -570,10 +537,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NombreTextEdit.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>10</value>
   </data>
   <data name="ApellidoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 155</value>
+    <value>367, 162</value>
   </data>
   <data name="ApellidoTextEdit.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 32</value>
@@ -591,10 +558,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ApellidoTextEdit.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>12</value>
   </data>
   <data name="CorreoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 369</value>
+    <value>367, 336</value>
   </data>
   <data name="CorreoTextEdit.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 32</value>
@@ -612,13 +579,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CorreoTextEdit.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>19</value>
   </data>
   <data name="ContrasenaTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 15.75pt</value>
   </data>
   <data name="ContrasenaTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 453</value>
+    <value>367, 420</value>
   </data>
   <data name="ContrasenaTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 33</value>
@@ -636,7 +603,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ContrasenaTextBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>5</value>
   </data>
   <data name="BtnRegistrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -663,7 +630,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnRegistrar.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>6</value>
   </data>
   <data name="SimpleButton1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -690,13 +657,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SimpleButton1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="ComboBoxSexo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 15.75pt</value>
   </data>
   <data name="ComboBoxSexo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 280</value>
+    <value>367, 247</value>
   </data>
   <data name="ComboBoxSexo.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 33</value>
@@ -714,10 +681,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ComboBoxSexo.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>2</value>
   </data>
   <data name="TextEditUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 410</value>
+    <value>367, 377</value>
   </data>
   <data name="TextEditUsuario.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 32</value>
@@ -735,13 +702,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEditUsuario.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="ComboBoxCarrera.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 15.75pt</value>
   </data>
   <data name="ComboBoxCarrera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 326</value>
+    <value>367, 293</value>
   </data>
   <data name="ComboBoxCarrera.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 33</value>
@@ -759,10 +726,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ComboBoxCarrera.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="TelefonoTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 237</value>
+    <value>367, 204</value>
   </data>
   <data name="TelefonoTextEdit.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -789,94 +756,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TelefonoTextEdit.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>709, 223</value>
-  </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="Button1.Text" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TextEditDia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 199</value>
-  </data>
-  <data name="TextEditDia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 32</value>
-  </data>
-  <data name="TextEditDia.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;TextEditDia.Name" xml:space="preserve">
-    <value>TextEditDia</value>
-  </data>
-  <data name="&gt;&gt;TextEditDia.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd</value>
-  </data>
-  <data name="&gt;&gt;TextEditDia.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TextEditDia.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TextEditMes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 199</value>
-  </data>
-  <data name="TextEditMes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 32</value>
-  </data>
-  <data name="TextEditMes.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;TextEditMes.Name" xml:space="preserve">
-    <value>TextEditMes</value>
-  </data>
-  <data name="&gt;&gt;TextEditMes.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd</value>
-  </data>
-  <data name="&gt;&gt;TextEditMes.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TextEditMes.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TextEditAno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 199</value>
-  </data>
-  <data name="TextEditAno.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 32</value>
-  </data>
-  <data name="TextEditAno.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;TextEditAno.Name" xml:space="preserve">
-    <value>TextEditAno</value>
-  </data>
-  <data name="&gt;&gt;TextEditAno.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd</value>
-  </data>
-  <data name="&gt;&gt;TextEditAno.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TextEditAno.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>14</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
