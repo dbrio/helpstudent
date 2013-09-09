@@ -23,7 +23,6 @@ Partial Class Registro
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registro))
         Dim NombreLabel As System.Windows.Forms.Label
         Dim ApellidoLabel As System.Windows.Forms.Label
-        Dim FechNacLabel As System.Windows.Forms.Label
         Dim TelefonoLabel As System.Windows.Forms.Label
         Dim IdSexoLabel As System.Windows.Forms.Label
         Dim IdCarreraLabel As System.Windows.Forms.Label
@@ -44,14 +43,9 @@ Partial Class Registro
         Me.TextEditUsuario = New DevExpress.XtraEditors.TextEdit()
         Me.ComboBoxCarrera = New System.Windows.Forms.ComboBox()
         Me.TelefonoTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextEditDia = New DevExpress.XtraEditors.TextEdit()
-        Me.TextEditMes = New DevExpress.XtraEditors.TextEdit()
-        Me.TextEditAno = New DevExpress.XtraEditors.TextEdit()
         CtaAlumLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidoLabel = New System.Windows.Forms.Label()
-        FechNacLabel = New System.Windows.Forms.Label()
         TelefonoLabel = New System.Windows.Forms.Label()
         IdSexoLabel = New System.Windows.Forms.Label()
         IdCarreraLabel = New System.Windows.Forms.Label()
@@ -64,9 +58,6 @@ Partial Class Registro
         CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditUsuario.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEditDia.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEditMes.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEditAno.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CtaAlumLabel
@@ -78,16 +69,12 @@ Partial Class Registro
         '
         resources.ApplyResources(NombreLabel, "NombreLabel")
         NombreLabel.Name = "NombreLabel"
+
         '
         'ApellidoLabel
         '
         resources.ApplyResources(ApellidoLabel, "ApellidoLabel")
         ApellidoLabel.Name = "ApellidoLabel"
-        '
-        'FechNacLabel
-        '
-        resources.ApplyResources(FechNacLabel, "FechNacLabel")
-        FechNacLabel.Name = "FechNacLabel"
         '
         'TelefonoLabel
         '
@@ -230,33 +217,6 @@ Partial Class Registro
         Me.TelefonoTextEdit.Properties.Mask.EditMask = resources.GetString("TelefonoTextEdit.Properties.Mask.EditMask")
         Me.TelefonoTextEdit.Properties.Mask.MaskType = CType(resources.GetObject("TelefonoTextEdit.Properties.Mask.MaskType"), DevExpress.XtraEditors.Mask.MaskType)
         '
-        'Button1
-        '
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextEditDia
-        '
-        resources.ApplyResources(Me.TextEditDia, "TextEditDia")
-        Me.TextEditDia.Name = "TextEditDia"
-        Me.TextEditDia.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextEditDia.Properties.Appearance.Options.UseFont = True
-        '
-        'TextEditMes
-        '
-        resources.ApplyResources(Me.TextEditMes, "TextEditMes")
-        Me.TextEditMes.Name = "TextEditMes"
-        Me.TextEditMes.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextEditMes.Properties.Appearance.Options.UseFont = True
-        '
-        'TextEditAno
-        '
-        resources.ApplyResources(Me.TextEditAno, "TextEditAno")
-        Me.TextEditAno.Name = "TextEditAno"
-        Me.TextEditAno.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextEditAno.Properties.Appearance.Options.UseFont = True
-        '
         'Registro
         '
         Me.AllowDrop = True
@@ -265,10 +225,6 @@ Partial Class Registro
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         resources.ApplyResources(Me, "$this")
         Me.ControlBox = False
-        Me.Controls.Add(Me.TextEditAno)
-        Me.Controls.Add(Me.TextEditMes)
-        Me.Controls.Add(Me.TextEditDia)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBoxCarrera)
         Me.Controls.Add(Me.TextEditUsuario)
         Me.Controls.Add(Me.ComboBoxSexo)
@@ -282,7 +238,6 @@ Partial Class Registro
         Me.Controls.Add(Me.NombreTextEdit)
         Me.Controls.Add(ApellidoLabel)
         Me.Controls.Add(Me.ApellidoTextEdit)
-        Me.Controls.Add(FechNacLabel)
         Me.Controls.Add(TelefonoLabel)
         Me.Controls.Add(Me.TelefonoTextEdit)
         Me.Controls.Add(IdSexoLabel)
@@ -296,7 +251,7 @@ Partial Class Registro
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Registro"
-        Me.Opacity = 0.97999999999999998R
+        Me.Opacity = 0.98R
         Me.ShowIcon = False
         CType(Me.CtaAlumTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -304,9 +259,6 @@ Partial Class Registro
         CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEditUsuario.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEditDia.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEditMes.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEditAno.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -328,8 +280,4 @@ Partial Class Registro
     Friend WithEvents TextEditUsuario As DevExpress.XtraEditors.TextEdit
     Friend WithEvents ComboBoxCarrera As System.Windows.Forms.ComboBox
     Friend WithEvents TelefonoTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextEditDia As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents TextEditMes As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents TextEditAno As DevExpress.XtraEditors.TextEdit
 End Class

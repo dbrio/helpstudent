@@ -1,6 +1,8 @@
-﻿Imports System.Net.NetworkInformation
-Public Class Screen
+﻿Public Class Screen
 
 
-    
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+
+    End Sub
 End Class

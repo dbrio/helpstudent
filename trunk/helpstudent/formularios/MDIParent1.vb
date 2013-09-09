@@ -1,6 +1,7 @@
 ﻿Imports System.Net.NetworkInformation
 Imports System.Windows.Forms
 
+
 Public Class MDIParent1
     Dim DS As New DataSet
 
@@ -89,32 +90,29 @@ Public Class MDIParent1
 
         Dim contar As Integer = db.GetCount("CtaAlum", "Alumno")
 
-        MsgBox(contar)
-        If NetworkInterface.GetIsNetworkAvailable Then
+        If NetworkInterface.GetIsNetworkAvailable And contar > 0 Then
+            Dim agenda As DataTable = db.GetDataTemporal("SELECT * FROM Agenda")
+            Dim alumnos As DataTable = db.GetDataTemporal("SELECT * FROM Alumno")
+            Dim login As DataTable = db.GetDataTemporal("SELECT * FROM Login")
+            Dim matricula As DataTable = db.GetDataTemporal("SELECT * FROM Matricula")
+            Dim periodo As DataTable = db.GetDataTemporal("SELECT * FROM Periodo")
 
-            Try
-                Dim alumnos As DataTable = db.GetData("SELECT * FROM Alumno")
-                
-                MsgBox(alumnos)
-                For Each linea As DataRow In alumnos.Rows
-                    'Insertamos a mysql si hay internet
-                    Dim insert As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, FechNac, Telefono,IdSexo, IdLogin,IdCarrera,Correo,Imagen) VALUES ('{0}','{1}','{2}','{3}','{4}',{5},{6},{7},'{8}',{9})", linea(0), (1), (2), (3), (4), (5), (6), (7), (8), (9))
-                    db.MyNotQuery(insert)
+            For Each linea As DataRow In alumnos.Rows
+                'Insertamos a mysql si hay internet
+                Dim insert As String = String.Format("INSERT INTO Alumno (CtaAlum, Nombre, Apellido, Telefono,IdSexo,IdCarrera,Correo,Imagen) VALUES ('{0}','{1}','{2}','{3}','{4}',{5},{6},'{7}')", linea(0), linea(1), linea(2), linea(3), linea(4), linea(5), linea(6), linea(7))
+                db.MyNotQuery(insert)
 
-                    'Borramos de la base de datos temporarl tabla Alumno
-                    db.NotQueryTemporal("DELETE FROM Alumno")
+                'Borramos de la base de datos temporarl tabla Alumno
+                db.NotQueryTemporal("DELETE FROM Alumno")
 
-                    MsgBox("Gracias")
+            Next
 
-                    Dim star = Inicio
-                    star.MdiParent = Me
-                    star.Show()
-                Next
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+            Dim star = Inicio
+            star.MdiParent = Me
+            star.Show()
+           
 
-         
+
         Else
             Dim star = Inicio
             star.MdiParent = Me
@@ -129,6 +127,10 @@ Public Class MDIParent1
         Dim star = Inicio
         star.MdiParent = Me
         star.Show()
+
+    End Sub
+
+    Private Sub MenuStrip_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip.ItemClicked
 
     End Sub
 End Class
