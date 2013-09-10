@@ -1,7 +1,8 @@
-﻿
+﻿Imports System.Data.SQLite
 Public Class login
-    Dim ex, ey As Integer
-    Dim arrastrar As Boolean
+
+
+
 
     Private Sub SimpleButton3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -15,31 +16,24 @@ Public Class login
 
     End Sub
 
-  
-    Private Sub login_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseDown
-        ex = e.X
-        ey = e.Y
-        arrastrar = True
-    End Sub
 
-    Private Sub login_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseMove
 
-        If arrastrar Then
-            Location = PointToScreen(New Point(MousePosition.X - Location.X - ex, MousePosition.Y - Location.Y - ex))
+    Private Sub BtnEntrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEntrar.Click
+        db.CNN.Open()
+        If db.Login(TxtUsuario.Text, TxtContrasena.Text) = True Then
+            MDIParent1.Show()
+            Me.Hide()
 
+        Else
+            MsgBox("Uusario y/o contraseña incorrectas")
+            TxtUsuario.Text = ""
+            TxtContrasena.Text = ""
+            TxtUsuario.Focus()
+            db.CNN.Close()
         End If
 
+
     End Sub
 
-    Private Sub login_MouseUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseUp
-        arrastrar = False
-    End Sub
 
-    
-    Private Sub BtnEntrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEntrar.Click
-        MDIParent1.Show()
-        Me.Hide()
-    End Sub
-
-  
 End Class

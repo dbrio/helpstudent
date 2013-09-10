@@ -1,12 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data.SQLite
 
-
-
 Public Class DBManager
     Private TemporalCNN As New SQLiteConnection
     Private MyCNN As New MySqlConnection
-    Private CNN As New SQLiteConnection
+    Public CNN As New SQLiteConnection
+
+    Dim UsuarioActivo As Usuario
+
 
     Public Sub New()
 
@@ -45,6 +46,7 @@ Public Class DBManager
         End Try
 
     End Function
+
 
     Public Function MyCargarDatos(ByVal comando As String, ByVal NombreTabla As String)
         Try
@@ -89,7 +91,7 @@ Public Class DBManager
         End Using
     End Function
 
-    
+
     Public Function NotQueryTemporal(ByVal comando As String)
         Using CMD As New SQLiteCommand(comando, TemporalCNN)
             Try
@@ -103,7 +105,9 @@ Public Class DBManager
         End Using
     End Function
 
-    
+  
+
+
     Public Function MyNotQuery(ByVal mycomando As String)
         Using MyCMD As New MySqlCommand(mycomando, MyCNN)
             Try
@@ -112,7 +116,7 @@ Public Class DBManager
                 MyCNN.Close()
                 Return True
             Catch ex As Exception
-                Return ex.Message
+                Return False
             End Try
         End Using
     End Function
@@ -133,6 +137,8 @@ Public Class DBManager
         End Try
     End Function
 
+    
+
     Public Function GetCount(ByVal col As String, ByVal table As String) As Integer
         Try
             Dim sql As String = String.Format("SELECT COUNT({0}) FROM {1}", col, table)
@@ -148,4 +154,37 @@ Public Class DBManager
             Return Nothing
         End Try
     End Function
+
+
+    Public Function Login(ByVal user As String, ByVal pass As String) As Boolean
+
+        Dim sql As String = String.Format("SELECT Login.Usuario,Login.Contrasena,Alumno.Nombre,Alumno.Apellido FROM Login INNER JOIN Alumno ON Login.CtaAlum = Alumno.CtaAlum WHERE Login.Usuario = '{0}' AND Login.Contrasena = '{1}'", user, pass)
+
+        Using validar As New SQLiteCommand(sql, CNN)
+
+            Dim reader As SQLiteDataReader = validar.ExecuteReader
+
+            If reader.HasRows Then 'Indica que hay registros en el reader
+                While reader.Read 'Recorre cada registro de la colección
+                    UsuarioActivo.nombre = reader.GetValue(2).ToString 'Suponiendo que el nombre está en la cuarta columna
+                    UsuarioActivo.apellido = reader.GetValue(3).ToString 'Suponiendo que el nombre está en la quinta columna
+
+                End While
+
+
+                Return True
+            Else
+                Return False
+            End If
+
+        End Using
+    End Function
+
+
+
+
+   
+
+
+    
 End Class
