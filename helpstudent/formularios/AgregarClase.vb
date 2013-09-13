@@ -40,6 +40,14 @@ Public Class AgregarClase
                 db.MyNotQuery(AddClase2)
 
                 MsgBox("Asignatura Agregada correctamente!", MsgBoxStyle.Information, "Registro exitoso")
+
+                With Matricula
+                    .MdiParent = MdiParent
+                    .Show()
+                    .Focus()
+                End With
+                MDIParent1.Enabled = True
+                Me.Close()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try

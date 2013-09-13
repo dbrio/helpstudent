@@ -6,8 +6,6 @@
         DataGridClases.DataSource = db.GetData(llenar)
     End Sub
 
- 
-    Private Sub DataGridClases_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridClases.CellContentClick
 
-    End Sub
+
 End Class
