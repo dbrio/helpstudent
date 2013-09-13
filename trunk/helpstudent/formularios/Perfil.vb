@@ -10,7 +10,7 @@
         LabelCarrera.Text = UsuarioActivo.carrera
         LabelCorreo.Text = UsuarioActivo.correo
         LabelCuenta.Text = UsuarioActivo.cuenta
-        LabelUsuario.Text = UsuarioActivo.IdCarrera
+        LabelUsuario.Text = UsuarioActivo.usuario
 
         db.CNN.Close()
     End Sub
