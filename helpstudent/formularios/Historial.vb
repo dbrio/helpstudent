@@ -5,10 +5,9 @@ Public Class Historial
 
 
 
-    'Sub CargarGrid()
 
-    '    GridControl1.DataSource = db.GetData("SELECT * FROM Clase")
-    'End Sub
+    Dim llenar As String = String.Format("SELECT * FROM Clase INNER JOIN  ")
+
 
     
     Private Sub Historial_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

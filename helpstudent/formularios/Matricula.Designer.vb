@@ -54,6 +54,7 @@ Partial Class Matricula
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridClases.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridClases.RowTemplate.Height = 40
+        Me.DataGridClases.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridClases.Size = New System.Drawing.Size(1039, 429)
         Me.DataGridClases.TabIndex = 0
         '
