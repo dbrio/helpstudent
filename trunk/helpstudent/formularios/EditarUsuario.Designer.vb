@@ -37,7 +37,7 @@ Partial Class EditarUsuario
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Location = New System.Drawing.Point(25, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(148, 25)
         Me.Label1.TabIndex = 0
@@ -45,7 +45,7 @@ Partial Class EditarUsuario
         '
         'TextEditUsuario
         '
-        Me.TextEditUsuario.Location = New System.Drawing.Point(369, 124)
+        Me.TextEditUsuario.Location = New System.Drawing.Point(504, 180)
         Me.TextEditUsuario.Name = "TextEditUsuario"
         Me.TextEditUsuario.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextEditUsuario.Properties.Appearance.Options.UseFont = True
@@ -54,7 +54,7 @@ Partial Class EditarUsuario
         '
         'TextEditContrasena
         '
-        Me.TextEditContrasena.Location = New System.Drawing.Point(369, 185)
+        Me.TextEditContrasena.Location = New System.Drawing.Point(504, 241)
         Me.TextEditContrasena.Name = "TextEditContrasena"
         Me.TextEditContrasena.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextEditContrasena.Properties.Appearance.Options.UseFont = True
@@ -66,7 +66,7 @@ Partial Class EditarUsuario
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label2.Location = New System.Drawing.Point(240, 128)
+        Me.Label2.Location = New System.Drawing.Point(375, 184)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(86, 25)
         Me.Label2.TabIndex = 4
@@ -77,7 +77,7 @@ Partial Class EditarUsuario
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label3.Location = New System.Drawing.Point(240, 187)
+        Me.Label3.Location = New System.Drawing.Point(375, 243)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(123, 25)
         Me.Label3.TabIndex = 5
@@ -93,7 +93,7 @@ Partial Class EditarUsuario
         Me.BtnRegistrar.Appearance.Options.UseForeColor = True
         Me.BtnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnRegistrar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat
-        Me.BtnRegistrar.Location = New System.Drawing.Point(369, 245)
+        Me.BtnRegistrar.Location = New System.Drawing.Point(504, 301)
         Me.BtnRegistrar.Name = "BtnRegistrar"
         Me.BtnRegistrar.Size = New System.Drawing.Size(240, 45)
         Me.BtnRegistrar.TabIndex = 19
@@ -104,7 +104,7 @@ Partial Class EditarUsuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(915, 373)
+        Me.ClientSize = New System.Drawing.Size(1198, 545)
         Me.Controls.Add(Me.BtnRegistrar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)

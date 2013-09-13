@@ -29,9 +29,9 @@ Public Class login
             TxtUsuario.Text = ""
             TxtContrasena.Text = ""
             TxtUsuario.Focus()
-            db.CNN.Close()
-        End If
 
+        End If
+        db.CNN.Close()
 
     End Sub
 
