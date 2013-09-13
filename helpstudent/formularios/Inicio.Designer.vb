@@ -25,7 +25,7 @@ Partial Class Inicio
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape6 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape5 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape4 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleMatricula = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape3 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShapeUsuario = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
@@ -36,7 +36,7 @@ Partial Class Inicio
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape6, Me.RectangleShape5, Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShapeUsuario})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape6, Me.RectangleShape5, Me.RectangleMatricula, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShapeUsuario})
         Me.ShapeContainer1.Size = New System.Drawing.Size(1214, 641)
         Me.ShapeContainer1.TabIndex = 1
         Me.ShapeContainer1.TabStop = False
@@ -63,16 +63,16 @@ Partial Class Inicio
         Me.RectangleShape5.Name = "RectangleShape5"
         Me.RectangleShape5.Size = New System.Drawing.Size(160, 114)
         '
-        'RectangleShape4
+        'RectangleMatricula
         '
-        Me.RectangleShape4.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque
-        Me.RectangleShape4.BorderColor = System.Drawing.SystemColors.ControlLight
-        Me.RectangleShape4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.RectangleShape4.FillColor = System.Drawing.SystemColors.ControlLight
-        Me.RectangleShape4.FillGradientColor = System.Drawing.Color.Maroon
-        Me.RectangleShape4.Location = New System.Drawing.Point(649, 168)
-        Me.RectangleShape4.Name = "RectangleShape4"
-        Me.RectangleShape4.Size = New System.Drawing.Size(334, 153)
+        Me.RectangleMatricula.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque
+        Me.RectangleMatricula.BorderColor = System.Drawing.SystemColors.ControlLight
+        Me.RectangleMatricula.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.RectangleMatricula.FillColor = System.Drawing.SystemColors.ControlLight
+        Me.RectangleMatricula.FillGradientColor = System.Drawing.Color.Maroon
+        Me.RectangleMatricula.Location = New System.Drawing.Point(649, 165)
+        Me.RectangleMatricula.Name = "RectangleMatricula"
+        Me.RectangleMatricula.Size = New System.Drawing.Size(334, 153)
         '
         'RectangleShape3
         '
@@ -134,7 +134,7 @@ Partial Class Inicio
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape6 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents RectangleShape5 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape4 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleMatricula As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents RectangleShape3 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents RectangleShape2 As Microsoft.VisualBasic.PowerPacks.RectangleShape
 End Class

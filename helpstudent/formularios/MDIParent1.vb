@@ -6,15 +6,22 @@ Public Class MDIParent1
     Dim DS As New DataSet
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewWindowToolStripMenuItem.Click
-        ' Create a new instance of the child form.
-        Dim ChildForm As New System.Windows.Forms.Form
-        ' Make it a child of this MDI form before showing it.
-        ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Window " & m_ChildFormNumber
+        Try
 
-        ChildForm.Show()
+            With AgregarClase
+                .MdiParent = MdiParent
+                .Show()
+                .Focus()
+            End With
+            Me.Enabled = False
+        Catch ex As Exception
+
+        End Try
+
+       
+
+       
     End Sub
 
     Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click
@@ -132,5 +139,19 @@ Public Class MDIParent1
 
     Private Sub MenuStrip_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip.ItemClicked
 
+    End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveToolStripMenuItem.Click
+        Try
+
+            With Matricula
+                .MdiParent = MdiParent
+                .Show()
+                .Focus()
+            End With
+            Me.Enabled = False
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

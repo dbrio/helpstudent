@@ -6,9 +6,6 @@ Public Class DBManager
     Private MyCNN As New MySqlConnection
     Public CNN As New SQLiteConnection
 
-    Dim UsuarioActivo As Usuario
-
-
     Public Sub New()
 
         'conexion a sqlite
@@ -156,9 +153,10 @@ Public Class DBManager
     End Function
 
 
+
     Public Function Login(ByVal user As String, ByVal pass As String) As Boolean
 
-        Dim sql As String = String.Format("SELECT Login.Usuario,Login.Contrasena,Alumno.Nombre,Alumno.Apellido FROM Login INNER JOIN Alumno ON Login.CtaAlum = Alumno.CtaAlum WHERE Login.Usuario = '{0}' AND Login.Contrasena = '{1}'", user, pass)
+        Dim sql As String = String.Format("SELECT Login.Usuario,Login.Contrasena,Alumno.CtaAlum,Alumno.Nombre,Alumno.Apellido,Alumno.Telefono,Sexo.Sexo,Carrera.Nombre,Alumno.Correo,Carrera.IdCarrera, CarreraClase.IdAno FROM Login INNER JOIN Alumno ON Login.CtaAlum = Alumno.CtaAlum INNER JOIN Sexo ON Alumno.IdSexo = Sexo.IdSexo INNER JOIN Carrera ON Alumno.IdCarrera = Carrera.IdCarrera INNER JOIN CarreraClase ON Carrera.IdCarrera = CarreraClase.IdCarrera WHERE Login.Usuario = '{0}' AND Login.Contrasena = '{1}'", user, pass)
 
         Using validar As New SQLiteCommand(sql, CNN)
 
@@ -166,8 +164,15 @@ Public Class DBManager
 
             If reader.HasRows Then 'Indica que hay registros en el reader
                 While reader.Read 'Recorre cada registro de la colección
-                    UsuarioActivo.nombre = reader.GetValue(2).ToString 'Suponiendo que el nombre está en la cuarta columna
-                    UsuarioActivo.apellido = reader.GetValue(3).ToString 'Suponiendo que el nombre está en la quinta columna
+                    UsuarioActivo.usuario = reader.GetValue(0).ToString
+                    UsuarioActivo.cuenta = reader.GetValue(2).ToString
+                    UsuarioActivo.nombre = reader.GetValue(3).ToString 'Suponiendo que el nombre está en la cuarta columna
+                    UsuarioActivo.apellido = reader.GetValue(4).ToString 'Suponiendo que el nombre está en la quinta columna
+                    UsuarioActivo.telefono = reader.GetValue(5).ToString
+                    UsuarioActivo.sexo = reader.GetValue(6).ToString
+                    UsuarioActivo.carrera = reader.GetValue(7).ToString
+                    UsuarioActivo.correo = reader.GetValue(8).ToString
+                    UsuarioActivo.IdCarrera = reader.GetValue(9).ToString
 
                 End While
 
