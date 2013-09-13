@@ -19,6 +19,7 @@ Partial Class Matricula
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridClases = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
@@ -46,6 +47,13 @@ Partial Class Matricula
         Me.DataGridClases.Location = New System.Drawing.Point(3, 17)
         Me.DataGridClases.Name = "DataGridClases"
         Me.DataGridClases.ReadOnly = True
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(20)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridClases.RowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridClases.RowTemplate.Height = 40
         Me.DataGridClases.Size = New System.Drawing.Size(1039, 429)
         Me.DataGridClases.TabIndex = 0
         '
