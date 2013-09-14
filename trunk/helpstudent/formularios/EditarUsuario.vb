@@ -1,4 +1,5 @@
-﻿Public Class EditarUsuario
+﻿
+Public Class EditarUsuario
 
     Private Sub EditarUsuario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         cbCarrera.DisplayMember = "Nombre"
