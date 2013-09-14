@@ -4,7 +4,7 @@ Public Class ActualizarNotas
 
     Public Property NOtaID1 As Integer
         Get
-            Return NotaID
+            Return NOtaID
         End Get
         Set(ByVal value As Integer)
             NotaID = value
