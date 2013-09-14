@@ -28,5 +28,6 @@
             .TextBoxHora.Text = Me.DataGridClases.CurrentRow.Cells(3).Value.ToString
 
         End With
+        Me.Enabled = False
     End Sub
 End Class

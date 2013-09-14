@@ -118,7 +118,7 @@ Public Class Registro
 
         ComboBoxCarrera.DisplayMember = "Nombre"
         ComboBoxCarrera.ValueMember = "IdCarrera"
-        ComboBoxCarrera.DataSource = db.GetData("SELECT IdCarrera, Nombre FROM Carrera WHERE IdCarrera <>5")
+        ComboBoxCarrera.DataSource = db.GetData("SELECT IdCarrera, Nombre FROM Carrera WHERE IdCarrera <>6")
 
     End Sub
    
