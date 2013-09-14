@@ -28,8 +28,13 @@ Partial Class EditarUsuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnRegistrar = New DevExpress.XtraEditors.SimpleButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LbTelefono = New System.Windows.Forms.Label()
+        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.cbCarrera = New System.Windows.Forms.ComboBox()
         CType(Me.TextEditUsuario.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditContrasena.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -66,7 +71,7 @@ Partial Class EditarUsuario
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label2.Location = New System.Drawing.Point(375, 184)
+        Me.Label2.Location = New System.Drawing.Point(375, 182)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(86, 25)
         Me.Label2.TabIndex = 4
@@ -99,12 +104,55 @@ Partial Class EditarUsuario
         Me.BtnRegistrar.TabIndex = 19
         Me.BtnRegistrar.Text = "CAMBIAR"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label4.Location = New System.Drawing.Point(374, 127)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(84, 25)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "Carrera"
+        '
+        'LbTelefono
+        '
+        Me.LbTelefono.AutoSize = True
+        Me.LbTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbTelefono.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LbTelefono.Location = New System.Drawing.Point(374, 66)
+        Me.LbTelefono.Name = "LbTelefono"
+        Me.LbTelefono.Size = New System.Drawing.Size(96, 25)
+        Me.LbTelefono.TabIndex = 22
+        Me.LbTelefono.Text = "Teléfono"
+        '
+        'TextEdit2
+        '
+        Me.TextEdit2.Location = New System.Drawing.Point(503, 64)
+        Me.TextEdit2.Name = "TextEdit2"
+        Me.TextEdit2.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextEdit2.Properties.Appearance.Options.UseFont = True
+        Me.TextEdit2.Size = New System.Drawing.Size(240, 29)
+        Me.TextEdit2.TabIndex = 20
+        '
+        'cbCarrera
+        '
+        Me.cbCarrera.FormattingEnabled = True
+        Me.cbCarrera.Location = New System.Drawing.Point(504, 131)
+        Me.cbCarrera.Name = "cbCarrera"
+        Me.cbCarrera.Size = New System.Drawing.Size(239, 21)
+        Me.cbCarrera.TabIndex = 24
+        '
         'EditarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1198, 545)
+        Me.Controls.Add(Me.cbCarrera)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.LbTelefono)
+        Me.Controls.Add(Me.TextEdit2)
         Me.Controls.Add(Me.BtnRegistrar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -117,6 +165,7 @@ Partial Class EditarUsuario
         Me.Text = "EditarUsuario"
         CType(Me.TextEditUsuario.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEditContrasena.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -127,4 +176,8 @@ Partial Class EditarUsuario
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents BtnRegistrar As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents LbTelefono As System.Windows.Forms.Label
+    Friend WithEvents TextEdit2 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents cbCarrera As System.Windows.Forms.ComboBox
 End Class
