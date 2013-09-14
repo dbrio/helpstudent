@@ -87,8 +87,6 @@ Public Class DBManager
             End Try
         End Using
     End Function
-
-
     Public Function NotQueryTemporal(ByVal comando As String)
         Using CMD As New SQLiteCommand(comando, TemporalCNN)
             Try
