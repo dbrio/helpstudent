@@ -31,6 +31,7 @@
             .Show()
             .Focus()
         End With
+        Me.Hide()
     End Sub
 
 
@@ -70,5 +71,14 @@
 
     Private Sub RectangleMatricula_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles RectangleMatricula.MouseMove
         RectangleMatricula.BackColor = Color.FromArgb(&HFF, &H98, &H1D)
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        With Historial
+            .MdiParent = MdiParent
+            .Show()
+            .Focus()
+        End With
+        Me.Hide()
     End Sub
 End Class

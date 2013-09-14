@@ -10,6 +10,7 @@
         Dim carrera As String
         Dim correo As String
         Dim IdCarrera As String
+        Dim Clase As String
 
     End Structure
 
