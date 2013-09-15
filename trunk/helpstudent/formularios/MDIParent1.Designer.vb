@@ -363,7 +363,7 @@ Partial Class MDIParent1
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 431)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 387)
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Size = New System.Drawing.Size(859, 22)
         Me.StatusStrip.TabIndex = 7
@@ -393,7 +393,7 @@ Partial Class MDIParent1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.helpstudent.My.Resources.Resources.fondo
-        Me.ClientSize = New System.Drawing.Size(859, 453)
+        Me.ClientSize = New System.Drawing.Size(859, 409)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
