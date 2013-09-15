@@ -16,7 +16,10 @@ Public Class Historial
         Dim i As Integer = 1
 
         Using cnn As New SQLite.SQLiteConnection(db.CNN)
-            Dim cmd As New SQLite.SQLiteCommand("SELECT Clase.Nombre,Clase.CodClase FROM CarreraClase INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase INNER JOIN PeridoCatalogo ON CarreraClase.IdPeriodoCatalogo = PeridoCatalogo.IdPeriodoCatalogo INNER JOIN Carrera ON CarreraClase.IdCarrera = Carrera.IdCarrera WHERE Carrera.IdCarrera = 1 ORDER BY CarreraClase.IdAno, CarreraClase.IdPeriodoCatalogo", cnn)
+            Dim consulta As String = String.Format("SELECT Clase.Nombre,Clase.CodClase,CarreraClase.Posicion FROM CarreraClase INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase INNER JOIN PeridoCatalogo ON CarreraClase.IdPeriodoCatalogo = PeridoCatalogo.IdPeriodoCatalogo INNER JOIN Carrera ON CarreraClase.IdCarrera = Carrera.IdCarrera WHERE Carrera.IdCarrera = '{0}' ORDER BY CarreraClase.IdAno, CarreraClase.IdPeriodoCatalogo", UsuarioActivo.IdCarrera)
+
+
+            Dim cmd As New SQLite.SQLiteCommand(consulta, cnn)
             cnn.Open()
             Dim reader As SQLite.SQLiteDataReader = cmd.ExecuteReader
 
@@ -44,11 +47,13 @@ Public Class Historial
                     label.Text = reader.GetValue(0)
                     label2.Text = reader.GetValue(1)
 
+
                     numeroCuadro += 1 'Variable que llevará el conteo de cuantos cuadros hay por línea
+
 
                     If numeroCuadro = 5 Then 'Si el numero del siguiente cuadro es 5, entonces se definen nuevas posiciones para x, y
                         y += 60 'Se suman 35px al valor actual de y
-                        x = 5 'Se reinicia el valor de x en 5px (o sea al principio de la línea)
+                        x = 4 'Se reinicia el valor de x en 5px (o sea al principio de la línea)
                         numeroCuadro = 1 'Se reinicia el conteo de cuadros en 1 para la nueva línea de cuadros
                         label.Location = New Point(x, y) 'Se definen los valores de la posición del cuadro en el eje x, y (primer cuadro)
                         label2.Location = New Point(x, y)
@@ -56,6 +61,8 @@ Public Class Historial
                         label.Location = New Point(x, y) 'Se definen los valores de la posición del cuadro en el eje x, y (segundo cuadro en adelante)
                         label2.Location = New Point(x, y)
                     End If
+
+
 
                     Controls.Add(label2)
                     Controls.Add(label) 'Se agrega el cuadro a la colección control del contenedor (el form en este caso)
