@@ -11,6 +11,8 @@
         Dim correo As String
         Dim IdCarrera As String
         Dim Clase As String
+        Dim contrasena As String
+        Dim IdLogin As String
 
     End Structure
 

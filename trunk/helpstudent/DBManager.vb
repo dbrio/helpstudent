@@ -154,7 +154,7 @@ Public Class DBManager
 
     Public Function Login(ByVal user As String, ByVal pass As String) As Boolean
 
-        Dim sql As String = String.Format("SELECT Login.Usuario,Login.Contrasena,Alumno.CtaAlum,Alumno.Nombre,Alumno.Apellido,Alumno.Telefono,Sexo.Sexo,Carrera.Nombre,Alumno.Correo,Carrera.IdCarrera, CarreraClase.IdAno,Clase.Nombre FROM Login INNER JOIN Alumno ON Login.CtaAlum = Alumno.CtaAlum INNER JOIN Sexo ON Alumno.IdSexo = Sexo.IdSexo INNER JOIN Carrera ON Alumno.IdCarrera = Carrera.IdCarrera INNER JOIN CarreraClase ON Carrera.IdCarrera = CarreraClase.IdCarrera INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase WHERE Login.Usuario = '{0}' AND Login.Contrasena = '{1}'", user, pass)
+        Dim sql As String = String.Format("SELECT Login.Usuario,Login.Contrasena,Alumno.CtaAlum,Alumno.Nombre,Alumno.Apellido,Alumno.Telefono,Sexo.Sexo,Carrera.Nombre,Alumno.Correo,Carrera.IdCarrera, CarreraClase.IdAno,Clase.Nombre, Login.IdLogin FROM Login INNER JOIN Alumno ON Login.CtaAlum = Alumno.CtaAlum INNER JOIN Sexo ON Alumno.IdSexo = Sexo.IdSexo INNER JOIN Carrera ON Alumno.IdCarrera = Carrera.IdCarrera INNER JOIN CarreraClase ON Carrera.IdCarrera = CarreraClase.IdCarrera INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase WHERE Login.Usuario = '{0}' AND Login.Contrasena = '{1}'", user, pass)
 
         Using validar As New SQLiteCommand(sql, CNN)
 
@@ -163,6 +163,7 @@ Public Class DBManager
             If reader.HasRows Then 'Indica que hay registros en el reader
                 While reader.Read 'Recorre cada registro de la colección
                     UsuarioActivo.usuario = reader.GetValue(0).ToString
+                    UsuarioActivo.contrasena = reader.GetValue(1).ToString
                     UsuarioActivo.cuenta = reader.GetValue(2).ToString
                     UsuarioActivo.nombre = reader.GetValue(3).ToString 'Suponiendo que el nombre está en la cuarta columna
                     UsuarioActivo.apellido = reader.GetValue(4).ToString 'Suponiendo que el nombre está en la quinta columna
@@ -171,6 +172,7 @@ Public Class DBManager
                     UsuarioActivo.carrera = reader.GetValue(7).ToString
                     UsuarioActivo.correo = reader.GetValue(8).ToString
                     UsuarioActivo.IdCarrera = reader.GetValue(9).ToString
+                    UsuarioActivo.IdLogin = reader.GetValue(10).ToString
 
 
 

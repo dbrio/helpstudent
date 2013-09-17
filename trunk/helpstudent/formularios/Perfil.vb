@@ -17,17 +17,15 @@
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
-        Try
-
-            With EditarUsuario
-                .MdiParent = MdiParent
-                .Show()
-                .Focus()
-            End With
-            Me.Hide()
-        Catch ex As Exception
-            
-        End Try
-
+        With EditarUsuario
+            .txtTelefono.Text = LabelTelefono.Text
+            .cbCarrera.Text = LabelCarrera.Text
+            .TextEditUsuario.Text = LabelUsuario.Text
+            .TextEditContrasena.Text = UsuarioActivo.contrasena
+            .MdiParent = MdiParent
+            .Show()
+            .Focus()
+        End With
+        Me.Hide()
     End Sub
 End Class
