@@ -30,11 +30,11 @@ Partial Class EditarUsuario
         Me.BtnRegistrar = New DevExpress.XtraEditors.SimpleButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LbTelefono = New System.Windows.Forms.Label()
-        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.txtTelefono = New DevExpress.XtraEditors.TextEdit()
         Me.cbCarrera = New System.Windows.Forms.ComboBox()
         CType(Me.TextEditUsuario.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditContrasena.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTelefono.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -126,14 +126,14 @@ Partial Class EditarUsuario
         Me.LbTelefono.TabIndex = 22
         Me.LbTelefono.Text = "Teléfono"
         '
-        'TextEdit2
+        'txtTelefono
         '
-        Me.TextEdit2.Location = New System.Drawing.Point(503, 64)
-        Me.TextEdit2.Name = "TextEdit2"
-        Me.TextEdit2.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextEdit2.Properties.Appearance.Options.UseFont = True
-        Me.TextEdit2.Size = New System.Drawing.Size(240, 29)
-        Me.TextEdit2.TabIndex = 20
+        Me.txtTelefono.Location = New System.Drawing.Point(503, 64)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Properties.Appearance.Options.UseFont = True
+        Me.txtTelefono.Size = New System.Drawing.Size(240, 29)
+        Me.txtTelefono.TabIndex = 20
         '
         'cbCarrera
         '
@@ -152,7 +152,7 @@ Partial Class EditarUsuario
         Me.Controls.Add(Me.cbCarrera)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.LbTelefono)
-        Me.Controls.Add(Me.TextEdit2)
+        Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.BtnRegistrar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -165,7 +165,7 @@ Partial Class EditarUsuario
         Me.Text = "EditarUsuario"
         CType(Me.TextEditUsuario.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEditContrasena.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTelefono.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -178,6 +178,6 @@ Partial Class EditarUsuario
     Friend WithEvents BtnRegistrar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents LbTelefono As System.Windows.Forms.Label
-    Friend WithEvents TextEdit2 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtTelefono As DevExpress.XtraEditors.TextEdit
     Friend WithEvents cbCarrera As System.Windows.Forms.ComboBox
 End Class
