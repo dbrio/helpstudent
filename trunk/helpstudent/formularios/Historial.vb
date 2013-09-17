@@ -29,11 +29,17 @@ Public Class Historial
                     Dim label As New Label
                     Dim label2 As New Label
 
+
                     AddHandler label.Click, AddressOf LabelEvent 'Se agrega un manejador para el evento click de la etiqueta que es direccionado a sub LabelEvent
+                    'AddHandler label.MouseHover, AddressOf hover
                     '(Esto es la definición de eventos a controles de forma dinámica)
 
 
-                    label.Name = reader.GetValue(4)
+                   
+
+                    label.Tag = reader.Item(4).ToString
+                    'label.Text = Requisitos()
+
                     label.Width = 220 'Ancho de 60px
                     label.Height = 60 'Alto de 30px
                     label2.Width = 80 'Ancho de 60px
@@ -148,9 +154,20 @@ Public Class Historial
         'Ejemplo: Mostrar en un MsgBox el nombre de cada cuadro
 
         MsgBox(cuadro.Name, MsgBoxStyle.Information, "Nombre")
+        'tag
+    End Sub
+
+    Private Sub hover(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim cuadro As Label = DirectCast(sender, Label)
+
+        'Aquí puede ir el código de cada cuadro
+        'Ejemplo: Mostrar en un MsgBox el nombre de cada cuadro
+        cuadro.BackColor = Color.AliceBlue
 
     End Sub
 
-    
+    Public Sub Requisitos()
+        Dim consulta As String = String.Format("Select * from Clase inner join Requisitos on Clase.CodClase = Requisitos.CodClase where  CodRequisito = '{0}'", Tag)
+    End Sub
 
 End Class
