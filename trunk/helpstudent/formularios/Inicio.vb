@@ -51,7 +51,7 @@
             .Show()
             .Focus()
         End With
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleMatricula.Click
