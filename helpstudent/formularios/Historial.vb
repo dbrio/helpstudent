@@ -1,20 +1,22 @@
 ﻿
 Public Class Historial
-    
+    Dim x As Integer = 30
+    Dim y As Integer = 80
+    Dim numeroCuadro As Integer = 0
+    Dim i As Integer = 1
+    Public Property tag As Object
 
 
     Private Sub Historial_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         LabelCarrera.Text = UsuarioActivo.carrera
+
         GenerarPlan2()
     End Sub
     Dim db As New DBManager
 
 
     Sub GenerarPlan2()
-        Dim x As Integer = 30
-        Dim y As Integer = 80
-        Dim numeroCuadro As Integer = 0
-        Dim i As Integer = 1
+        
 
         Using cnn As New SQLite.SQLiteConnection(db.CNN)
             Dim consulta As String = String.Format("SELECT Clase.Nombre,Clase.CodClase, Matricula.Promedio,Maestro.IdMaestro,Requisitos.CodRequisito  FROM CarreraClase INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase LEFT OUTER JOIN Requisitos ON Clase.CodClase = Requisitos.CodClase LEFT OUTER JOIN Matricula ON Clase.CodClase = Matricula.CodClase LEFT OUTER JOIN Maestro ON Matricula.IdMaestro = Maestro.IdMaestro INNER JOIN PeridoCatalogo ON CarreraClase.IdPeriodoCatalogo = PeridoCatalogo.IdPeriodoCatalogo INNER JOIN Carrera ON CarreraClase.IdCarrera = Carrera.IdCarrera WHERE Carrera.IdCarrera = '{0}' ORDER BY CarreraClase.IdAno, CarreraClase.IdPeriodoCatalogo", UsuarioActivo.IdCarrera)
@@ -31,14 +33,11 @@ Public Class Historial
 
 
                     AddHandler label.Click, AddressOf LabelEvent 'Se agrega un manejador para el evento click de la etiqueta que es direccionado a sub LabelEvent
-                    'AddHandler label.MouseHover, AddressOf hover
+                    AddHandler label.MouseHover, AddressOf hover
                     '(Esto es la definición de eventos a controles de forma dinámica)
 
 
-                   
-
                     label.Tag = reader.Item(4).ToString
-                    'label.Text = Requisitos()
 
                     label.Width = 220 'Ancho de 60px
                     label.Height = 60 'Alto de 30px
@@ -48,12 +47,12 @@ Public Class Historial
                     label2.BackColor = Color.FromArgb(&H0, &H8A, &HCF) 'Color de fondo
                     label.TextAlign = ContentAlignment.MiddleCenter
                     label2.TextAlign = ContentAlignment.MiddleCenter
-
-                    label.ForeColor = Color.Black
+                    label.ForeColor = Color.White
                     label2.ForeColor = Color.White
                     label2.Text = Font.Bold
                     label.Text = reader.GetValue(0)
                     label2.Text = reader.GetValue(1)
+
                     Dim promedio As Integer
 
                     If reader.GetValue(2) Is DBNull.Value Then
@@ -103,71 +102,84 @@ Public Class Historial
             End If
 
         End Using
+
+
+  
     End Sub
+  
+
+    Private Sub hover(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim cuadro As Label = DirectCast(sender, Label)
+
+
+        Using cnn As New SQLite.SQLiteConnection(db.CNN)
+
+            Dim consulta As String = String.Format("Select clase.Nombre from Clase inner join Requisitos on Clase.CodClase = Requisitos.CodClase WHERE Clase.CodClase ='{0}'", cuadro.Tag)
+            Dim cmd As New SQLite.SQLiteCommand(consulta, cnn)
+            cnn.Open()
+            Dim reader As SQLite.SQLiteDataReader = cmd.ExecuteReader
 
 
 
-    Sub GenerarPlan()
-        Dim x As Integer = 5
-        Dim y As Integer = 5
-        Dim numeroCuadro As Integer = 0
+            If reader.HasRows Then
+                While reader.Read
 
+                    cuadro.BackColor = Color.AliceBlue
 
-
-
-        For i As Integer = 1 To 60 'Este for simulará el While reader.Read() suponiendo que el reader tiene 60 registros
-            Dim label As New Label
-
-            AddHandler label.Click, AddressOf LabelEvent 'Se agrega un manejador para el evento click de la etiqueta que es direccionado a sub LabelEvent
-            '(Esto es la definición de eventos a controles de forma dinámica)
-
-
-            label.Name = String.Format("Clase{0}", i)
-            label.Width = 60 'Ancho de 60px
-            label.Height = 30 'Alto de 30px
-            label.BackColor = Color.Aqua 'Color de fondo
-            label.TextAlign = ContentAlignment.MiddleCenter
-            label.Text = String.Format("Clase {0}", i)
-
-
-            numeroCuadro += 1 'Variable que llevará el conteo de cuantos cuadros hay por línea
-
-            If numeroCuadro = 5 Then 'Si el numero del siguiente cuadro es 5, entonces se definen nuevas posiciones para x, y
-                y += 35 'Se suman 35px al valor actual de y
-                x = 5 'Se reinicia el valor de x en 5px (o sea al principio de la línea)
-                numeroCuadro = 1 'Se reinicia el conteo de cuadros en 1 para la nueva línea de cuadros
-                label.Location = New Point(x, y) 'Se definen los valores de la posición del cuadro en el eje x, y (primer cuadro)
-            Else
-                label.Location = New Point(x, y) 'Se definen los valores de la posición del cuadro en el eje x, y (segundo cuadro en adelante)
+                    'MsgBox(reader.GetValue(0), MsgBoxStyle.Information, "Requisito")
+                End While
             End If
 
-            Controls.Add(label) 'Se agrega el cuadro a la colección control del contenedor (el form en este caso)
-            x += 70 ' Se suman 70px al valor actual de x (10px mas del ancho del cuadro para que se note la separación)
-        Next
+        End Using
+        
     End Sub
 
-
+    
     Private Sub LabelEvent(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim cuadro As Label = DirectCast(sender, Label)
 
         'Aquí puede ir el código de cada cuadro
         'Ejemplo: Mostrar en un MsgBox el nombre de cada cuadro
 
-        MsgBox(cuadro.Name, MsgBoxStyle.Information, "Nombre")
-        'tag
+        Using cnn As New SQLite.SQLiteConnection(db.CNN)
+
+            Dim consulta As String = String.Format("Select clase.Nombre from Clase inner join Requisitos on Clase.CodClase = Requisitos.CodClase WHERE Clase.CodClase ='{0}'", cuadro.Tag)
+            Dim cmd As New SQLite.SQLiteCommand(consulta, cnn)
+            cnn.Open()
+            Dim reader As SQLite.SQLiteDataReader = cmd.ExecuteReader
+
+
+            If reader.HasRows Then
+                While reader.Read
+                    MsgBox(reader.GetValue(0), MsgBoxStyle.Information, "Requisito")
+                End While
+            End If
+
+        End Using
+
+
     End Sub
 
-    Private Sub hover(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim cuadro As Label = DirectCast(sender, Label)
+    'Sub Requisitos()
 
-        'Aquí puede ir el código de cada cuadro
-        'Ejemplo: Mostrar en un MsgBox el nombre de cada cuadro
-        cuadro.BackColor = Color.AliceBlue
 
-    End Sub
+    '    Using cnn As New SQLite.SQLiteConnection(db.CNN)
 
-    Public Sub Requisitos()
-        Dim consulta As String = String.Format("Select * from Clase inner join Requisitos on Clase.CodClase = Requisitos.CodClase where  CodRequisito = '{0}'", Tag)
-    End Sub
+    '        Dim consulta As String = String.Format("Select clase.Nombre from Clase inner join Requisitos on Clase.CodClase = Requisitos.CodClase WHERE Clase.CodClase ='{0}'", numeroCuadro..tag)
+    '        Dim cmd As New SQLite.SQLiteCommand(consulta, cnn)
+    '        cnn.Open()
+    '        Dim reader As SQLite.SQLiteDataReader = cmd.ExecuteReader
+
+
+    '        If reader.HasRows Then
+    '            While reader.Read
+
+    '                Dim hola As String = reader.GetValue(0)
+
+    '            End While
+    '        End If
+
+    '    End Using
+    'End Sub
 
 End Class
