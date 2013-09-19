@@ -15,7 +15,7 @@
         RectangleShapeUsuario.BackColor = Color.FromArgb(&HC1, &H0, &H4F)
 
         RectangleShape2.BackColor = Color.FromArgb(&H2E, &H8D, &HEF)
-        RectangleShape3.BackColor = Color.FromArgb(&HFF, &H98, &H1D)
+        RectangleaPropuesta.BackColor = Color.FromArgb(&HFF, &H98, &H1D)
         RectangleMatricula.BackColor = Color.FromArgb(&H7B, &HAD, &H18)
         RectangleShape5.BackColor = Color.FromArgb(&H46, &H17, &HB4)
         RectangleShape6.BackColor = Color.FromArgb(&H6E, &H7E, &H94)
@@ -75,6 +75,15 @@
 
     Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         With Historial
+            .MdiParent = MdiParent
+            .Show()
+            .Focus()
+        End With
+        Me.Hide()
+    End Sub
+
+    Private Sub RectangleaPropuesta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleaPropuesta.Click
+        With Propuesta
             .MdiParent = MdiParent
             .Show()
             .Focus()
