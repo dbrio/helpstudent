@@ -136,7 +136,7 @@ Public Class Historial
 
             For Each controlesForm In Controls
                 If (TypeOf controlesForm Is Label) Then
-                    cuadro.BackColor = Color.AliceBlue
+                    'cuadro.BackColor = Color.AliceBlue
                     'valor = controlesForm
                 End If
             Next
