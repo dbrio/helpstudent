@@ -65,6 +65,8 @@ Partial Class Inicio
         '
         'RectangleMatricula
         '
+        Me.RectangleMatricula.BackgroundImage = Global.helpstudent.My.Resources.Resources.matricula
+        Me.RectangleMatricula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleMatricula.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque
         Me.RectangleMatricula.BorderColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleMatricula.Cursor = System.Windows.Forms.Cursors.Hand
@@ -76,6 +78,8 @@ Partial Class Inicio
         '
         'RectangleaPropuesta
         '
+        Me.RectangleaPropuesta.BackgroundImage = Global.helpstudent.My.Resources.Resources.aprovadas
+        Me.RectangleaPropuesta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleaPropuesta.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque
         Me.RectangleaPropuesta.BorderColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleaPropuesta.Cursor = System.Windows.Forms.Cursors.Hand
@@ -87,6 +91,8 @@ Partial Class Inicio
         '
         'RectangleShape2
         '
+        Me.RectangleShape2.BackgroundImage = Global.helpstudent.My.Resources.Resources.historial1
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.RectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque
         Me.RectangleShape2.BorderColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleShape2.Cursor = System.Windows.Forms.Cursors.Hand

@@ -209,10 +209,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Propuesta.Designer.vb">
+    <Compile Include="formularios\Propuesta.Designer.vb">
       <DependentUpon>Propuesta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Propuesta.vb">
+    <Compile Include="formularios\Propuesta.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -260,7 +260,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Propuesta.resx">
+    <EmbeddedResource Include="formularios\Propuesta.resx">
       <DependentUpon>Propuesta.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -342,6 +342,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1377398002_651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historial1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\matricula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aprovadas1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

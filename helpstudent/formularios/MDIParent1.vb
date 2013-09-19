@@ -99,11 +99,8 @@ Public Class MDIParent1
     
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
        
-        With Inicio
-            .MdiParent = MdiParent
-            .Show()
-            .Focus()
-        End With
+        Inicio.Show()
+        Inicio.MdiParent = Me
         perfil.Close()
         Historial.Close()
         Matricula.Close()

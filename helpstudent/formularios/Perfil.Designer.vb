@@ -45,7 +45,7 @@ Partial Class perfil
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(273, 93)
+        Me.Label1.Location = New System.Drawing.Point(137, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(75, 24)
         Me.Label1.TabIndex = 0
@@ -55,7 +55,7 @@ Partial Class perfil
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(273, 146)
+        Me.Label2.Location = New System.Drawing.Point(137, 89)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 24)
         Me.Label2.TabIndex = 1
@@ -65,7 +65,7 @@ Partial Class perfil
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(273, 199)
+        Me.Label3.Location = New System.Drawing.Point(137, 142)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 24)
         Me.Label3.TabIndex = 2
@@ -75,7 +75,7 @@ Partial Class perfil
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(273, 252)
+        Me.Label4.Location = New System.Drawing.Point(137, 195)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(90, 24)
         Me.Label4.TabIndex = 3
@@ -85,7 +85,7 @@ Partial Class perfil
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(273, 293)
+        Me.Label5.Location = New System.Drawing.Point(137, 236)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 24)
         Me.Label5.TabIndex = 4
@@ -95,7 +95,7 @@ Partial Class perfil
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(273, 337)
+        Me.Label6.Location = New System.Drawing.Point(137, 280)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 24)
         Me.Label6.TabIndex = 5
@@ -105,7 +105,7 @@ Partial Class perfil
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(273, 382)
+        Me.Label7.Location = New System.Drawing.Point(137, 325)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(73, 24)
         Me.Label7.TabIndex = 6
@@ -116,7 +116,7 @@ Partial Class perfil
         Me.LabelCuenta.AutoSize = True
         Me.LabelCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelCuenta.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelCuenta.Location = New System.Drawing.Point(388, 93)
+        Me.LabelCuenta.Location = New System.Drawing.Point(252, 36)
         Me.LabelCuenta.Name = "LabelCuenta"
         Me.LabelCuenta.Size = New System.Drawing.Size(70, 24)
         Me.LabelCuenta.TabIndex = 7
@@ -127,7 +127,7 @@ Partial Class perfil
         Me.LabelNombre.AutoSize = True
         Me.LabelNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelNombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelNombre.Location = New System.Drawing.Point(388, 147)
+        Me.LabelNombre.Location = New System.Drawing.Point(252, 90)
         Me.LabelNombre.Name = "LabelNombre"
         Me.LabelNombre.Size = New System.Drawing.Size(79, 24)
         Me.LabelNombre.TabIndex = 8
@@ -138,7 +138,7 @@ Partial Class perfil
         Me.LabelApellido.AutoSize = True
         Me.LabelApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelApellido.Location = New System.Drawing.Point(388, 199)
+        Me.LabelApellido.Location = New System.Drawing.Point(252, 142)
         Me.LabelApellido.Name = "LabelApellido"
         Me.LabelApellido.Size = New System.Drawing.Size(79, 24)
         Me.LabelApellido.TabIndex = 9
@@ -149,7 +149,7 @@ Partial Class perfil
         Me.LabelTelefono.AutoSize = True
         Me.LabelTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelTelefono.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelTelefono.Location = New System.Drawing.Point(388, 252)
+        Me.LabelTelefono.Location = New System.Drawing.Point(252, 195)
         Me.LabelTelefono.Name = "LabelTelefono"
         Me.LabelTelefono.Size = New System.Drawing.Size(85, 24)
         Me.LabelTelefono.TabIndex = 10
@@ -160,7 +160,7 @@ Partial Class perfil
         Me.LabelCorreo.AutoSize = True
         Me.LabelCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelCorreo.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelCorreo.Location = New System.Drawing.Point(390, 382)
+        Me.LabelCorreo.Location = New System.Drawing.Point(254, 325)
         Me.LabelCorreo.Name = "LabelCorreo"
         Me.LabelCorreo.Size = New System.Drawing.Size(68, 24)
         Me.LabelCorreo.TabIndex = 13
@@ -171,7 +171,7 @@ Partial Class perfil
         Me.LabelCarrera.AutoSize = True
         Me.LabelCarrera.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelCarrera.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelCarrera.Location = New System.Drawing.Point(390, 337)
+        Me.LabelCarrera.Location = New System.Drawing.Point(254, 280)
         Me.LabelCarrera.Name = "LabelCarrera"
         Me.LabelCarrera.Size = New System.Drawing.Size(72, 24)
         Me.LabelCarrera.TabIndex = 12
@@ -182,7 +182,7 @@ Partial Class perfil
         Me.LabelSexo.AutoSize = True
         Me.LabelSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelSexo.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelSexo.Location = New System.Drawing.Point(392, 293)
+        Me.LabelSexo.Location = New System.Drawing.Point(256, 236)
         Me.LabelSexo.Name = "LabelSexo"
         Me.LabelSexo.Size = New System.Drawing.Size(54, 24)
         Me.LabelSexo.TabIndex = 11
@@ -193,7 +193,7 @@ Partial Class perfil
         Me.LabelUsuario.AutoSize = True
         Me.LabelUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelUsuario.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelUsuario.Location = New System.Drawing.Point(388, 432)
+        Me.LabelUsuario.Location = New System.Drawing.Point(252, 375)
         Me.LabelUsuario.Name = "LabelUsuario"
         Me.LabelUsuario.Size = New System.Drawing.Size(74, 24)
         Me.LabelUsuario.TabIndex = 15
@@ -203,7 +203,7 @@ Partial Class perfil
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(273, 432)
+        Me.Label9.Location = New System.Drawing.Point(137, 375)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(79, 24)
         Me.Label9.TabIndex = 14
@@ -215,7 +215,7 @@ Partial Class perfil
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.MediumBlue
-        Me.Button1.Location = New System.Drawing.Point(468, 429)
+        Me.Button1.Location = New System.Drawing.Point(332, 372)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(176, 33)
         Me.Button1.TabIndex = 16
@@ -227,7 +227,7 @@ Partial Class perfil
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1017, 565)
+        Me.ClientSize = New System.Drawing.Size(881, 433)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.LabelUsuario)
         Me.Controls.Add(Me.Label9)
