@@ -21,7 +21,7 @@ Public Class DBManager
         Dim db As String = "studentapp"
         MyCNN.ConnectionString = String.Format("server={0}; uid={1}; pwd={2}; database={3}", host, user, pass, db)
 
-
+        'conexion a base de datos Temporal
         Dim Temp As String = AppDomain.CurrentDomain.BaseDirectory
         Dim dbTempo As String = Temp.Replace("\bin\Debug\", "\temporal.s3db")
         TemporalCNN.ConnectionString = String.Format("Data Source={0}", dbTempo)
