@@ -125,15 +125,17 @@ Partial Class ActualizarNotas
         '
         'TextBoxDía
         '
+        Me.TextBoxDía.Enabled = False
         Me.TextBoxDía.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxDía.ForeColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBoxDía.Location = New System.Drawing.Point(186, 32)
+        Me.TextBoxDía.Location = New System.Drawing.Point(228, 32)
         Me.TextBoxDía.Name = "TextBoxDía"
         Me.TextBoxDía.Size = New System.Drawing.Size(100, 26)
         Me.TextBoxDía.TabIndex = 18
         '
         'TextBoxHora
         '
+        Me.TextBoxHora.Enabled = False
         Me.TextBoxHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxHora.ForeColor = System.Drawing.SystemColors.ScrollBar
         Me.TextBoxHora.Location = New System.Drawing.Point(370, 32)
@@ -143,18 +145,19 @@ Partial Class ActualizarNotas
         '
         'TextBoxClase
         '
+        Me.TextBoxClase.Enabled = False
         Me.TextBoxClase.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxClase.ForeColor = System.Drawing.SystemColors.ScrollBar
         Me.TextBoxClase.Location = New System.Drawing.Point(19, 32)
         Me.TextBoxClase.Name = "TextBoxClase"
-        Me.TextBoxClase.Size = New System.Drawing.Size(100, 26)
+        Me.TextBoxClase.Size = New System.Drawing.Size(189, 26)
         Me.TextBoxClase.TabIndex = 16
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(225, 3)
+        Me.Label3.Location = New System.Drawing.Point(263, 3)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(37, 24)
         Me.Label3.TabIndex = 15
