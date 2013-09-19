@@ -124,11 +124,22 @@ Public Class Historial
             If reader.HasRows Then
                 While reader.Read
 
-                    cuadro.BackColor = Color.AliceBlue
+                    reader.GetValue(0)
 
                     'MsgBox(reader.GetValue(0), MsgBoxStyle.Information, "Requisito")
                 End While
             End If
+
+
+            Dim controlesForm As Control
+            Dim valor
+
+            For Each controlesForm In Controls
+                If (TypeOf controlesForm Is Label) Then
+                    cuadro.BackColor = Color.AliceBlue
+                    'valor = controlesForm
+                End If
+            Next
 
         End Using
         
