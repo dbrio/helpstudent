@@ -91,8 +91,8 @@ Partial Class Inicio
         '
         'RectangleShape2
         '
-        Me.RectangleShape2.BackgroundImage = Global.helpstudent.My.Resources.Resources.historial1
-        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.RectangleShape2.BackgroundImage = Global.helpstudent.My.Resources.Resources.historial
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque
         Me.RectangleShape2.BorderColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleShape2.Cursor = System.Windows.Forms.Cursors.Hand
