@@ -46,4 +46,15 @@ Public Class ActualizarNotas
     Private Sub ActualizarNotas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton1.Click
+        With Me
+            .MdiParent = MdiParent()
+            .Show()
+            .Focus()
+        End With
+
+        Me.Close()
+        Matricula.Show()
+    End Sub
 End Class

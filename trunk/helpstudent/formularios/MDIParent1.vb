@@ -1,7 +1,5 @@
 ﻿Imports System.Net.NetworkInformation
 Imports System.Windows.Forms
-
-
 Public Class MDIParent1
     Dim DS As New DataSet
 
@@ -49,6 +47,15 @@ Public Class MDIParent1
     Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
         Inicio.Close()
+        PlandeEstudio.Close()
+        perfil.Close()
+        Matricula.Close()
+        Propuesta.Close()
+        Historial.Close()
+        EditarUsuario.Close()
+        ActualizarNotas.Close()
+
+
     End Sub
 
     Private Sub CutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CutToolStripMenuItem.Click
@@ -142,13 +149,7 @@ Public Class MDIParent1
         Historial.Close()
         Matricula.Close()
         PlandeEstudio.Close()
-
-
-
-    End Sub
-
-    Private Sub MenuStrip_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip.ItemClicked
-
+        Propuesta.Close()
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveToolStripMenuItem.Click
@@ -168,4 +169,6 @@ Public Class MDIParent1
     Private Sub FlowLayoutPanel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles FlowLayoutPanel1.Paint
         Inicio.MdiParent = Me.MdiParent
     End Sub
+    
 End Class
+

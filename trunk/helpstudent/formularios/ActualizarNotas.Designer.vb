@@ -35,6 +35,7 @@ Partial Class ActualizarNotas
         Me.TextBoxNota2 = New System.Windows.Forms.TextBox()
         Me.TextBoxNota1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.SuspendLayout()
         '
         'Label1
@@ -92,7 +93,7 @@ Partial Class ActualizarNotas
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(10, 150)
+        Me.Label4.Location = New System.Drawing.Point(308, 150)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 24)
         Me.Label4.TabIndex = 6
@@ -102,7 +103,7 @@ Partial Class ActualizarNotas
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(12, 231)
+        Me.Label5.Location = New System.Drawing.Point(310, 231)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 24)
         Me.Label5.TabIndex = 7
@@ -112,7 +113,7 @@ Partial Class ActualizarNotas
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(10, 191)
+        Me.Label6.Location = New System.Drawing.Point(308, 191)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(59, 24)
         Me.Label6.TabIndex = 8
@@ -120,21 +121,21 @@ Partial Class ActualizarNotas
         '
         'TextBoxNota3
         '
-        Me.TextBoxNota3.Location = New System.Drawing.Point(86, 231)
+        Me.TextBoxNota3.Location = New System.Drawing.Point(384, 231)
         Me.TextBoxNota3.Name = "TextBoxNota3"
         Me.TextBoxNota3.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxNota3.TabIndex = 9
         '
         'TextBoxNota2
         '
-        Me.TextBoxNota2.Location = New System.Drawing.Point(86, 191)
+        Me.TextBoxNota2.Location = New System.Drawing.Point(384, 191)
         Me.TextBoxNota2.Name = "TextBoxNota2"
         Me.TextBoxNota2.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxNota2.TabIndex = 10
         '
         'TextBoxNota1
         '
-        Me.TextBoxNota1.Location = New System.Drawing.Point(86, 150)
+        Me.TextBoxNota1.Location = New System.Drawing.Point(384, 150)
         Me.TextBoxNota1.Name = "TextBoxNota1"
         Me.TextBoxNota1.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxNota1.TabIndex = 11
@@ -148,11 +149,29 @@ Partial Class ActualizarNotas
         Me.Button1.Text = "Actualizar Notas"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.SimpleButton1.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.SimpleButton1.Appearance.Options.UseBackColor = True
+        Me.SimpleButton1.Appearance.Options.UseForeColor = True
+        Me.SimpleButton1.AutoWidthInLayoutControl = True
+        Me.SimpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat
+        Me.SimpleButton1.Image = Global.helpstudent.My.Resources.Resources._1377000670_left_round
+        Me.SimpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft
+        Me.SimpleButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.SimpleButton1.Location = New System.Drawing.Point(12, 186)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(138, 129)
+        Me.SimpleButton1.TabIndex = 26
+        '
         'ActualizarNotas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(529, 327)
+        Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBoxNota1)
         Me.Controls.Add(Me.TextBoxNota2)
@@ -166,6 +185,7 @@ Partial Class ActualizarNotas
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ActualizarNotas"
         Me.Text = "ActualizarNotas"
         Me.ResumeLayout(False)
@@ -185,4 +205,5 @@ Partial Class ActualizarNotas
     Friend WithEvents TextBoxNota2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxNota1 As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
 End Class
