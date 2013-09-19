@@ -48,6 +48,7 @@ Public Class MDIParent1
 
     Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
+        Inicio.Close()
     End Sub
 
     Private Sub CutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CutToolStripMenuItem.Click
@@ -131,10 +132,18 @@ Public Class MDIParent1
 
     
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+       
+        With Inicio
+            .MdiParent = MdiParent
+            .Show()
+            .Focus()
+        End With
+        perfil.Close()
+        Historial.Close()
+        Matricula.Close()
+        PlandeEstudio.Close()
 
-        Dim star = Inicio
-        star.MdiParent = Me
-        star.Show()
+
 
     End Sub
 
@@ -154,5 +163,9 @@ Public Class MDIParent1
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub FlowLayoutPanel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles FlowLayoutPanel1.Paint
+        Inicio.MdiParent = Me.MdiParent
     End Sub
 End Class
