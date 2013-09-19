@@ -12,7 +12,7 @@ Public Class ActualizarNotas
     End Property
 
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         If Not IsNumeric(TextBoxNota1.Text) Then
             MsgBox("Ingrese cantidad Numerica")
@@ -34,7 +34,7 @@ Public Class ActualizarNotas
             Me.Close()
         End If
 
-            
+
 
     End Sub
 
@@ -47,7 +47,7 @@ Public Class ActualizarNotas
 
     End Sub
 
-    Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton1.Click
+    Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         With Me
             .MdiParent = MdiParent()
             .Show()

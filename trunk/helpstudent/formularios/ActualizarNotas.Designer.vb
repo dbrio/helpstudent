@@ -22,188 +22,190 @@ Partial Class ActualizarNotas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBoxClase = New System.Windows.Forms.TextBox()
-        Me.TextBoxHora = New System.Windows.Forms.TextBox()
-        Me.TextBoxDía = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBoxNota3 = New System.Windows.Forms.TextBox()
-        Me.TextBoxNota2 = New System.Windows.Forms.TextBox()
-        Me.TextBoxNota1 = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.TextBoxNota1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxNota2 = New System.Windows.Forms.TextBox()
+        Me.TextBoxNota3 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBoxDía = New System.Windows.Forms.TextBox()
+        Me.TextBoxHora = New System.Windows.Forms.TextBox()
+        Me.TextBoxClase = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'GroupBox1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(28, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 24)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Clase"
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.TextBoxNota1)
+        Me.GroupBox1.Controls.Add(Me.TextBoxNota2)
+        Me.GroupBox1.Controls.Add(Me.TextBoxNota3)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.TextBoxDía)
+        Me.GroupBox1.Controls.Add(Me.TextBoxHora)
+        Me.GroupBox1.Controls.Add(Me.TextBoxClase)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 27)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(488, 358)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
         '
-        'Label2
+        'Button1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(390, 28)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 24)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Hora"
+        Me.Button1.Location = New System.Drawing.Point(163, 293)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(181, 46)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Actualizar Notas"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label3
+        'TextBoxNota1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(219, 28)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 24)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Día"
+        Me.TextBoxNota1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxNota1.Location = New System.Drawing.Point(127, 118)
+        Me.TextBoxNota1.Name = "TextBoxNota1"
+        Me.TextBoxNota1.Size = New System.Drawing.Size(100, 26)
+        Me.TextBoxNota1.TabIndex = 24
         '
-        'TextBoxClase
+        'TextBoxNota2
         '
-        Me.TextBoxClase.Location = New System.Drawing.Point(13, 57)
-        Me.TextBoxClase.Name = "TextBoxClase"
-        Me.TextBoxClase.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxClase.TabIndex = 3
+        Me.TextBoxNota2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxNota2.Location = New System.Drawing.Point(127, 159)
+        Me.TextBoxNota2.Name = "TextBoxNota2"
+        Me.TextBoxNota2.Size = New System.Drawing.Size(100, 26)
+        Me.TextBoxNota2.TabIndex = 23
         '
-        'TextBoxHora
+        'TextBoxNota3
         '
-        Me.TextBoxHora.Location = New System.Drawing.Point(364, 57)
-        Me.TextBoxHora.Name = "TextBoxHora"
-        Me.TextBoxHora.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxHora.TabIndex = 4
-        '
-        'TextBoxDía
-        '
-        Me.TextBoxDía.Location = New System.Drawing.Point(180, 57)
-        Me.TextBoxDía.Name = "TextBoxDía"
-        Me.TextBoxDía.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxDía.TabIndex = 5
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(308, 150)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(59, 24)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Nota1"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(310, 231)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(59, 24)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Nota3"
+        Me.TextBoxNota3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxNota3.Location = New System.Drawing.Point(127, 199)
+        Me.TextBoxNota3.Name = "TextBoxNota3"
+        Me.TextBoxNota3.Size = New System.Drawing.Size(100, 26)
+        Me.TextBoxNota3.TabIndex = 22
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(308, 191)
+        Me.Label6.Location = New System.Drawing.Point(51, 159)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(59, 24)
-        Me.Label6.TabIndex = 8
+        Me.Label6.TabIndex = 21
         Me.Label6.Text = "Nota2"
         '
-        'TextBoxNota3
+        'Label5
         '
-        Me.TextBoxNota3.Location = New System.Drawing.Point(384, 231)
-        Me.TextBoxNota3.Name = "TextBoxNota3"
-        Me.TextBoxNota3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxNota3.TabIndex = 9
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(53, 199)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(59, 24)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "Nota3"
         '
-        'TextBoxNota2
+        'Label4
         '
-        Me.TextBoxNota2.Location = New System.Drawing.Point(384, 191)
-        Me.TextBoxNota2.Name = "TextBoxNota2"
-        Me.TextBoxNota2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxNota2.TabIndex = 10
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(51, 118)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 24)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "Nota1"
         '
-        'TextBoxNota1
+        'TextBoxDía
         '
-        Me.TextBoxNota1.Location = New System.Drawing.Point(384, 150)
-        Me.TextBoxNota1.Name = "TextBoxNota1"
-        Me.TextBoxNota1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxNota1.TabIndex = 11
+        Me.TextBoxDía.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxDía.ForeColor = System.Drawing.SystemColors.ScrollBar
+        Me.TextBoxDía.Location = New System.Drawing.Point(186, 32)
+        Me.TextBoxDía.Name = "TextBoxDía"
+        Me.TextBoxDía.Size = New System.Drawing.Size(100, 26)
+        Me.TextBoxDía.TabIndex = 18
         '
-        'Button1
+        'TextBoxHora
         '
-        Me.Button1.Location = New System.Drawing.Point(327, 269)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(181, 46)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Actualizar Notas"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TextBoxHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxHora.ForeColor = System.Drawing.SystemColors.ScrollBar
+        Me.TextBoxHora.Location = New System.Drawing.Point(370, 32)
+        Me.TextBoxHora.Name = "TextBoxHora"
+        Me.TextBoxHora.Size = New System.Drawing.Size(100, 26)
+        Me.TextBoxHora.TabIndex = 17
         '
-        'SimpleButton1
+        'TextBoxClase
         '
-        Me.SimpleButton1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.SimpleButton1.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.SimpleButton1.Appearance.Options.UseBackColor = True
-        Me.SimpleButton1.Appearance.Options.UseForeColor = True
-        Me.SimpleButton1.AutoWidthInLayoutControl = True
-        Me.SimpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat
-        Me.SimpleButton1.Image = Global.helpstudent.My.Resources.Resources._1377000670_left_round
-        Me.SimpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft
-        Me.SimpleButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.SimpleButton1.Location = New System.Drawing.Point(12, 186)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(138, 129)
-        Me.SimpleButton1.TabIndex = 26
+        Me.TextBoxClase.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxClase.ForeColor = System.Drawing.SystemColors.ScrollBar
+        Me.TextBoxClase.Location = New System.Drawing.Point(19, 32)
+        Me.TextBoxClase.Name = "TextBoxClase"
+        Me.TextBoxClase.Size = New System.Drawing.Size(100, 26)
+        Me.TextBoxClase.TabIndex = 16
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(225, 3)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(37, 24)
+        Me.Label3.TabIndex = 15
+        Me.Label3.Text = "Día"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(396, 3)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(51, 24)
+        Me.Label2.TabIndex = 14
+        Me.Label2.Text = "Hora"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(34, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(57, 24)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Clase"
         '
         'ActualizarNotas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(529, 327)
-        Me.Controls.Add(Me.SimpleButton1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBoxNota1)
-        Me.Controls.Add(Me.TextBoxNota2)
-        Me.Controls.Add(Me.TextBoxNota3)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBoxDía)
-        Me.Controls.Add(Me.TextBoxHora)
-        Me.Controls.Add(Me.TextBoxClase)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.ClientSize = New System.Drawing.Size(529, 397)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "ActualizarNotas"
         Me.Text = "ActualizarNotas"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxClase As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxHora As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxDía As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxNota3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxNota2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxNota1 As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TextBoxNota1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxNota2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxNota3 As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxDía As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxHora As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxClase As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

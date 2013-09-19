@@ -113,6 +113,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property aprovadas() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("aprovadas", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property edit_user_128() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("edit_user-128", resourceCulture)
@@ -126,6 +136,36 @@ Namespace My.Resources
         Friend ReadOnly Property fondo() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("fondo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property historial() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("historial", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property historial1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("historial1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property matricula() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("matricula", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
