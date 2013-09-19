@@ -106,6 +106,7 @@ Public Class MDIParent1
         Matricula.Close()
         PlandeEstudio.Close()
         Propuesta.Close()
+        EditarUsuario.Close()
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
