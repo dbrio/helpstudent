@@ -37,7 +37,7 @@ Partial Class Inicio
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape6, Me.RectangleShape5, Me.RectangleMatricula, Me.RectangleaPropuesta, Me.RectangleShape2, Me.RectangleShapeUsuario})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1214, 641)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(944, 434)
         Me.ShapeContainer1.TabIndex = 1
         Me.ShapeContainer1.TabStop = False
         '
@@ -48,7 +48,7 @@ Partial Class Inicio
         Me.RectangleShape6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RectangleShape6.FillColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleShape6.FillGradientColor = System.Drawing.Color.Maroon
-        Me.RectangleShape6.Location = New System.Drawing.Point(822, 341)
+        Me.RectangleShape6.Location = New System.Drawing.Point(678, 227)
         Me.RectangleShape6.Name = "RectangleShape6"
         Me.RectangleShape6.Size = New System.Drawing.Size(162, 113)
         '
@@ -59,7 +59,7 @@ Partial Class Inicio
         Me.RectangleShape5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RectangleShape5.FillColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleShape5.FillGradientColor = System.Drawing.Color.Maroon
-        Me.RectangleShape5.Location = New System.Drawing.Point(651, 341)
+        Me.RectangleShape5.Location = New System.Drawing.Point(507, 227)
         Me.RectangleShape5.Name = "RectangleShape5"
         Me.RectangleShape5.Size = New System.Drawing.Size(160, 114)
         '
@@ -70,7 +70,7 @@ Partial Class Inicio
         Me.RectangleMatricula.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RectangleMatricula.FillColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleMatricula.FillGradientColor = System.Drawing.Color.Maroon
-        Me.RectangleMatricula.Location = New System.Drawing.Point(649, 165)
+        Me.RectangleMatricula.Location = New System.Drawing.Point(505, 51)
         Me.RectangleMatricula.Name = "RectangleMatricula"
         Me.RectangleMatricula.Size = New System.Drawing.Size(334, 153)
         '
@@ -81,7 +81,7 @@ Partial Class Inicio
         Me.RectangleaPropuesta.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RectangleaPropuesta.FillColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleaPropuesta.FillGradientColor = System.Drawing.Color.Maroon
-        Me.RectangleaPropuesta.Location = New System.Drawing.Point(467, 316)
+        Me.RectangleaPropuesta.Location = New System.Drawing.Point(323, 202)
         Me.RectangleaPropuesta.Name = "RectangleaPropuesta"
         Me.RectangleaPropuesta.Size = New System.Drawing.Size(170, 140)
         '
@@ -92,7 +92,7 @@ Partial Class Inicio
         Me.RectangleShape2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RectangleShape2.FillColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleShape2.FillGradientColor = System.Drawing.Color.Maroon
-        Me.RectangleShape2.Location = New System.Drawing.Point(466, 166)
+        Me.RectangleShape2.Location = New System.Drawing.Point(322, 52)
         Me.RectangleShape2.Name = "RectangleShape2"
         Me.RectangleShape2.Size = New System.Drawing.Size(171, 135)
         '
@@ -106,7 +106,7 @@ Partial Class Inicio
         Me.RectangleShapeUsuario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RectangleShapeUsuario.FillColor = System.Drawing.SystemColors.ControlLight
         Me.RectangleShapeUsuario.FillGradientColor = System.Drawing.Color.Maroon
-        Me.RectangleShapeUsuario.Location = New System.Drawing.Point(230, 165)
+        Me.RectangleShapeUsuario.Location = New System.Drawing.Point(86, 51)
         Me.RectangleShapeUsuario.Name = "RectangleShapeUsuario"
         Me.RectangleShapeUsuario.Size = New System.Drawing.Size(226, 292)
         '
@@ -116,7 +116,7 @@ Partial Class Inicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(1214, 641)
+        Me.ClientSize = New System.Drawing.Size(944, 434)
         Me.ControlBox = False
         Me.Controls.Add(Me.ShapeContainer1)
         Me.ForeColor = System.Drawing.Color.Transparent
@@ -126,7 +126,6 @@ Partial Class Inicio
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio"
-        Me.TransparencyKey = System.Drawing.Color.Transparent
         Me.ResumeLayout(False)
 
     End Sub

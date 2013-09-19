@@ -1,16 +1,6 @@
 ﻿Public Class Inicio
 
 
-    'With EditarUsuario
-    '    .MdiParent = Me
-    '    .Show()
-    '    .Focus()
-    'End With
-
-
-
-
-
     Private Sub Inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         RectangleShapeUsuario.BackColor = Color.FromArgb(&HC1, &H0, &H4F)
 
@@ -25,15 +15,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        With EditarUsuario
-            .MdiParent = Me
-            .Show()
-            .Focus()
-        End With
-        Me.Hide()
-    End Sub
-
+    
 
     Private Sub RectangleShapeUsuario_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShapeUsuario.MouseLeave
         RectangleShapeUsuario.BackColor = Color.FromArgb(&HC1, &H0, &H4F)
@@ -46,21 +28,13 @@
     End Sub
 
     Private Sub RectangleShapeUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShapeUsuario.Click
-        With perfil
-            .MdiParent = MdiParent
-            .Show()
-            .Focus()
-        End With
-        Me.Hide()
+        perfil.Show()
+        perfil.MdiParent = MDIParent1
     End Sub
 
     Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleMatricula.Click
-        With Matricula
-            .MdiParent = MdiParent
-            .Show()
-            .Focus()
-        End With
-        Me.Hide()
+        Matricula.Show()
+        Matricula.MdiParent = MDIParent1
     End Sub
 
   
@@ -74,20 +48,14 @@
     End Sub
 
     Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
-        With Historial
-            .MdiParent = MdiParent
-            .Show()
-            .Focus()
-        End With
-        Me.Hide()
+
+        Historial.Show()
+        Historial.MdiParent = MDIParent1
+
     End Sub
 
     Private Sub RectangleaPropuesta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleaPropuesta.Click
-        With Propuesta
-            .MdiParent = MdiParent
-            .Show()
-            .Focus()
-        End With
-        Me.Hide()
+        Propuesta.Show()
+        Propuesta.MdiParent = MDIParent1
     End Sub
 End Class
