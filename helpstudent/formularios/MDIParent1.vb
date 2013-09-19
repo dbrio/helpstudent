@@ -84,12 +84,9 @@ Public Class MDIParent1
 
             Next
 
-            Dim star = Inicio
-            star.MdiParent = Me
-            star.Show()
+            Inicio.Show()
+            Inicio.MdiParent = Me
            
-
-
         Else
             Dim star = Inicio
             star.MdiParent = Me
@@ -128,10 +125,8 @@ Public Class MDIParent1
         End Try
     End Sub
 
-    Private Sub FlowLayoutPanel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles FlowLayoutPanel1.Paint
-        Inicio.MdiParent = Me.MdiParent
-    End Sub
+ 
     
-    
+   
 End Class
 
