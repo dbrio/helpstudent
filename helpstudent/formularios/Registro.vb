@@ -4,7 +4,7 @@ Public Class Registro
     Dim DS As New DataSet
 
     Private Sub BtnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRegistrar.Click
-       
+        'validamos la cuenta del usuario
         If CtaAlumTextEdit.Text.Trim = "" Or Not IsNumeric(CtaAlumTextEdit.EditValue) Then
             MsgBox("Cuenta no valida ", MsgBoxStyle.Information, "HelStudent")
             CtaAlumTextEdit.Focus()
@@ -14,6 +14,7 @@ Public Class Registro
             Exit Sub
         End If
 
+        'validamos el nombre 
         If NombreTextEdit.Text.Trim = "" Then
             MsgBox("Debe escribir un nombre", MsgBoxStyle.Information, "HelpStudent")
             NombreTextEdit.Focus()
@@ -21,7 +22,7 @@ Public Class Registro
             Exit Sub
 
         End If
-
+        'Validamos el apellido
         If ApellidoTextEdit.Text.Trim = "" Then
             MsgBox("Debe escribir un Apellido", MsgBoxStyle.Information, "HelpStudent")
             ApellidoTextEdit.Focus()
@@ -31,7 +32,7 @@ Public Class Registro
         End If
 
         
-
+        'validamos el telefono
         If TelefonoTextEdit.Text.Trim = "" Then
             MsgBox("Debe escribir su numero telefonico", MsgBoxStyle.Information, "HelpStudent")
             TelefonoTextEdit.Focus()
@@ -40,7 +41,7 @@ Public Class Registro
 
         End If
 
-
+        'validamos el comboxsexo
         If ComboBoxSexo.Text.Trim = "" Then
             MsgBox("Debe seleccionar un genero", MsgBoxStyle.Information, "HelpStudent")
             ComboBoxSexo.Focus()
@@ -48,7 +49,7 @@ Public Class Registro
             Exit Sub
 
         End If
-
+        'validamos la carrera
         If ComboBoxCarrera.Text.Trim = "" Then
             MsgBox("Debe seleccionar una carrera", MsgBoxStyle.Information, "HelpStudent")
             ComboBoxCarrera.Focus()
@@ -56,7 +57,7 @@ Public Class Registro
             Exit Sub
 
         End If
-
+        'validadmos el usuario
         If TextEditUsuario.Text.Trim = "" Then
             MsgBox("Debes de escribir tu usuario", MsgBoxStyle.Information, "HelpStudent")
             TextEditUsuario.Focus()
@@ -64,6 +65,7 @@ Public Class Registro
             Exit Sub
 
         End If
+        'validamos la contrasena
         If ContrasenaTextBox.Text.Trim = "" Then
             MsgBox("Debes de escribir una contraseña", MsgBoxStyle.Information, "HelpStudent")
             ContrasenaTextBox.Focus()
@@ -109,9 +111,9 @@ Public Class Registro
 
 
     Private Sub Registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'pasamos el foco a la cuenta
         CtaAlumTextEdit.Focus()
-
-
+        'llenamos los ComboBox
         ComboBoxSexo.DisplayMember = "Sexo"
         ComboBoxSexo.ValueMember = "IdSexo"
         ComboBoxSexo.DataSource = db.GetData("SELECT IdSexo, Sexo FROM Sexo")
@@ -122,8 +124,4 @@ Public Class Registro
 
     End Sub
    
-
-    Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton1.Click
-
-    End Sub
 End Class

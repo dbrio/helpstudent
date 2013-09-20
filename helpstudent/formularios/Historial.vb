@@ -8,16 +8,17 @@ Public Class Historial
 
 
     Private Sub Historial_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'muestra el nombre de la carrera del usuario logiado
         LabelCarrera.Text = UsuarioActivo.carrera
-
+        'Cargamos el sub GeneralPlan2
         GenerarPlan2()
     End Sub
     Dim db As New DBManager
 
-
+    'Creamos el sub Cargar Usuario
     Sub GenerarPlan2()
         
-
+        'hacemos la consulta y recorremos los datos para crear el plan de estudio
         Using cnn As New SQLite.SQLiteConnection(db.CNN)
             Dim consulta As String = String.Format("SELECT Clase.Nombre,Clase.CodClase, Matricula.Promedio,Maestro.IdMaestro,Requisitos.CodRequisito  FROM CarreraClase INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase LEFT OUTER JOIN Requisitos ON Clase.CodClase = Requisitos.CodClase LEFT OUTER JOIN Matricula ON Clase.CodClase = Matricula.CodClase LEFT OUTER JOIN Maestro ON Matricula.IdMaestro = Maestro.IdMaestro INNER JOIN PeridoCatalogo ON CarreraClase.IdPeriodoCatalogo = PeridoCatalogo.IdPeriodoCatalogo INNER JOIN Carrera ON CarreraClase.IdCarrera = Carrera.IdCarrera WHERE Carrera.IdCarrera = '{0}' ORDER BY CarreraClase.IdAno, CarreraClase.IdPeriodoCatalogo", UsuarioActivo.IdCarrera)
 
@@ -68,15 +69,6 @@ Public Class Historial
                         label.BackColor = Color.FromArgb(&H33, &H99, &HCC) 'Color de fondo
                     End If
 
-                    'If hola < 60 Then
-                    '    label.BackColor = SystemColors.HotTrack 'Color de fondo
-
-                    'Else
-                    '    label.BackColor = Color.FromArgb(&H0, &H66, &H0) 'Color de fondo
-                    'End If
-
-
-
                     numeroCuadro += 1 'Variable que llevará el conteo de cuantos cuadros hay por línea
 
 
@@ -110,7 +102,6 @@ Public Class Historial
 
     Private Sub hover(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim cuadro As Label = DirectCast(sender, Label)
-
 
         Using cnn As New SQLite.SQLiteConnection(db.CNN)
 
@@ -170,27 +161,5 @@ Public Class Historial
 
 
     End Sub
-
-    'Sub Requisitos()
-
-
-    '    Using cnn As New SQLite.SQLiteConnection(db.CNN)
-
-    '        Dim consulta As String = String.Format("Select clase.Nombre from Clase inner join Requisitos on Clase.CodClase = Requisitos.CodClase WHERE Clase.CodClase ='{0}'", numeroCuadro..tag)
-    '        Dim cmd As New SQLite.SQLiteCommand(consulta, cnn)
-    '        cnn.Open()
-    '        Dim reader As SQLite.SQLiteDataReader = cmd.ExecuteReader
-
-
-    '        If reader.HasRows Then
-    '            While reader.Read
-
-    '                Dim hola As String = reader.GetValue(0)
-
-    '            End While
-    '        End If
-
-    '    End Using
-    'End Sub
 
 End Class

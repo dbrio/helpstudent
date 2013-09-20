@@ -4,7 +4,7 @@ Public Class MDIParent1
     Dim DS As New DataSet
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click
-
+        'cargamos el formulario AgregarClase
         Try
 
             With AgregarClase
@@ -17,34 +17,10 @@ Public Class MDIParent1
 
         End Try
 
-
-
-
     End Sub
-
-    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs)
-        Dim OpenFileDialog As New OpenFileDialog
-        OpenFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        OpenFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
-        If (OpenFileDialog.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
-            Dim FileName As String = OpenFileDialog.FileName
-            ' TODO: Add code here to open the file.
-        End If
-    End Sub
-
-    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        Dim SaveFileDialog As New SaveFileDialog
-        SaveFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        SaveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
-
-        If (SaveFileDialog.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
-            Dim FileName As String = SaveFileDialog.FileName
-            ' TODO: Add code here to save the current contents of the form to a file.
-        End If
-    End Sub
-
 
     Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
+        'Salimos del programa
         Me.Close()
         Inicio.Close()
         PlandeEstudio.Close()
@@ -58,15 +34,10 @@ Public Class MDIParent1
 
     End Sub
 
- 
-
-
-    Private m_ChildFormNumber As Integer
 
     Private Sub MDIParent1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Dim contar As Integer = db.GetCount("CtaAlum", "Alumno")
-
+        Dim contar As Integer = db.GetCount("CtaAlum", "Alumno") 'Contamos cuantos registros hay en la tabla alumno
         If NetworkInterface.GetIsNetworkAvailable And contar > 0 Then
             Dim agenda As DataTable = db.GetDataTemporal("SELECT * FROM Agenda")
             Dim alumnos As DataTable = db.GetDataTemporal("SELECT * FROM Alumno")
@@ -98,7 +69,7 @@ Public Class MDIParent1
 
     
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
-       
+        'Regresamos al inicio
         Inicio.Show()
         Inicio.MdiParent = Me
         perfil.Close()
@@ -111,7 +82,7 @@ Public Class MDIParent1
 
     Private Sub SaveToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
-
+            'abrimos el formulario matricula
             With Matricula
                 .MdiParent = MdiParent
                 .Show()
