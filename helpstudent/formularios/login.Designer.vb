@@ -213,7 +213,7 @@ Partial Class login
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "login"
-        Me.Opacity = 0.98R
+        Me.Opacity = 0.97999999999999998R
         Me.RightToLeftLayout = True
         Me.ShowIcon = False
         Me.ShowInTaskbar = False

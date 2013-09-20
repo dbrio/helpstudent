@@ -31,9 +31,9 @@ Public Class login
             TxtUsuario.Focus()
 
         End If
+        
         db.CNN.Close()
 
     End Sub
-
 
 End Class

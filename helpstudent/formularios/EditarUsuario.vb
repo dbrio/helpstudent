@@ -13,6 +13,21 @@ Public Class EditarUsuario
         Dim actlogin As String = String.Format("UPDATE Login SET Usuario='{0}', Contrasena= '{1}' WHERE IdLogin = '{2}'", TextEditUsuario.Text, TextEditContrasena.Text, UsuarioActivo.IdLogin)
         db.NotQuery(actlogin)
         MsgBox("El usuario ha sido Actualizado")
-        Me.Refresh()
+
+        Me.Hide()
+        
+        With perfil
+            .Show()
+            .Focus()
+            .LabelTelefono.Text = txtTelefono.Text()
+            .LabelUsuario.Text = TextEditUsuario.Text()
+            .LabelCarrera.Text = cbCarrera.Text()
+
+
+
+
+        End With
+
     End Sub
+    
 End Class

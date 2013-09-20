@@ -4,7 +4,7 @@ Public Class Historial
     Dim y As Integer = 80
     Dim numeroCuadro As Integer = 0
     Dim i As Integer = 1
-    Public Property tag As Object
+
 
 
     Private Sub Historial_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -123,7 +123,7 @@ Public Class Historial
 
 
             Dim controlesForm As Control
-            Dim valor
+
 
             For Each controlesForm In Controls
                 If (TypeOf controlesForm Is Label) Then
