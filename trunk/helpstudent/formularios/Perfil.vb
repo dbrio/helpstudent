@@ -1,6 +1,7 @@
 ﻿Public Class perfil
 
     Private Sub perfil_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Cargamos los datos del usuario en el formulario en los label
         db.CNN.Open()
         LabelCuenta.Text = UsuarioActivo.cuenta
         LabelNombre.Text = UsuarioActivo.nombre
@@ -16,7 +17,7 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-
+        'pasamos los datos al formulario EditarUsuario
         With EditarUsuario
             .txtTelefono.Text = LabelTelefono.Text
             .cbCarrera.Text = LabelCarrera.Text

@@ -7,7 +7,7 @@ Public Class AgregarClase
     End Sub
 
     Private Sub AgregarClase_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        'llenamos todo los texbos con la informacion que correspond
         Dim llenar As String = String.Format("SELECT Clase.CodClase,Clase.Nombre FROM  CarreraClase INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase INNER JOIN Carrera ON CarreraClase.IdCarrera = Carrera.IdCarrera WHERE Carrera.IdCarrera = '{0}' ORDER BY CarreraClase.IdAno", UsuarioActivo.IdCarrera)
         ComboBoxClases.DisplayMember = "Nombre"
         ComboBoxClases.ValueMember = "CodClase"

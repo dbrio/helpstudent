@@ -1,7 +1,9 @@
-﻿Imports MySql.Data.MySqlClient
+﻿'importamos las db
+Imports MySql.Data.MySqlClient
 Imports System.Data.SQLite
 
 Public Class DBManager
+    'creamos las Conexiones
     Private TemporalCNN As New SQLiteConnection
     Private MyCNN As New MySqlConnection
     Public CNN As New SQLiteConnection
@@ -27,8 +29,8 @@ Public Class DBManager
         TemporalCNN.ConnectionString = String.Format("Data Source={0}", dbTempo)
 
     End Sub
-   
 
+    'funcion para llenar datos de la conexion CNN
     Public Function GetData(ByVal cmd As String, Optional ByVal table As String = "Tablex")
 
         Try
@@ -58,7 +60,7 @@ Public Class DBManager
         End Try
     End Function
 
-
+    'Funcion para llenar datos de la db temporal
     Public Function GetDataTemporal(ByVal cmd As String, Optional ByVal table As String = "Tablex")
 
         Try
@@ -74,7 +76,7 @@ Public Class DBManager
 
     End Function
 
-
+    'funcion para el notquery de CNN
     Public Function NotQuery(ByVal comando As String)
         Using CMD As New SQLiteCommand(comando, CNN)
             Try
@@ -87,6 +89,7 @@ Public Class DBManager
             End Try
         End Using
     End Function
+    'Funcion para el notquery de la tabla temporal
     Public Function NotQueryTemporal(ByVal comando As String)
         Using CMD As New SQLiteCommand(comando, TemporalCNN)
             Try
@@ -100,9 +103,7 @@ Public Class DBManager
         End Using
     End Function
 
-  
-
-
+    'Funcion para Notquery para mysql
     Public Function MyNotQuery(ByVal mycomando As String)
         Using MyCMD As New MySqlCommand(mycomando, MyCNN)
             Try
@@ -116,6 +117,7 @@ Public Class DBManager
         End Using
     End Function
 
+    'Funcio para contar las columnas de una tabla
     Public Function GetLastID(ByVal col As String, ByVal table As String) As Integer
         Try
             Dim sql As String = String.Format("SELECT MAX({0}) FROM {1}", col, table)
@@ -132,8 +134,7 @@ Public Class DBManager
         End Try
     End Function
 
-    
-
+    'Funcion contar
     Public Function GetCount(ByVal col As String, ByVal table As String) As Integer
         Try
             Dim sql As String = String.Format("SELECT COUNT({0}) FROM {1}", col, table)
@@ -151,10 +152,10 @@ Public Class DBManager
     End Function
 
 
-
+    'Funcion para validar el usuario
     Public Function Login(ByVal user As String, ByVal pass As String) As Boolean
 
-        Dim sql As String = String.Format("SELECT Login.Usuario,Login.Contrasena,Alumno.CtaAlum,Alumno.Nombre,Alumno.Apellido,Alumno.Telefono,Sexo.Sexo,Carrera.Nombre,Alumno.Correo,Carrera.IdCarrera, CarreraClase.IdAno,Clase.Nombre, Login.IdLogin FROM Login INNER JOIN Alumno ON Login.CtaAlum = Alumno.CtaAlum INNER JOIN Sexo ON Alumno.IdSexo = Sexo.IdSexo INNER JOIN Carrera ON Alumno.IdCarrera = Carrera.IdCarrera INNER JOIN CarreraClase ON Carrera.IdCarrera = CarreraClase.IdCarrera INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase WHERE Login.Usuario = '{0}' AND Login.Contrasena = '{1}'", user, pass)
+        Dim sql As String = String.Format("SELECT Login.Usuario,Login.Contrasena,Alumno.CtaAlum,Alumno.Nombre,Alumno.Apellido,Alumno.Telefono,Sexo.Sexo,Carrera.Nombre,Alumno.Correo,Carrera.IdCarrera, CarreraClase.IdAno,Clase.Nombre, Login.IdLogin FROM Login INNER JOIN Alumno ON Login.CtaAlum = Alumno.CtaAlum INNER JOIN Sexo ON Alumno.IdSexo = Sexo.IdSexo INNER JOIN Carrera ON Alumno.IdCarrera = Carrera.IdCarrera INNER JOIN CarreraClase ON Carrera.IdCarrera = CarreraClase.IdCarrera INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase WHERE Login.Usuario = '{0}' AND Login.Contrasena = '{1}'", Replace(user, "'", ""), Replace(pass, "'", ""))
 
         Using validar As New SQLiteCommand(sql, CNN)
 
@@ -190,8 +191,8 @@ Public Class DBManager
 
 
 
-   
 
 
-    
+
+
 End Class
