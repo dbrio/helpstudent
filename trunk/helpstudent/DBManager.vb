@@ -173,7 +173,7 @@ Public Class DBManager
                     UsuarioActivo.carrera = reader.GetValue(7).ToString
                     UsuarioActivo.correo = reader.GetValue(8).ToString
                     UsuarioActivo.IdCarrera = reader.GetValue(9).ToString
-                    UsuarioActivo.IdLogin = reader.GetValue(10).ToString
+                    UsuarioActivo.IdLogin = reader.GetValue(12).ToString
 
 
 

@@ -29,4 +29,8 @@
         End With
         Me.Hide()
     End Sub
+
+    Private Sub perfil_Activated(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Activated
+
+    End Sub
 End Class
