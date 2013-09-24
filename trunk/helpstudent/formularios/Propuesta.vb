@@ -26,4 +26,8 @@
         Dim llenar2 As String = String.Format("SELECT Clase.Nombre FROM Clase INNER JOIN Requisitos ON Clase.CodClase = Requisitos.CodClase INNER JOIN CarreraClase ON Clase.CodClase = CarreraClase.CodClase WHERE Requisitos.CodRequisito = '{0}' AND  CarreraClase.IdCarrera ='{1}' ", IdRequisto, UsuarioActivo.IdCarrera)
         DataGridViewDisponible.DataSource = db.GetData(llenar2)
     End Sub
+
+    Private Sub DataGridViewDisponible_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewDisponible.CellContentClick
+
+    End Sub
 End Class
