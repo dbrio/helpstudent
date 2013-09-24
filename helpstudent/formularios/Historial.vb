@@ -20,7 +20,7 @@ Public Class Historial
         
         'hacemos la consulta y recorremos los datos para crear el plan de estudio
         Using cnn As New SQLite.SQLiteConnection(db.CNN)
-            Dim consulta As String = String.Format("SELECT Clase.Nombre,Clase.CodClase, Matricula.Promedio,Maestro.IdMaestro,Requisitos.CodRequisito  FROM CarreraClase INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase LEFT OUTER JOIN Requisitos ON Clase.CodClase = Requisitos.CodClase LEFT OUTER JOIN Matricula ON Clase.CodClase = Matricula.CodClase LEFT OUTER JOIN Maestro ON Matricula.IdMaestro = Maestro.IdMaestro INNER JOIN PeridoCatalogo ON CarreraClase.IdPeriodoCatalogo = PeridoCatalogo.IdPeriodoCatalogo INNER JOIN Carrera ON CarreraClase.IdCarrera = Carrera.IdCarrera WHERE Carrera.IdCarrera = '{0}' ORDER BY CarreraClase.IdAno, CarreraClase.IdPeriodoCatalogo", UsuarioActivo.IdCarrera)
+            Dim consulta As String = String.Format("SELECT Clase.Nombre,Clase.CodClase, Matricula.Promedio,Matricula.CtaAlum FROM CarreraClase INNER JOIN Clase ON CarreraClase.CodClase = Clase.CodClase LEFT OUTER JOIN Requisitos ON Clase.CodClase = Requisitos.CodClase LEFT OUTER JOIN Matricula ON Clase.CodClase = Matricula.CodClase LEFT OUTER JOIN Alumno ON Matricula.CtaAlum = Alumno.CtaAlum LEFT OUTER JOIN Maestro ON Matricula.IdMaestro = Maestro.IdMaestro INNER JOIN PeridoCatalogo ON CarreraClase.IdPeriodoCatalogo = PeridoCatalogo.IdPeriodoCatalogo INNER JOIN Carrera ON CarreraClase.IdCarrera = Carrera.IdCarrera WHERE Carrera.IdCarrera = '{0}'  GROUP BY Clase.Nombre ORDER BY CarreraClase.IdAno, CarreraClase.IdPeriodoCatalogo", UsuarioActivo.IdCarrera)
 
 
             Dim cmd As New SQLite.SQLiteCommand(consulta, cnn)
@@ -38,7 +38,7 @@ Public Class Historial
                     '(Esto es la definición de eventos a controles de forma dinámica)
 
 
-                    label.Tag = reader.Item(4).ToString
+                    label.Tag = reader.Item(1).ToString
 
                     label.Width = 220 'Ancho de 60px
                     label.Height = 60 'Alto de 30px
@@ -55,6 +55,7 @@ Public Class Historial
                     label2.Text = reader.GetValue(1)
 
                     Dim promedio As Integer
+                    Dim cuenta As String
 
                     If reader.GetValue(2) Is DBNull.Value Then
                         promedio = 0
@@ -62,7 +63,13 @@ Public Class Historial
                         promedio = reader.GetValue(2)
                     End If
 
-                    If promedio > 60 Then
+                    If reader.GetValue(3) Is DBNull.Value Then
+                        cuenta = "defaul"
+                    Else
+                        cuenta = reader.GetValue(3)
+                    End If
+
+                    If promedio > 60 And cuenta = UsuarioActivo.cuenta Then
                         label.BackColor = Color.FromArgb(&H99, &HCC, &H99) 'Color de fondo
                         label2.BackColor = Color.FromArgb(&H77, &HB0, &H5A) 'Color de fondo
                     Else
@@ -142,20 +149,27 @@ Public Class Historial
 
         'Aquí puede ir el código de cada cuadro
         'Ejemplo: Mostrar en un MsgBox el nombre de cada cuadro
-
+        Dim RecordCount As Integer = 0
         Using cnn As New SQLite.SQLiteConnection(db.CNN)
 
-            Dim consulta As String = String.Format("Select clase.Nombre from Clase inner join Requisitos on Clase.CodClase = Requisitos.CodClase WHERE Clase.CodClase ='{0}'", cuadro.Tag)
+            Dim consulta As String = String.Format("Select Requisitos.CodRequisito from Clase inner join Requisitos on Clase.CodClase = Requisitos.CodClase INNER JOIN CarreraClase ON Clase.CodClase = CarreraClase.CodClase where  Clase.CodClase = '{0}' AND CarreraClase.IdCarrera ='{1}'", cuadro.Tag, UsuarioActivo.IdCarrera)
             Dim cmd As New SQLite.SQLiteCommand(consulta, cnn)
             cnn.Open()
             Dim reader As SQLite.SQLiteDataReader = cmd.ExecuteReader
 
 
-            If reader.HasRows Then
-                While reader.Read
-                    MsgBox(reader.GetValue(0), MsgBoxStyle.Information, "Requisito")
-                End While
-            End If
+            Dim records As String
+            While reader.Read()
+                Dim i As Integer = 0
+                For i = 0 To reader.FieldCount - 1
+                    records &= reader(i) & "  "
+                Next
+                RecordCount += 1
+            End While
+
+             
+            MessageBox.Show(records)
+
 
         End Using
 
