@@ -23,6 +23,7 @@ Partial Class AgregarClase
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BtnRegistrar = New DevExpress.XtraEditors.SimpleButton()
         Me.TextBoxAnio = New System.Windows.Forms.TextBox()
         Me.ComboBoxPeriodo = New System.Windows.Forms.ComboBox()
         Me.ComboBoxMaestro = New System.Windows.Forms.ComboBox()
@@ -35,7 +36,6 @@ Partial Class AgregarClase
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnRegistrar = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -62,6 +62,22 @@ Partial Class AgregarClase
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar Clase"
+        '
+        'BtnRegistrar
+        '
+        Me.BtnRegistrar.Appearance.BackColor = System.Drawing.Color.SlateGray
+        Me.BtnRegistrar.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRegistrar.Appearance.ForeColor = System.Drawing.Color.White
+        Me.BtnRegistrar.Appearance.Options.UseBackColor = True
+        Me.BtnRegistrar.Appearance.Options.UseFont = True
+        Me.BtnRegistrar.Appearance.Options.UseForeColor = True
+        Me.BtnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnRegistrar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat
+        Me.BtnRegistrar.Location = New System.Drawing.Point(197, 357)
+        Me.BtnRegistrar.Name = "BtnRegistrar"
+        Me.BtnRegistrar.Size = New System.Drawing.Size(276, 50)
+        Me.BtnRegistrar.TabIndex = 19
+        Me.BtnRegistrar.Text = "Agregar Clase"
         '
         'TextBoxAnio
         '
@@ -164,24 +180,9 @@ Partial Class AgregarClase
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Clase:"
         '
-        'BtnRegistrar
-        '
-        Me.BtnRegistrar.Appearance.BackColor = System.Drawing.Color.SlateGray
-        Me.BtnRegistrar.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegistrar.Appearance.ForeColor = System.Drawing.Color.White
-        Me.BtnRegistrar.Appearance.Options.UseBackColor = True
-        Me.BtnRegistrar.Appearance.Options.UseFont = True
-        Me.BtnRegistrar.Appearance.Options.UseForeColor = True
-        Me.BtnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnRegistrar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat
-        Me.BtnRegistrar.Location = New System.Drawing.Point(197, 357)
-        Me.BtnRegistrar.Name = "BtnRegistrar"
-        Me.BtnRegistrar.Size = New System.Drawing.Size(276, 50)
-        Me.BtnRegistrar.TabIndex = 19
-        Me.BtnRegistrar.Text = "Agregar Clase"
-        '
         'AgregarClase
         '
+        Me.AcceptButton = Me.BtnRegistrar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(722, 488)

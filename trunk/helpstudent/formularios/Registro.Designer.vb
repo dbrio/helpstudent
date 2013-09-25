@@ -218,6 +218,7 @@ Partial Class Registro
         '
         'Registro
         '
+        Me.AcceptButton = Me.BtnRegistrar
         Me.AllowDrop = True
         Me.Appearance.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Appearance.Options.UseBackColor = True
