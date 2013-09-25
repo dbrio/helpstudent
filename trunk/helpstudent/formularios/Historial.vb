@@ -117,8 +117,6 @@ Public Class Historial
             cnn.Open()
             Dim reader As SQLite.SQLiteDataReader = cmd.ExecuteReader
 
-
-
             If reader.HasRows Then
                 While reader.Read
 
@@ -127,11 +125,7 @@ Public Class Historial
                     'MsgBox(reader.GetValue(0), MsgBoxStyle.Information, "Requisito")
                 End While
             End If
-
-
             Dim controlesForm As Control
-
-
             For Each controlesForm In Controls
                 If (TypeOf controlesForm Is Label) Then
                     'cuadro.BackColor = Color.AliceBlue
