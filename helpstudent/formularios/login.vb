@@ -36,4 +36,7 @@ Public Class login
 
     End Sub
 
+    Private Sub BtnEntrar_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles BtnEntrar.KeyPress
+       
+    End Sub
 End Class
