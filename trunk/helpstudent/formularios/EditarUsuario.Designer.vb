@@ -63,6 +63,7 @@ Partial Class EditarUsuario
         Me.TextEditContrasena.Name = "TextEditContrasena"
         Me.TextEditContrasena.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextEditContrasena.Properties.Appearance.Options.UseFont = True
+        Me.TextEditContrasena.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextEditContrasena.Size = New System.Drawing.Size(240, 29)
         Me.TextEditContrasena.TabIndex = 2
         '
