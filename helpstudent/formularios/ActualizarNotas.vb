@@ -67,35 +67,19 @@ Public Class ActualizarNotas
  
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         'valida los texbox de las notas para luego actualizar 
-        If TextBoxNota1.Text.Trim > 100 Or TextBoxNota1.Text.Trim < 0 Then
-            MsgBox(" Ingrese notas dentro del rango")
-            TextBoxNota1.Clear()
-            TextBoxNota1.Focus()
-            Exit Sub
-        End If
-        If TextBoxNota2.Text.Trim > 100 Or TextBoxNota2.Text.Trim < 0 Then
-            MsgBox(" Ingrese notas dentro del rango")
-            TextBoxNota2.Clear()
-            TextBoxNota2.Focus()
-            Exit Sub
-        End If
-        If TextBoxNota3.Text.Trim > 100 Or TextBoxNota3.Text.Trim < 0 Then
-            MsgBox(" Ingrese notas dentro del rango")
-            TextBoxNota3.Clear()
-            TextBoxNota3.Focus()
-            Exit Sub
-        End If
+       
+        
 
-        If Not IsNumeric(TextBoxNota1.Text) Then
-            MsgBox("Ingrese cantidad Numerica")
+        If Not IsNumeric(TextBoxNota1.Text) Or TextBoxNota1.Text.Trim > 100 Or TextBoxNota1.Text.Trim < 0 Then
+            MsgBox("Ingrese cantidad Numerica o elija notas dentro del rango")
             TextBoxNota1.Clear()
             TextBoxNota1.Focus()
-        ElseIf Not IsNumeric(TextBoxNota2.Text) Then
-            MsgBox("Ingrese cantidad Numerica")
+        ElseIf Not IsNumeric(TextBoxNota2.Text) Or TextBoxNota2.Text.Trim > 100 Or TextBoxNota2.Text.Trim < 0 Then
+            MsgBox("Ingrese cantidad Numerica o elija notas dentro del rango")
             TextBoxNota2.Clear()
             TextBoxNota2.Focus()
-        ElseIf Not IsNumeric(TextBoxNota3.Text) Then
-            MsgBox("Ingrese cantidad Numerica")
+        ElseIf Not IsNumeric(TextBoxNota3.Text) Or TextBoxNota3.Text.Trim > 100 Or TextBoxNota3.Text.Trim < 0 Then
+            MsgBox("Ingrese cantidad Numerica o elija notas dentro del rango")
             TextBoxNota3.Clear()
             TextBoxNota3.Focus()
 
